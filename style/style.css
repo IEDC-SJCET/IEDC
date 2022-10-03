@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
+h2 {
+  font-family: "Inter", sans-serif;
+}
+
+nav {
+  font-family: "Dm Sans", sans-serif;
+}
+
+.flex-fill {
+  flex: 1;
+}
+
+.homepage {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0, 0, 0, 0.393) 80%, rgba(0, 0, 0, 0) 100%), url(../media/sjcet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}/*# sourceMappingURL=style.css.map */
