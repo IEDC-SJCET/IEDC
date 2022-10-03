@@ -1,6 +1,13 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
+:root {
+  --green:#65e548;
+}
+
 h2 {
   font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 nav, h5 {
@@ -18,14 +25,28 @@ nav, h5 {
   background-position-x: center;
 }
 
-.nav-item {
-  text-decoration: none;
-  transition-delay: 5s;
+.bigdot::after {
+  content: " ⚫";
+  font-size: 1.1rem;
+  color: var(--green);
 }
-.nav-item :hover, .nav-item :active, .nav-item :focus {
-  text-decoration: underline;
-  text-decoration-thickness: 2.5px;
-  -webkit-text-decoration-color: #65e548;
-          text-decoration-color: #65e548;
-  text-underline-offset: 7px;
+
+.bigdot > span,
+.nav-item > a {
+  line-height: 0.4em;
+  background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+  background-position: 0 1em 1em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+}
+.bigdot > span:hover, .bigdot > span:active, .bigdot > span:focus,
+.nav-item > a:hover,
+.nav-item > a:active,
+.nav-item > a:focus {
+  background-size: 100% 100%;
+}
+
+.bigdot > span {
+  background-size: 100% 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
-
+:root {
+    --green :#65e548;
+}
 h2 {
 	font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 nav,h5 {
 	font-family: "Dm Sans", sans-serif;
@@ -18,15 +22,41 @@ nav,h5 {
     
 }
 
-.nav-item {
-    text-decoration: none;
-    transition-delay: 5s;
-    :hover,:active,:focus {
-        text-decoration: underline;
-        text-decoration-thickness: 2.5px;
-        text-decoration-color: #65e548;
-        text-underline-offset: 7px;
+// .nav-item {
+//     text-decoration: none;
+//     transition-delay: 5s;
+//     :hover,:active,:focus {
+//         text-decoration: underline;
+//         text-decoration-thickness: 2.5px;
+//         text-decoration-color: #65e548;
+//         text-underline-offset: 7px;
         
-    }
+//     }
+// }
+
+
+.bigdot::after{
+    content: " ⚫";
+    font-size: 1.1rem;
+    color: var(--green);
 }
 
+.bigdot>span,
+.nav-item>a {
+    line-height: .4em;
+    background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+    background-position: 0 1em 1em;
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    transition: background .5s;
+    &:hover,
+    &:active,
+    &:focus
+    {
+        background-size: 100% 100%;
+    }
+    
+}
+.bigdot>span{
+    background-size: 100% 100%;
+}
