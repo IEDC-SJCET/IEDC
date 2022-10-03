@@ -16,4 +16,16 @@ nav, h5 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+}
+
+.nav-item {
+  text-decoration: none;
+  transition-delay: 5s;
+}
+.nav-item :hover, .nav-item :active, .nav-item :focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2.5px;
+  -webkit-text-decoration-color: #65e548;
+          text-decoration-color: #65e548;
+  text-underline-offset: 7px;
 }/*# sourceMappingURL=style.css.map */
