@@ -17,6 +17,9 @@ h2 {
     content: 'SJCET ';
     color: var(--green);
 }
+.greencolor {
+    color: var(--green);
+}
 nav,h5 {
 	font-family: "Dm Sans", sans-serif;
 }
@@ -82,11 +85,11 @@ nav,h5 {
 // }
 
 
-.bigdot::after{
-    content: " 🔴";
-    font-size: medium;
-    color: var(--green);
-}
+// .bigdot::after{
+//     content: " <i class="bi bi-circle-fill fs-1></i>";
+//     font-size: medium;
+//     color: var(--green);
+// }
 
 .bigdot>div,
 .nav-item>a {
