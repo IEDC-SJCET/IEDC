@@ -4,8 +4,13 @@
 }
 h2 {
 	font-family: "Inter", sans-serif;
-    padding: 0;
-    margin: 0;
+}
+#whyiedc::after {
+    content: " IEDC ?";
+        color: var(--green);
+}
+#bootcamp {
+    color: var(--green);
 }
 nav,h5 {
 	font-family: "Dm Sans", sans-serif;
