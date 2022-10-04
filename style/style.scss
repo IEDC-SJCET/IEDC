@@ -5,23 +5,22 @@
 h2 {
 	font-family: "Inter", sans-serif;
 }
-#whyiedc::after {
-    content: " IEDC ?";
-        color: var(--green);
-}
-#bootcamp:before {
-    content: 'BOOT';
-        color: var(--green);
-}
-#SJCETPALAI:before {
-    content: 'SJCET ';
-    color: var(--green);
+
+.preselection,
+::-moz-selection,
+::selection {
+    color: white;
+    background: var(--green);
 }
 .greencolor {
     color: var(--green);
 }
 nav,h5 {
 	font-family: "Dm Sans", sans-serif;
+}
+.bi-circle-fill {
+    color: var(--green);
+    font-size: 8px;
 }
 #changetext:before {
             content: ' ';
@@ -61,16 +60,17 @@ nav,h5 {
         }
 
 .homepage {
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.80) 60%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
+    // background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.80) 60%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;   
 }
-@media (max-width:768px){
-    .homepage {
-            background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
-    }
-}
+// @media (max-width:768px){
+//     .homepage {
+//             background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
+//     }
+// }
 
 .bigdot>div,
 .nav-item>a {
