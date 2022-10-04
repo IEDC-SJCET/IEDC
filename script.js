@@ -9,3 +9,11 @@ function show_secondary(){
         , 200);
 
 }
+
+// var y = document.getElementById("changetext");
+// var text = ["Innovative","&nbsp; Creative &nbsp;","&nbsp;Techincal&nbsp;"];
+// let i=0;
+// setInterval(function(){
+//     i = (i+1)%3;
+//     y.innerHTML = text[i];
+// },2000)

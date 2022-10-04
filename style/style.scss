@@ -10,16 +10,53 @@ h2 {
 nav,h5 {
 	font-family: "Dm Sans", sans-serif;
 }
-.flex-fill {
-	flex: 1;
-}
+#changetext:before {
+            content: ' ';
+            animation-name: head;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+    
+        @keyframes head {
+            0%,9%,100% {
+                content: 'Innovative';
+                opacity: 1;
+            }
+    
+            16%,25% {
+                opacity: 0;
+                
+            }
+    
+            32%,41% {
+                content: "Creative";
+                opacity: 1;
+            }
+    
+            48%,57% {
+                opacity: 0;
+            }
+    
+            64%,73% {
+                content: "Technical";
+                opacity: 1;
+            }
+    
+            80%,89% {
+                opacity: 0;
+            }
+        }
 
 .homepage {
-    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.70) 60%, rgba(0, 0, 0, 0.393) 80%, rgba(0, 0, 0, 0) 100%), url(../media/sjcet.jpg);
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.80) 60%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position-x: center;
-    
+    background-position-x: center;   
+}
+@media (max-width:768px){
+    .homepage {
+            background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
+    }
 }
 
 // .nav-item {
@@ -41,7 +78,7 @@ nav,h5 {
     color: var(--green);
 }
 
-.bigdot>span,
+.bigdot>div,
 .nav-item>a {
     line-height: .4em;
     background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
@@ -57,6 +94,6 @@ nav,h5 {
     }
     
 }
-.bigdot>span{
+.bigdot>div{
     background-size: 100% 100%;
 }
