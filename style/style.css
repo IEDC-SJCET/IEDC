@@ -319,4 +319,51 @@ textarea {
 .form-field:hover,
 .form-field:focus {
   background: rgb(48, 48, 48);
+}
+
+.team-lead {
+  position: relative;
+  overflow: hidden;
+}
+.team-lead > span {
+  background-color: var(--green);
+  height: 80px;
+  left: -50px;
+  position: absolute;
+  z-index: 2;
+  top: -50px;
+  width: 80px;
+  -webkit-transform: rotate(-45deg);
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  position: relative;
+}
+.card-body > .card-text {
+  z-index: 2;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+.card-img-overlay > a {
+  color: white;
+  margin: auto;
+  visibility: hidden;
+  font-size: 0px;
+  transition: 0.3s;
+}
+
+.card:hover > .card-img-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.card:hover > .card-img-overlay > a {
+  visibility: visible;
+  color: white;
+  font-size: 30px;
 }/*# sourceMappingURL=style.css.map */
