@@ -227,3 +227,20 @@ html {
 }
 
 // the form page 
+.form-field {
+    height: 46px;
+    border:none;
+    border-left: 3px solid var(--green);
+    padding: 0 16px;
+    color: white;
+    outline: 0;
+    background: rgba(48, 48, 48, 0.536);
+    transition: 0.2s;
+}
+textarea {
+        resize: none;
+}
+.form-field:hover,
+.form-field:focus {
+    background:rgba(48, 48, 48, 1);
+}

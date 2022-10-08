@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="teamsection/teamsection/style.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body class="m-0 p-0 col-12 bg-black">
@@ -154,28 +155,30 @@
         <br><br>
     </div>
     <!-- the team -->
-    <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 p-0 d-flex flex-column">
-        
-    </div>
+
     <!-- contact and feedback form -->
     <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 p-0 d-flex flex-column">
-        <div class="d-flex flex-md-nowrap flex-wrap flex-row p-4 p-md-5 bg-transparent m-0">
-            <div class="col-12 col-md-6 text-center">
-
-                <form action="">
-                    <input type="text" name="input" id="input" labal="Name">
-                    <input type="email" name="input" id="input" label="email">
-                    <input type="text" name="input" id="input" label="subject">
+        <div class="d-flex flex-column flex-md-row gap-5 justify-content-between">
+            <div class="col d-flex flex-column">
+            <h3 class="text-white fs-5 fw-bold text-center">REACH US</h3>
+            <a href="https://g.page/SJCETPALA?share">
+                <img src="media/map.PNG" alt="SJCET PALAI MAP" class="img-fluid">
+            </a>
+            </div>
+            <div class="col text-center border-1 border-white">
+                <h3 class="text-white fs-5 fw-bold text-center">CONTACT US</h3>
+                <form action="" class="d-flex flex-column text-white-50 gap-3">
+                    <input id="q1or2or3" type="text" minlength="2" maxlength="20" class="form-field" placeholder="Your Name" required>
+                    <input id="q1or2or3" type="email" minlength="2" maxlength="20" class="form-field" placeholder="Email" required>
+                    <textarea id="q1or2or3" type="text" minlength="2" maxlength="200" class="form-field" placeholder="Write your feedbacks" required style="min-height:125px ;"></textarea>
+                    <span><button type="submit" class="form-field">Submit Your Feedback</button></span>
                 </form>
             </div>
-            <a href="https://g.page/SJCETPALA?share">
-                <img src="media/map.PNG" class="animation a4 col-12 col-md-6 w-100 rounded-1" alt="SJCET PALAI MAP">
-            </a>
         </div>
     </div>
-    <div class="row container-xl col-lg-12 col-xl-10 py-4 mx-auto d-flex flex-md-row bg-black gap-md-5">
+    <div class="row container-xl col-lg-12 col-xl-10 p-0 py-4 d-flex mx-auto flex-column flex-md-row bg-black gap-md-5">
         <div class="col text-start d-flex flex-column gap-4">
-            <a href="#"><img src="asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8"></a>
+            <a href="#"><img src="asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8 m-0"></a>
             <p class="text-white fs-6 fw-lighter text-white-50 ms-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, nesciunt!</p>
             <h3 class="text-white fs-5 fw-bold mt-auto text-start ms-1">FOLLOW US</h3>
             <div class="col p-0 d-flex gap-5 fs-4 ms-1">
