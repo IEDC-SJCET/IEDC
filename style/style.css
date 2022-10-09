@@ -335,6 +335,7 @@ textarea {
   width: 80px;
   -webkit-transform: rotate(-45deg);
 }
+
 .card {
   position: relative;
   overflow: hidden;
@@ -352,8 +353,8 @@ textarea {
   transition: 0.3s;
 }
 .card-img-overlay > a {
-  color: white;
   margin: auto;
+  color: white;
   visibility: hidden;
   font-size: 0px;
   transition: 0.3s;
@@ -365,5 +366,5 @@ textarea {
 .card:hover > .card-img-overlay > a {
   visibility: visible;
   color: white;
-  font-size: 30px;
+  font-size: 25px;
 }/*# sourceMappingURL=style.css.map */

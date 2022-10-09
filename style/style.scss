@@ -314,9 +314,9 @@ textarea {
             width: 80px;
             -webkit-transform: rotate(-45deg);
     }
-    &>:nth-child(3) {
-        // border-bottom:3px solid var(--green) !important ;
-    }
+    // &>:nth-child(3) {
+    //       border-bottom:3px solid var(--green) !important ;
+    // }
 }
 .card {
 position: relative;
@@ -333,8 +333,8 @@ position: relative;
     background: rgba(0, 0, 0, 0);
     transition: 0.3s;
     &>a{
-        color: white;
         margin: auto;
+        color: white;
         visibility: hidden;
         font-size: 0px;
         transition: 0.3s;
@@ -347,6 +347,6 @@ position: relative;
     &>a {
             visibility: visible;
             color: white;
-            font-size: 30px;
+            font-size: 25px;
         }
 }
