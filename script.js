@@ -1,7 +1,7 @@
-var extraTabs = document.getElementById('extraTabs');
-var openButton = document.getElementById('openButton');
-
 function openAll(){
+  var extraTabs = document.getElementById('extraTabs');
+  var openButton = document.getElementById('openButton');
+
   if (extraTabs.style.display == 'none'){
     extraTabs.style.display = 'flex';
     openButton.childNodes[1].classList.remove("bi-chevron-down");
@@ -12,4 +12,10 @@ function openAll(){
   openButton.childNodes[1].classList.remove("bi-chevron-up");
   openButton.childNodes[1].classList.add("bi-chevron-down");
   }
+}
+
+function loading() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loading").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflowY = "auto";
 }

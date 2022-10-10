@@ -313,7 +313,7 @@ textarea {
             z-index: 2;
             top: -50px;
             width: 80px;
-            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     }
     // &>:nth-child(3) {
     //       border-bottom:3px solid var(--green) !important ;
@@ -322,6 +322,8 @@ textarea {
 .card {
 position: relative;
     overflow: hidden;
+    border-radius: 0;
+    // border: none !important;
 }
 .card-body {
     position: relative;
@@ -333,7 +335,7 @@ position: relative;
 .card-img-overlay {
     background: rgba(0, 0, 0, 0);
     transition: 0.3s;
-    &>a{
+    &>a,&>p{
         margin: auto;
         color: white;
         visibility: hidden;
@@ -345,9 +347,64 @@ position: relative;
 .card:hover>.card-img-overlay{
     // color: rgba(255, 255, 255, 1);
     background: rgba(0, 0, 0, .3);
-    &>a {
+    &>a,&>p {
             visibility: visible;
             color: white;
             font-size: 25px;
         }
+}
+
+// the galary show for SUmmit 
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+.div1 {
+    flex:1;
+    grid-area: 1 / 1 / 3 / 4;
+}
+.carousel-item-1 {
+    background: url("/media/stock2.jpeg");
+}
+.carousel-item-2 {
+    background: url("/media/stock2.jpeg");
+}
+
+.div2 {
+    flex: 1;
+    grid-area: 1 / 4 / 2 / 5;
+    background: url("/media/sjcet.jpg");
+        
+}
+
+.div3 {
+    flex: 1;
+    grid-area: 2 / 4 / 3 / 5;
+    background: url("/media/stock-hackathon.jpg");
+}
+
+.div4 {
+    flex: 1;
+    grid-area: 3 / 2 / 4 / 5;
+    background: url("/media/stock2.jpeg");
+}
+
+.div5 {
+    flex: 1;
+    grid-area: 3 / 1 / 4 / 2;
+    background: url("/media/stock2.jpeg");
+}
+.carousel-item,
+.parent>div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:solid 1.8px white;
+}
+.carousel-item{
+    border:none;
 }
