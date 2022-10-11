@@ -355,7 +355,7 @@ position: relative;
 }
 
 // the galary show for SUmmit 
-.parent {
+.Summitparent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -399,7 +399,8 @@ position: relative;
     background: url("/media/stock2.jpeg");
 }
 .carousel-item,
-.parent>div {
+.Summitparent>div,
+.eventGrid>div {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -407,4 +408,57 @@ position: relative;
 }
 .carousel-item{
     border:none;
+}
+
+
+// the event page 
+.eventGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+.eventGrid>div>.card-img-overlay {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+
+    &>a,
+    &>p {
+        margin: auto;
+        color: white;
+        visibility: hidden;
+        font-size: 0px;
+        transition: 0.3s;
+    }
+}
+.eventGrid>div:hover>.card-img-overlay {
+    // color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, .3);
+
+    &>a,
+    &>p {
+        visibility: visible;
+        color: white;
+        font-size: 25px;
+    }
+}
+.Event1 {
+    flex: 1;
+    grid-area: 1 / 1 / 3 / 3;
+}
+
+.Event2 {
+    flex:1;
+    grid-area: 1 / 3 / 3 / 4;
+}
+
+.Event3 {
+    flex: 1;
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.Event4 {
+    flex:1;
+    grid-area: 2 / 4 / 3 / 5;
 }
