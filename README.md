@@ -1,3 +1,3 @@
 # IEDC-SJCET
 
-im Back
+OFFICIAL IEDC BOOTCAMP SJCET PALAI website currently under maintance
