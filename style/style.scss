@@ -335,7 +335,7 @@ position: relative;
 .card-img-overlay {
     background: rgba(0, 0, 0, 0);
     transition: 0.3s;
-    &>a,&>p{
+    &>a,&>p,&>button{
         margin: auto;
         color: white;
         visibility: hidden;
@@ -347,7 +347,8 @@ position: relative;
 .card:hover>.card-img-overlay{
     // color: rgba(255, 255, 255, 1);
     background: rgba(0, 0, 0, .3);
-    &>a,&>p {
+    &>a,&>p,
+        &>button {
             visibility: visible;
             color: white;
             font-size: 25px;
@@ -461,4 +462,17 @@ position: relative;
 .Event4 {
     flex:1;
     grid-area: 2 / 4 / 3 / 5;
+}
+
+// eventexternal
+.eventbody{
+    display: none;
+}
+
+#event1bg {
+    background: url("/media/stock-hackathon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
 }

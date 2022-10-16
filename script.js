@@ -19,3 +19,9 @@ function loading() {
     document.getElementById("loading").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
 }
+
+// eventexternal
+function openEventDetails(y){
+  var x = document.getElementById(y);
+  x.style.display = "flex";
+}

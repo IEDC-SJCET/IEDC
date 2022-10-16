@@ -354,7 +354,7 @@ textarea {
   background: rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
-.card-img-overlay > a, .card-img-overlay > p {
+.card-img-overlay > a, .card-img-overlay > p, .card-img-overlay > button {
   margin: auto;
   color: white;
   visibility: hidden;
@@ -365,7 +365,7 @@ textarea {
 .card:hover > .card-img-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-.card:hover > .card-img-overlay > a, .card:hover > .card-img-overlay > p {
+.card:hover > .card-img-overlay > a, .card:hover > .card-img-overlay > p, .card:hover > .card-img-overlay > button {
   visibility: visible;
   color: white;
   font-size: 25px;
@@ -476,4 +476,16 @@ textarea {
 .Event4 {
   flex: 1;
   grid-area: 2/4/3/5;
+}
+
+.eventbody {
+  display: none;
+}
+
+#event1bg {
+  background: url("/media/stock-hackathon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
 }/*# sourceMappingURL=style.css.map */
