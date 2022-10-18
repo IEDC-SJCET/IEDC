@@ -1,0 +1,54 @@
+.bi-circle-fill {
+    color: var(--green);
+    font-size: 8px;
+}
+#changetext:before {
+    content: ' ';
+    animation-name: dropshow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes dropshow {
+    0%,
+    9%,
+    100% {
+        content: 'Innovative';
+        opacity: 1;
+    }
+    16%,
+    25% {
+        opacity: 0;
+    }
+    32%,
+    41% {
+        content: "Creative";
+        opacity: 1;
+    }
+    48%,
+    57% {
+        opacity: 0;
+    }
+    64%,
+    73% {
+        content: "Technical";
+        opacity: 1;
+    }
+    80%,
+    89% {
+        opacity: 0;
+    }
+}
+.homepage {
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(../media/sjcet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+.bigdot>div {
+    line-height: .4em;
+    background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+    background-position: 0 1em 1em;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: background .5s;
+}

@@ -1,0 +1,54 @@
+// team card
+.team-lead {
+    position: relative;
+    overflow: hidden;
+    &>span {
+        background-color: var(--green);
+        height: 80px;
+        left: -50px;
+        position: absolute;
+        z-index: 2;
+        top: -50px;
+        width: 80px;
+        transform: rotate(-45deg);
+    }
+    // &>:nth-child(3) {
+    //       border-bottom:3px solid var(--green) !important ;
+    // }
+}
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    // border: none !important;
+}
+.card-body {
+    position: relative;
+    &>.card-text {
+        z-index: 2;
+    }
+}
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    &>a,
+    &>p,
+    &>button {
+        margin: auto;
+        color: white;
+        visibility: hidden;
+        font-size: 0px;
+        transition: 0.3s;
+    }
+}
+.card:hover>.card-img-overlay {
+    // color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, .3);
+    &>a,
+    &>p,
+    &>button {
+        visibility: visible;
+        color: white;
+        font-size: 25px;
+    }
+}

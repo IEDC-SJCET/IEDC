@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
+:root {
+  --green: #56c23e;
+}
+
+.greencolor {
+  color: var(--green);
+  border-color: var(--green) !important;
+}
+
+h2, .h2 {
+  font-family: "Inter", sans-serif;
+}
+
+p, nav, h5, h3, .h3 {
+  font-family: "Dm Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--green);
+}
+
+.preselection,
+::-moz-selection,
+::selection {
+  color: white;
+  background: var(--green);
+}
+
+.form-field {
+  height: 46px;
+  border: none;
+  border-left: 3px solid var(--green);
+  padding: 0 16px;
+  color: white;
+  outline: 0;
+  background: rgba(48, 48, 48, 0.536);
+  transition: 0.2s;
+}
+.form-field:hover, .form-field:focus {
+  color: white;
+  background: rgb(48, 48, 48);
+}
+
+textarea {
+  resize: none;
+}/*# sourceMappingURL=common.css.map */

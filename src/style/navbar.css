@@ -1,0 +1,11 @@
+.nav-item > a {
+  line-height: 0.4em;
+  background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+  background-position: 0 1em 1em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+}
+.nav-item > a:hover, .nav-item > a:active, .nav-item > a:focus {
+  background-size: 100% 100%;
+}/*# sourceMappingURL=navbar.css.map */

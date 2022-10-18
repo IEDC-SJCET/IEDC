@@ -1,0 +1,29 @@
+.eventbody {
+  display: none;
+}
+
+#event1bg {
+  background: url("/media/stock-hackathon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.theme2 {
+  position: relative;
+}
+
+#play-video {
+  position: absolute;
+  bottom: 20px;
+}
+
+.fab:hover {
+  color: red;
+  transition: all 0.3s;
+}
+
+.contact-icon i {
+  transform: translateY(-20%);
+}/*# sourceMappingURL=style.css.map */
