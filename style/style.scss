@@ -476,3 +476,22 @@ position: relative;
     background-repeat: no-repeat;
     height: 200px;
 }
+
+.theme2 {
+  position: relative;
+}
+
+#play-video {
+  position: absolute;
+  bottom: 20px;
+}
+
+
+.fab:hover {
+  color: red;
+  transition: all 0.3s;
+}
+
+.contact-icon i {
+  transform: translateY(-20%);
+}
