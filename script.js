@@ -23,5 +23,7 @@ function loading() {
 // eventexternal
 function openEventDetails(y){
   var x = document.getElementById(y);
-  x.style.display = "flex";
+  if (x.style.display == "none")
+      x.style.display = "flex";
+  else x.style.display = "none";      
 }
