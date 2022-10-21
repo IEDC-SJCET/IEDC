@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
 }
 .eventGrid > div {
   background-size: cover;

@@ -12,35 +12,35 @@
 }
 
 .carousel-item-1 {
-  background: url("/media/stock2.jpeg");
+  background: url("src/media/stock2.jpeg");
 }
 
 .carousel-item-2 {
-  background: url("/media/stock2.jpeg");
+  background: url("src/media/stock2.jpeg");
 }
 
 .div2 {
   flex: 1;
   grid-area: 1/4/2/5;
-  background: url("/media/sjcet.jpg");
+  background: url("src/media/sjcet.jpg");
 }
 
 .div3 {
   flex: 1;
   grid-area: 2/4/3/5;
-  background: url("/media/stock-hackathon.jpg");
+  background: url("src/media/stock-hackathon.jpg");
 }
 
 .div4 {
   flex: 1;
   grid-area: 3/2/4/5;
-  background: url("/media/stock2.jpeg");
+  background: url("src/media/stock2.jpeg");
 }
 
 .div5 {
   flex: 1;
   grid-area: 3/1/4/2;
-  background: url("/media/stock2.jpeg");
+  background: url("src/media/stock2.jpeg");
 }
 
 .carousel-item,
@@ -48,7 +48,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: solid 1.8px white;
+  border: solid 1.8px black;
 }
 
 .carousel-item {

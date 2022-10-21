@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootcamp</title>
-    <link rel="shortcut icon" href="./asset/bootcamp logo whitefill - Copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="src/asset/bootcamp logo whitefill - Copy.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="src/style/common.css">
+    <link rel="stylesheet" href="src/style/exexom-cards.css">
+    <link rel="stylesheet" href="src/style/event-intro.css">
+    <link rel="stylesheet" href="src/style/home.css">
+    <link rel="stylesheet" href="src/style/loading.css">
+    <link rel="stylesheet" href="src/style/navbar.css">
+    <link rel="stylesheet" href="src/style/summit-grid.css">
+    <link rel="stylesheet" href="src/style/timeline.css">
     <!-- <link rel="stylesheet" type="text/css" href="teamsection/teamsection/style.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
-<body class="m-0 p-0 col-12 bg-black" onload="loading()" style="overflow: hidden">
-    <div id="loading" class="bg-black vh-100 vw-100">
+<body class="m-0 p-0 col-12 bg-white" onload="loading()" style="overflow: hidden">
+    <div id="loading" class="bg-white vh-100 vw-100">
         <div id="loader" class="lds-ring">
             <div></div>
             <div></div>
@@ -25,10 +32,10 @@
     <div class="homepage col-12 vh-100 m-0 p-0 d-flex flex-column">
 
         <div class="col-12 align-self-center m-0 mx-xl-auto p-0">
-            <nav class="navbar navbar-expand-md navbar-light bg-dark bg-transparent mt-md-1 mt-3">
+            <nav class="navbar navbar-expand-md navbar-dark bg-white bg-transparent mt-md-1 mt-3">
                 <div class="container-xl col-lg-12 col-xl-10 mt-md-3">
                     <a class="navbar-brand lead fs-3 fw-bolder m-0 p-0 col-4 col-md-2" href="#">
-                        <img src="asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="col-12 align-self-center"></a>
+                        <img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="col-12 align-self-center"></a>
 
                     <button class="navbar-toggler border-0 btn" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,13 +48,13 @@
                                 <a class="nav-link active text-white" href="#whyiedc">WHY IEDC</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-white" href="#">EVENTS</a>
+                                <a class="nav-link active text-white" href="EVENTS.html">EVENTS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active text-white" href="#SUMMIT2022">SUMMIT</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active text-white" href="https://rajatsandeepsen.github.io/IEDC/2022">EXECOM</a>
+                                <a class="nav-link active text-white" href="2022.html">EXECOM</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active text-white" href="#ABOUTUS">ABOUT US</a>
@@ -79,49 +86,49 @@
     </div>
     <!-- why iedc -->
     <div id="collapseExample" class="">
-    <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto vh-100 m-0 p-0 d-flex bg-black">
-        <h2 id="whyiedc" class="text-white fw-bolder mt-auto text-center">
+    <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto vh-100 m-0 p-0 d-flex bg-white">
+        <h2 id="whyiedc" class="text-black fw-bolder mt-auto text-center">
             WHY <span style="color: var(--green) ;">IEDC</span>?
         </h2>
-        <h5 class="text-white-50 fw-light fs-6 text-center m-0">
+        <h5 class="text-black-50 fw-light fs-6 text-center m-0">
             Here students take their <br> first step as innovators and entrepreneurs
         </h5>
-        <div class="row row-cols-md-5 row-cols-3 gap-2 mx-auto p-0 justify-content-center">
-            <li class="col border-1 bg-dark"></li>
-            <li class="col border-1 bg-dark"></li>
-            <li class="col border-1 bg-dark"></li>
-            <li class="col border-1 bg-dark"></li>
+        <div class="row row-cols-md-5 row-cols-3 gap-2 mx-auto p-0 justify-content-center list-unstyled flex-grow-1">
+            <li class="col bg-black rounded-1"></li>
+            <li class="col bg-black rounded-1"></li>
+            <li class="col bg-black rounded-1"></li>
+            <li class="col bg-black rounded-1"></li>
         </div>
-        <h2 id="bootcamp" class="text-white fw-bolder mt-auto text-center">
+        <h2 id="bootcamp" class="text-black fw-bolder mt-auto text-center">
           SJCET <span style="color: var(--green) ;">BOOT</span>CAMP
         </h2>
-        <h5 class="text-white-50 fw-light fs-6 text-center m-0">
+        <h5 class="text-black-50 fw-light fs-6 text-center m-0">
             As part of promoting the entrepreneurship culture among students, the St. Joseph’s College of Engineering and Technology, Palai (SJCET PALAI), in association with the Kerala Startup Mission, has decided to set up an Innovation & Entrepreneurship Development Center(SJCET Startup BootCamp) at the college. It was inaugurated on the 9th of march, 2015. With the various ideation and problem-solving maker events conducted by the Bootcamp, students are encouraged to challenge themselves and come up with innovative ideas. Students are provided with expert mentorship to convert their ideas into prototypes, and eventually into marketable products.
         </h5>
-        <h2 id="SJCETPALAI" class="text-white fw-bolder mt-auto text-center">
+        <h2 id="SJCETPALAI" class="text-black fw-bolder mt-auto text-center">
             OUR <span style="color: var(--green) ;">VISION</span>
         </h2>
-        <h5 class="text-white-50 fw-light fs-6 text-center m-0">
+        <h5 class="text-black-50 fw-light fs-6 text-center m-0">
             Our goal is to build an ecosystem that allows students as well as faculties to innovate and create prototypes of their
             potential ideas with support from the Government, industries, and other renowned academic institutions around the world
             so that they can realize what they are capable of.
         </h5>
         <div class="m-0 col p-0">
-            <h3 class="col-12 text-white-50 fs-6 fw-bold text-center m-0">FOLLOW US ON</h3>
+            <h3 class="col-12 text-black-50 fs-6 fw-bold text-center m-0">FOLLOW US ON</h3>
         
                 <div class="col-8 d-flex gap-3 fs-4 mx-auto list-unstyled justify-content-center">
                     <li>
-                            <a href="https://www.instagram.com/sjcetbootcamp/" class="text-decoration-none text-white-50"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.instagram.com/sjcetbootcamp/" class="text-decoration-none text-black-50"><i class="bi bi-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-decoration-none text-white-50"><i class="bi bi-twitter"></i></a>
+                        <a href="https://www.twitter.com/sjcetbootcamp" class="text-decoration-none text-black-50"><i class="bi bi-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/sjcetbootcamp" class="text-decoration-none text-white-50 p-0"><i
+                        <a href="https://www.facebook.com/sjcetbootcamp" class="text-decoration-none text-black-50 p-0"><i
                                 class="bi bi-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="https://discord.gg/5FCxcERP" class="text-decoration-none text-white-50 p-0"><i
+                        <a href="https://discord.gg/5FCxcERP" class="text-decoration-none text-black-50 p-0"><i
                                 class="bi bi-discord"></i></a>
                     </li>            
                 </div>
@@ -131,27 +138,27 @@
     <!-- the Event section  -->
     <div class="container-xl mx-md-auto m-0 p-2 d-flex flex-column justify-content-start vh-100">
         <br><br>
-        <h2 id="SUMMIT2022" class="fw-bolder text-white text-center m-0 p-0">
+        <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0">
             UPCOMING & ONGOING <span style="color: var(--green) ;">EVENTS</span>
         </h2><br><br class="d-none d-md-block">
         <div class="eventGrid col-12 flex-grow-1 d-flex flex-column d-md-grid">
-            <div class="Event1 bg-dark card">
+            <div class="Event1 bg-white card border-1 border-dark">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none text-center d-flex flex-column">
                         <i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
             </div>
-            <div class="Event2 bg-dark card">
+            <div class="Event2 bg-white card border-1 border-dark">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
             </div>
-            <div class="Event3 bg-dark card">
+            <div class="Event3 bg-white card border-1 border-dark">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
             </div>
-            <div class="Event4 bg-dark card d-none d-md-block">
+            <div class="Event4 bg-white card d-none d-md-block border-1 border-dark">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
                 </div>
@@ -159,7 +166,7 @@
             
         </div><br>
         <span class="p-0 mx-auto col-8 col-md-4">
-            <a class="btn btn-outline-light rounded-0 h2 fs-6 fw-semibold text-decoration-none d-flex" href="more events">
+            <a class="btn btn-outline-dark rounded-0 h2 fs-6 fw-semibold text-decoration-none d-flex" href="EVENTS.html">
                 <span class="m-auto">VIEW ALL EVENTS&nbsp; <i class="bi bi-chevron-right"></i></span>
             </a>
         </span>
@@ -168,74 +175,74 @@
     <!-- the summit page  -->
     <div class="container-xl mx-md-auto m-0 p-2 d-flex flex-column justify-content-start vh-100">
         <br><br>
-        <h2 id="SUMMIT2022" class="fw-bolder text-white text-center m-0 p-0">
+        <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0">
             IEDC <span style="color: var(--green) ;">SUMMIT</span> 2022 HIGHLIGHTS
         </h2><br><br class="d-none d-md-block">
         <div class="flex-grow-1 Summitparent d-flex flex-column d-md-grid col-12">
-            <div class="div1 bg-black">
+            <div class="div1 bg-white">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
 
                         <div class="carousel-item active carousel-item-1 h-100 card" data-bs-interval="3000">
                             <div class="card-img-overlay rounded-0 d-flex flex-column">
                                 <a href="1" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                                <!-- <p class="text-white p-0">Event</p> -->
+                                <!-- <p class="text-black p-0">Event</p> -->
                             </div>
                         </div>
 
                         <div class="carousel-item carousel-item-2 h-100 card" data-bs-interval="3000">
                             <div class="card-img-overlay rounded-0 d-flex flex-column">
                                 <a href="2" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                                <!-- <p class="text-white p-0">Event</p> -->
+                                <!-- <p class="text-black p-0">Event</p> -->
                             </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div class="div2 bg-dark card">
+            <div class="div2 bg-white card">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <p class="text-white p-0">Event</p> -->
+                    <!-- <p class="text-black p-0">Event</p> -->
                 </div>
             </div>
-            <div class="div3 bg-dark card">
+            <div class="div3 bg-white card">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <p class="text-white p-0">Event</p> -->
+                    <!-- <p class="text-black p-0">Event</p> -->
                 </div>
             </div>
-            <div class="div4 bg-dark card">
+            <div class="div4 bg-white card">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <p class="text-white p-0">Event</p> -->
+                    <!-- <p class="text-black p-0">Event</p> -->
                 </div>
             </div>
-            <div class="div5 bg-dark card d-none d-md-block">
+            <div class="div5 bg-white card d-none d-md-block">
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
                     <a href="" class="text-decoration-none"><i class="bi bi-box-arrow-up-right"></i></a>
-                    <!-- <p class="text-white p-0">Event</p> -->
+                    <!-- <p class="text-black p-0">Event</p> -->
                 </div>
             </div>
         </div>
         <br>
         <span class="p-0 mx-auto col-8 col-md-4">
-            <a class="btn btn-outline-light rounded-0 h2 fs-6 fw-semibold text-decoration-none d-flex" href="external summit page">
+            <a class="btn btn-outline-dark rounded-0 h2 fs-6 fw-semibold text-decoration-none d-flex" href="external summit page">
                 <span class="m-auto">VIEW ALL &nbsp; <i class="bi bi-chevron-right"></i></span>
             </a>
         </span>
         <br><br><br>
     </div>
     <!-- the team page -->
-    <div class="row container-xl col-lg-12 col-xl-10 m-0 p-2 my-2 mx-md-auto vh-100 p-0 d-flex flex-column">
-        <h2 class="col-12 fw-bolder text-white text-center m-0">
+    <div class="row container-xl col-lg-12 col-xl-10 m-0 p-2 my-2 mx-md-auto p-0 d-flex flex-column">
+        <h2 class="col-12 fw-bolder text-black text-center m-0">
             IEDC <span style="color: var(--green) ;">EXECOM</span><br class="d-block d-md-none"> BATCH 2022-23
         </h2><br><br class="d-none d-md-block">
-        <div class="card col p-0 flex-grow-1 bg-dark border-1 border-white">
-            <img src="/media/stock-hackathon.jpg" alt="">
-            <div class="card-img-overlay d-flex">
-                <a class="text-decoration-none m-auto " href="/2022.html">
-                    <span class="text-white">SEE OUR TEAM &nbsp;<i class="bi bi-chevron-right"></i></span>
+        <div class="card col p-0 bg-white border-1 border-dark">
+            <img src="src/media/stock-hackathon.jpg" alt="">
+            <div class="card-img-overlay d-flex rounded-0">
+                <a class="text-decoration-none m-auto " href="2022.html">
+                    <span class="text-black">SEE OUR TEAM &nbsp;<i class="bi bi-chevron-right"></i></span>
                 </a>
             </div>
         </div>
@@ -245,7 +252,7 @@
     <!-- history page -->
     <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 my-2 p-0 d-flex flex-column">
         <div class="the-past col-12 p-4 p-md-5 bg-transparent m-0">
-            <h2 class="fw-bolder text-white text-end text-md-center me-4 m-md-0 mb-md-5">
+            <h2 class="fw-bolder text-black text-center me-4 m-md-0 mb-md-5">
                 HISTORY OF OUR <span style="color: var(--green) ;">BOOTCAMP</span>
             </h2>
             <div class="timeline col-12">
@@ -298,12 +305,13 @@
     </div>
 
     <!-- contact and feedback form -->
+    <div class="col-12 bg-black">
     <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 p-0 d-flex flex-column">
-        <div class="d-flex flex-column flex-md-row gap-5 justify-content-between">
+        <div class="d-flex flex-column flex-md-row gap-5 justify-content-between my-3">
             <div class="col d-flex flex-column">
             <h3 class="text-white fs-5 fw-bold text-center">REACH US</h3>
             <a href="https://g.page/SJCETPALA?share">
-                <img src="media/map.PNG" alt="SJCET PALAI MAP" class="img-fluid">
+                <img src="src/media/map.PNG" alt="SJCET PALAI MAP" class="img-fluid">
             </a>
             </div>
             <div class="col text-center border-1 border-white">
@@ -317,14 +325,14 @@
             </div>
         </div>
     </div>
-    <div class="row container-xl col-lg-12 col-xl-10 p-0 py-5 d-flex mx-auto flex-column flex-md-row gap-md-5">
+    <div class="row container-xl col-lg-12 col-xl-10 p-0 py-5 d-flex mx-auto flex-column flex-md-row gap-md-5 bg-black">
         <div class="col text-start d-flex flex-column gap-4">
-            <a href="#"><img src="asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8 m-0"></a>
+            <a href="#"><img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8 m-0"></a>
             <p class="text-white fs-6 fw-lighter text-white-50 ms-1"></p>
             <h3 class="text-white fs-5 fw-bold mt-auto text-start ms-1">FOLLOW US</h3>
             <div class="col p-0 d-flex gap-5 fs-4 ms-1">
                 <a href="https://www.instagram.com/sjcetbootcamp/" class="text-decoration-none text-white"><i class="bi bi-instagram"></i></a>
-                <a href="" class="text-decoration-none text-white"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.tiwtter.com/sjcetbootcamp/" class="text-decoration-none text-white"><i class="bi bi-twitter"></i></a>
                 <a href="https://www.facebook.com/sjcetbootcamp/" class="text-decoration-none text-white"><i class="bi bi-facebook"></i></a>
                 <a href="https://discord.gg/5FCxcERP" class="text-decoration-none text-white"><i class="bi bi-discord"></i></a>
             </div>
@@ -348,16 +356,13 @@
             </div>
             </div>
         </div>
-        <div class="col-12 m-0 mt-5">
-            <span class="text-white-50 fs-6 fw-normal h3 m-0">DEVELOPED & MAINTAINED BY -</span>
-        </div>
-    
     </div>
 
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
