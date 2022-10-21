@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
+:root {
+  --green: #56c23e;
+}
+
+#loading,
+#loader {
+  position: fixed;
+  z-index: 999999;
+}
+
+#loader {
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.lds-ring {
+  top: 50vh;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid var(--green);
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+          animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--green) transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+          animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+          animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+h2 {
+  font-family: "Inter", sans-serif;
+}
+
+::-moz-selection {
+  color: white;
+  background: var(--green);
+}
+
+.preselection,
+::-moz-selection,
+::selection {
+  color: white;
+  background: var(--green);
+}
+
+.greencolor {
+  color: var(--green);
+  border-color: var(--green) !important;
+}
+
+p, nav, h5, h3, .h3 {
+  font-family: "Dm Sans", sans-serif;
+}
+
+.bi-circle-fill {
+  color: var(--green);
+  font-size: 8px;
+}
+
+#changetext:before {
+  content: " ";
+  -webkit-animation-name: head;
+          animation-name: head;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes head {
+  0%, 9%, 100% {
+    content: "Innovative";
+    opacity: 1;
+  }
+  16%, 25% {
+    opacity: 0;
+  }
+  32%, 41% {
+    content: "Creative";
+    opacity: 1;
+  }
+  48%, 57% {
+    opacity: 0;
+  }
+  64%, 73% {
+    content: "Technical";
+    opacity: 1;
+  }
+  80%, 89% {
+    opacity: 0;
+  }
+}
+
+@keyframes head {
+  0%, 9%, 100% {
+    content: "Innovative";
+    opacity: 1;
+  }
+  16%, 25% {
+    opacity: 0;
+  }
+  32%, 41% {
+    content: "Creative";
+    opacity: 1;
+  }
+  48%, 57% {
+    opacity: 0;
+  }
+  64%, 73% {
+    content: "Technical";
+    opacity: 1;
+  }
+  80%, 89% {
+    opacity: 0;
+  }
+}
+.homepage {
+  background-image: linear-gradient(360deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.2) 100%), url(../media/sjcet.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.bigdot > div,
+.nav-item > a {
+  line-height: 0.4em;
+  background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
+  background-position: 0 1em 1em;
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background 0.5s;
+}
+.bigdot > div:hover, .bigdot > div:active, .bigdot > div:focus,
+.nav-item > a:hover,
+.nav-item > a:active,
+.nav-item > a:focus {
+  background-size: 100% 100%;
+}
+
+.bigdot > div {
+  background-size: 100% 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.the-past {
+  /* The actual timeline (the vertical ruler) */
+  /* The actual timeline (the vertical ruler) */
+  /* Container around content */
+  /* The circles on the timeline */
+  /* Place the container to the left */
+  /* Place the container to the right */
+  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */
+  /* The actual content */
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+}
+.the-past * {
+  box-sizing: border-box;
+}
+.the-past .timeline {
+  position: relative;
+  margin: 0 auto;
+}
+.the-past .timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: var(--green);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.the-past .conbox {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.the-past .conbox::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  right: -9px;
+  background: var(--green);
+  top: 18px;
+  border-radius: 50%;
+  z-index: 10;
+}
+.the-past .left {
+  left: 0;
+}
+.the-past .right {
+  left: 50%;
+}
+.the-past .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.the-past .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+.the-past .right::after {
+  left: -9px;
+}
+.the-past .content {
+  background-color: white;
+  position: relative;
+}
+@media screen and (max-width: 600px) {
+  .the-past {
+    /* Place the timelime to the left */
+    /* Full-width containers */
+    /* Make sure that all arrows are pointing leftwards */
+    /* Make sure all circles are at the same spot */
+    /* Make all right containers behave like the left ones */
+  }
+  .the-past .timeline::after {
+    left: 31px;
+  }
+  .the-past .conbox {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  .the-past .conbox::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  .the-past .left::after,
+.the-past .right::after {
+    left: 22px;
+  }
+  .the-past .right {
+    left: 0%;
+  }
+}
+
+.form-field {
+  height: 46px;
+  border: none;
+  border-left: 3px solid var(--green);
+  padding: 0 16px;
+  color: white;
+  outline: 0;
+  background: rgba(48, 48, 48, 0.536);
+  transition: 0.2s;
+}
+
+textarea {
+  resize: none;
+}
+
+.form-field:hover,
+.form-field:focus {
+  color: white;
+  background: rgb(48, 48, 48);
+}
+
+.team-lead {
+  position: relative;
+  overflow: hidden;
+}
+.team-lead > span {
+  background-color: var(--green);
+  height: 80px;
+  left: -50px;
+  position: absolute;
+  z-index: 2;
+  top: -50px;
+  width: 80px;
+  transform: rotate(-45deg);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+.card-body {
+  position: relative;
+}
+.card-body > .card-text {
+  z-index: 2;
+}
+
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+.card-img-overlay > a, .card-img-overlay > p, .card-img-overlay > button {
+  margin: auto;
+  color: white;
+  visibility: hidden;
+  font-size: 0px;
+  transition: 0.3s;
+}
+
+.card:hover > .card-img-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.card:hover > .card-img-overlay > a, .card:hover > .card-img-overlay > p, .card:hover > .card-img-overlay > button {
+  visibility: visible;
+  color: white;
+  font-size: 25px;
+}
+
+.Summitparent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.div1 {
+  flex: 1;
+  grid-area: 1/1/3/4;
+}
+
+.carousel-item-1 {
+  background: url("/media/stock2.jpeg");
+}
+
+.carousel-item-2 {
+  background: url("/media/stock2.jpeg");
+}
+
+.div2 {
+  flex: 1;
+  grid-area: 1/4/2/5;
+  background: url("/media/sjcet.jpg");
+}
+
+.div3 {
+  flex: 1;
+  grid-area: 2/4/3/5;
+  background: url("/media/stock-hackathon.jpg");
+}
+
+.div4 {
+  flex: 1;
+  grid-area: 3/2/4/5;
+  background: url("/media/stock2.jpeg");
+}
+
+.div5 {
+  flex: 1;
+  grid-area: 3/1/4/2;
+  background: url("/media/stock2.jpeg");
+}
+
+.carousel-item,
+.Summitparent > div,
+.eventGrid > div {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid 1.8px white;
+}
+
+.carousel-item {
+  border: none;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.eventGrid > div > .card-img-overlay {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+.eventGrid > div > .card-img-overlay > a, .eventGrid > div > .card-img-overlay > p {
+  margin: auto;
+  color: white;
+  visibility: hidden;
+  font-size: 0px;
+  transition: 0.3s;
+}
+
+.eventGrid > div:hover > .card-img-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+.eventGrid > div:hover > .card-img-overlay > a, .eventGrid > div:hover > .card-img-overlay > p {
+  visibility: visible;
+  color: white;
+  font-size: 25px;
+}
+
+.Event1 {
+  flex: 1;
+  grid-area: 1/1/3/3;
+}
+
+.Event2 {
+  flex: 1;
+  grid-area: 1/3/3/4;
+}
+
+.Event3 {
+  flex: 1;
+  grid-area: 1/4/2/5;
+}
+
+.Event4 {
+  flex: 1;
+  grid-area: 2/4/3/5;
+}
+
+.eventbody {
+  display: none;
+}
+
+#event1bg {
+  background: url("/media/stock-hackathon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+}/*# sourceMappingURL=style.css.map */
