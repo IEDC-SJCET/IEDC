@@ -8,4 +8,10 @@
 }
 .nav-item > a:hover, .nav-item > a:active, .nav-item > a:focus {
   background-size: 100% 100%;
+}
+
+#navbarfloat {
+  position: absolute;
+  top: 0;
+  left: 0;
 }/*# sourceMappingURL=navbar.css.map */
