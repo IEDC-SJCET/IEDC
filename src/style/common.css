@@ -31,3 +31,26 @@ html {
   color: white;
   background: var(--green);
 }
+
+.form-field {
+  height: 46px;
+  border: none;
+  border-left: 3px solid var(--green);
+  padding: 0 16px;
+  color: white;
+  outline: 0;
+  background: rgba(48, 48, 48, 0.536);
+  transition: 0.2s;
+}
+.form-field:hover, .form-field:focus {
+  color: white;
+  background: rgb(48, 48, 48);
+}
+
+.mybtn {
+  background-color: white;
+  color: black;
+  font-family: "Dm Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}/*# sourceMappingURL=common.css.map */

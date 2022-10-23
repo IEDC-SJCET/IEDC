@@ -16,6 +16,8 @@
   transition: 0.3s;
 }
 .eventGrid > div > .card-img-overlay > a, .eventGrid > div > .card-img-overlay > p {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
   margin: auto;
   color: white;
   visibility: hidden;
@@ -30,6 +32,7 @@
   visibility: visible;
   color: white;
   font-size: 25px;
+  font-size: 1rem;
 }
 
 .Event1 {
