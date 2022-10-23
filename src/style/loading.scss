@@ -44,3 +44,8 @@
         transform: rotate(360deg);
     }
 }
+
+.pageclip-form__submit::after {
+  
+  border-left-color: var(--green);
+}
