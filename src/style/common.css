@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;600;700&display=swap");
 :root {
   --green: #56c23e;
+  --grey:rgba(44, 44, 44, 0.165);
 }
 
 .greencolor {
@@ -48,7 +49,7 @@ html {
 }
 
 .mybtn {
-  background-color: white;
+  background-color: var(--grey);
   color: black;
   font-family: "Dm Sans", sans-serif;
   font-weight: bold;
