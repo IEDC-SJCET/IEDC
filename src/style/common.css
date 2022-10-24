@@ -62,4 +62,8 @@ html {
   font-family: "Dm Sans", sans-serif;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.card {
+  border-radius: 0;
 }/*# sourceMappingURL=common.css.map */

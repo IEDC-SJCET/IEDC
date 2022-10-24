@@ -1,48 +1,103 @@
 .execom-container {
 display: grid;
-grid-template-columns: repeat(7, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 2px;
-grid-row-gap: 2px;
+// grid-template-columns: repeat(7, 1fr);
+// grid-template-rows: repeat(3, 1fr);
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 3px;
+grid-row-gap: 3px;
+
+    
     .img1 { 
-        grid-area: 1 / 1 / 4 / 2;
+        // grid-area: 1 / 1 / 4 / 2;
+        grid-area: 1 / 1 / 2 / 2;
         flex: 1;
-        background: url("EXECOM/super-pics/CMO.jpg");
+        background: url("../../EXECOM/super-pics/CEO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .img2 { 
-        grid-area: 1 / 2 / 4 / 3; 
+        // grid-area: 1 / 2 / 4 / 3; 
+        grid-area: 1 / 2 / 2 / 3;
         flex: 1; 
-        background: url("EXECOM/super-pics/CCO.jpg");
+        background: url("../../EXECOM/super-pics/CCO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        
     }
     .img3 { 
-        grid-area: 1 / 3 / 4 / 4; 
+        // grid-area: 1 / 3 / 4 / 4; 
+        grid-area: 1 / 3 / 2 / 4;
         flex: 1; 
-        background: url("EXECOM/super-pics/CFO.jpg");
+        background: url("../../EXECOM/super-pics/CFO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .img4 { 
-        grid-area: 1 / 4 / 4 / 5; 
+        // grid-area: 1 / 4 / 4 / 5;
+        grid-area: 1 / 4 / 2 / 5;
         flex: 1; 
-        background: url("EXECOM/super-pics/COO.jpg");
+        background: url("../../EXECOM/super-pics/COO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .img5 { 
-        grid-area: 1 / 5 / 4 / 6; 
+        // grid-area: 1 / 5 / 4 / 6;
+        grid-area: 2 / 1 / 3 / 2;
         flex: 1; 
-        background: url("EXECOM/super-pics/CEO.jpg");
+        background: url("../../EXECOM/super-pics/CMO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .img6 { 
-        grid-area: 1 / 6 / 4 / 7; 
+        // grid-area: 1 / 6 / 4 / 7;
+        grid-area: 2 / 2 / 3 / 3;
         flex: 1; 
-        background: url("EXECOM/super-pics/CTO.jpg");
+        background: url("../../EXECOM/super-pics/CTO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .img7 { 
-        grid-area: 1 / 7 / 4 / 8; 
+        // grid-area: 1 / 7 / 4 / 8;
+        grid-area: 2 / 3 / 3 / 4;
         flex: 1; 
-        background: url("EXECOM/super-pics/CSO.jpg");
+        background: url("../../EXECOM/super-pics/CSO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .img8 {
+        grid-area: 2 / 4 / 3 / 5;
+        flex: 1;
+        background: url("../../EXECOM/super-pics/CSO.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
-
-.execom-container>div {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+#super-pics{
+.card-img-overlay {
+    background: rgba(0, 0, 0, 0);
+    transition: 0.3s;
+    &>a,
+    &>p,
+    &>button {
+        visibility: hidden;
+        font-size: 0px;
+        transition: 0.4s;
+    }
+}
+}
+#super-pics:hover>.card-img-overlay {
+    background: rgba(0, 0, 0, .3);
+    &>a{
+        visibility: visible;
+        font-size: 1rem;
+    }
 }
