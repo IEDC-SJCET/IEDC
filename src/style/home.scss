@@ -58,3 +58,9 @@
         background-size: 9px 9px;
         background-position:center;
 }
+#down-arrow {
+    font-size: 20px;
+    position: absolute;
+        bottom: 0;
+        left: calc(50vw - 10px);
+}
