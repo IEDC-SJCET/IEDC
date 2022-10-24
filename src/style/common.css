@@ -53,4 +53,12 @@ html {
   font-family: "Dm Sans", sans-serif;
   font-weight: bold;
   font-size: 1rem;
+}
+
+.mybtn2 {
+  background-color: transparent;
+  color: white;
+  font-family: "Dm Sans", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
 }/*# sourceMappingURL=common.css.map */
