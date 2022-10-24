@@ -78,7 +78,7 @@
 }
 
 #bgdots {
-  background-image: radial-gradient(rgba(107, 149, 255, 0.7098039216) 0.8px, rgba(253, 253, 254, 0) 0.45px);
+  background-image: radial-gradient(rgba(107, 149, 255, 0.4156862745) 0.8px, rgba(253, 253, 254, 0) 0.45px);
   background-size: 9px 9px;
   background-position: center;
 }/*# sourceMappingURL=home.css.map */
