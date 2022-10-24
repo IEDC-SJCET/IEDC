@@ -6,44 +6,152 @@
     grid-column-gap: 15px;
     grid-row-gap: 15px;
 }
+
+@media (max-width:767px) {
+    .Summitparent{
+        grid-column-gap: 3px;
+        grid-row-gap: 3px;
+    }
+    
+}
+.summit-cards {
+    border-left: 3px solid var(--green);
+    padding: 0 16px;
+    font-family: "Dm Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    background: rgba(48, 48, 48, 0.2);
+    transition: 0.3s;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: white;
+        background: rgba(48, 48, 48, 0.6);
+    }
+}
 .div1 {
     flex: 1;
-    grid-area: 1 / 1 / 3 / 4;
-}
-// add or alter images here and update it on html
-.carousel-item-1 {
-    background: url("src/media/stock2.jpeg");
-}
-.carousel-item-2 {
-    background: url("src/media/stock2.jpeg");
+    grid-area: 1 / 1 / 3 / 3;
 }
 .div2 {
     flex: 1;
-    grid-area: 1 / 4 / 2 / 5;
-    background: url("src/media/sjcet.jpg");
+    grid-area: 1 / 4 / 3 / 5;
 }
 .div3 {
     flex: 1;
-    grid-area: 2 / 4 / 3 / 5;
-    background: url("src/media/stock-hackathon.jpg");
+    grid-area: 3 / 4 / 4 / 5;
 }
 .div4 {
     flex: 1;
-    grid-area: 3 / 2 / 4 / 5;
-    background: url("src/media/stock2.jpeg");
+    grid-area: 3 / 1 / 4 / 3;
 }
 .div5 {
     flex: 1;
-    grid-area: 3 / 1 / 4 / 2;
-    background: url("src/media/stock2.jpeg");
+    grid-area: 2 / 3 / 4 / 4;
 }
+.div6 {
+    flex: 1;
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+// add or alter images here and update it on html
+.div1-carousel-item-1 {
+    background: url("../SUMMIT2022/drone.jpg");
+}
+
+.div1-carousel-item-2 {
+    background: url("../SUMMIT2022/prize.JPG");
+}
+
+.div1-carousel-item-3 {
+    background: url("../SUMMIT2022/lap.jpg");
+}
+
+
+
+// div2 
+.div2-carousel-item-1 {
+    background: url("../SUMMIT2022/innaguration.JPG");
+}
+
+.div2-carousel-item-2 {
+    background: url("../SUMMIT2022/hall.jpg");
+}
+
+.div2-carousel-item-3 {
+    background: url("../SUMMIT2022/crowd.jpg");
+}
+
+
+
+// div3 
+.div3-carousel-item-1 {
+    background: url("../SUMMIT2022/sjcet.jpg");
+}
+
+.div3-carousel-item-2 {
+    background: url("../SUMMIT2022/drawing.JPG");
+}
+
+.div3-carousel-item-3 {
+    background: url("../SUMMIT2022/iloveiedc.jpg");
+}
+
+
+
+// div4 
+.div4-carousel-item-1 {
+    background: url("../SUMMIT2022/volunteer.jpg");
+}
+
+.div4-carousel-item-2 {
+    background: url("../SUMMIT2022/registrration.jpg");
+}
+
+.div4-carousel-item-3 {
+    background: url("../SUMMIT2022/registrationdesk.jpg");
+}
+
+
+
+// div5 
+.div5-carousel-item-1 {
+    background: url("../SUMMIT2022/speech.JPG");
+}
+
+.div5-carousel-item-2 {
+    background: url("../SUMMIT2022/guests\ talking.jpg");
+}
+
+.div5-carousel-item-3 {
+    background: url("../SUMMIT2022/guest.JPG");
+}
+
+
+// div6 
+.div6-carousel-item-1 {
+    background: url("../SUMMIT2022/female\ singing.jpg");
+}
+
+.div6-carousel-item-2 {
+    background: url("../SUMMIT2022/singing.jpg");
+}
+
+.div6-carousel-item-3 {
+    background: url("../SUMMIT2022/male\ singing.jpg");
+}
+
+
+
 .carousel-item,
 .Summitparent>div {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border: solid 1.8px black;
 }
+
 .carousel-item {
     border: none;
 }
