@@ -11,29 +11,27 @@
         background-repeat: no-repeat;
         border: solid 1.8px white;
         &>.card-img-overlay {
-            background: rgba(0, 0, 0, 0);
             transition: 0.3s;
             &>a,
             &>p {
+                background-color: rgba(255, 255, 255, 0.7);
                 font-family: "Inter", sans-serif;
                 font-weight: bold;
                 margin: auto;
-                color: white;
                 visibility: hidden;
                 font-size: 0px;
-                transition: 0.3s;
+                transition: 0.4s;
             }
         }
     }
 }
-.eventGrid>div:hover>.card-img-overlay {
-    // color: rgba(255, 255, 255, 1);
-    background: rgba(0, 0, 0, .3);
+.eventGrid>div:hover>.card-img-overlay,
+.eventGrid>div:active>.card-img-overlay,
+.eventGrid>div:focus>.card-img-overlay {
     &>a,
     &>p {
         visibility: visible;
-        color: white;
-        font-size: 25px;
+        color: black;
         font-size: 1rem;
     }
 }
@@ -43,13 +41,26 @@
 }
 .Event2 {
     flex: 1;
-    grid-area: 1 / 3 / 3 / 4;
+    grid-area: 1 / 3 / 2 / 4;
 }
 .Event3 {
     flex: 1;
-    grid-area: 1 / 4 / 2 / 5;
+    grid-area: 2 / 3 / 3 / 4;
 }
 .Event4 {
     flex: 1;
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.Event5 {
+    flex: 1;
     grid-area: 2 / 4 / 3 / 5;
+}
+
+#eventsection {
+    background-color: #e5e5f700;
+        // opacity: 0.4;
+        background-image: radial-gradient(#56c23e96 1.1px, transparent 1.1px), radial-gradient(#56c23e96 1.1px, #e5e5f700 1.1px);
+        background-size: 44px 44px;
+        background-position: 0 0, 22px 22px;
 }

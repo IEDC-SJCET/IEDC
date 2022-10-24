@@ -12,26 +12,25 @@
   border: solid 1.8px white;
 }
 .eventGrid > div > .card-img-overlay {
-  background: rgba(0, 0, 0, 0);
   transition: 0.3s;
 }
 .eventGrid > div > .card-img-overlay > a, .eventGrid > div > .card-img-overlay > p {
+  background-color: rgba(255, 255, 255, 0.7);
   font-family: "Inter", sans-serif;
   font-weight: bold;
   margin: auto;
-  color: white;
   visibility: hidden;
   font-size: 0px;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 
-.eventGrid > div:hover > .card-img-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-.eventGrid > div:hover > .card-img-overlay > a, .eventGrid > div:hover > .card-img-overlay > p {
+.eventGrid > div:hover > .card-img-overlay > a, .eventGrid > div:hover > .card-img-overlay > p,
+.eventGrid > div:active > .card-img-overlay > a,
+.eventGrid > div:active > .card-img-overlay > p,
+.eventGrid > div:focus > .card-img-overlay > a,
+.eventGrid > div:focus > .card-img-overlay > p {
   visibility: visible;
-  color: white;
-  font-size: 25px;
+  color: black;
   font-size: 1rem;
 }
 
@@ -42,15 +41,27 @@
 
 .Event2 {
   flex: 1;
-  grid-area: 1/3/3/4;
+  grid-area: 1/3/2/4;
 }
 
 .Event3 {
   flex: 1;
-  grid-area: 1/4/2/5;
+  grid-area: 2/3/3/4;
 }
 
 .Event4 {
   flex: 1;
+  grid-area: 1/4/2/5;
+}
+
+.Event5 {
+  flex: 1;
   grid-area: 2/4/3/5;
+}
+
+#eventsection {
+  background-color: rgba(229, 229, 247, 0);
+  background-image: radial-gradient(rgba(86, 194, 62, 0.5882352941) 1.1px, transparent 1.1px), radial-gradient(rgba(86, 194, 62, 0.5882352941) 1.1px, rgba(229, 229, 247, 0) 1.1px);
+  background-size: 44px 44px;
+  background-position: 0 0, 22px 22px;
 }/*# sourceMappingURL=event-intro.css.map */
