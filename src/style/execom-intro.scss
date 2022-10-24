@@ -1,0 +1,48 @@
+.execom-container {
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 2px;
+grid-row-gap: 2px;
+    .img1 { 
+        grid-area: 1 / 1 / 4 / 2;
+        flex: 1;
+        background: url("EXECOM/super-pics/CMO.jpg");
+    }
+    .img2 { 
+        grid-area: 1 / 2 / 4 / 3; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/CCO.jpg");
+    }
+    .img3 { 
+        grid-area: 1 / 3 / 4 / 4; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/CFO.jpg");
+    }
+    .img4 { 
+        grid-area: 1 / 4 / 4 / 5; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/COO.jpg");
+    }
+    .img5 { 
+        grid-area: 1 / 5 / 4 / 6; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/CEO.jpg");
+    }
+    .img6 { 
+        grid-area: 1 / 6 / 4 / 7; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/CTO.jpg");
+    }
+    .img7 { 
+        grid-area: 1 / 7 / 4 / 8; 
+        flex: 1; 
+        background: url("EXECOM/super-pics/CSO.jpg");
+    }
+}
+
+.execom-container>div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
