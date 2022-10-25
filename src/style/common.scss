@@ -65,6 +65,15 @@ html {
     border-radius: 0!important;
 }
 
-a{
+a,button{
     text-decoration: none;
+    border-radius: 0 !important;
+    border: 0;
+    background-color: transparent;
+
+}
+#bgdots {
+    background-image: radial-gradient(#6b95ff6a .8px, #fdfdfe00 .45px);
+    background-size: 9px 9px;
+    background-position: center;
 }

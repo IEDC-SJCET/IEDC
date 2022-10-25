@@ -23,9 +23,21 @@ function loading() {
 // eventexternal
 function openEventDetails(y){
   var x = document.getElementById(y);
+  var divsToHide = document.getElementsByClassName('eventbody'); 
+    
   if (x.style.display == "none")
-      x.style.display = "flex";
-  else x.style.display = "none";      
+  {  
+      
+    for(var i = 0; i < divsToHide.length; i++){
+        divsToHide[i].style.display = "none"; // depending on what you're doing
+    }
+    x.style.display = "flex";
+  }
+    
+  else
+  {
+    x.style.display = "none";
+  }       
 }
 
 function reveal() {
