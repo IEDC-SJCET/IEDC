@@ -13,28 +13,78 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="col-12 min-vh-100 m-0 p-0 d-flex flex-column bg-black">
+    <div class="col-12 m-0 p-0 d-flex flex-column bg-white">
         <br><br class="d-none d-md-block">
-        <h2 class="fw-bolder text-white text-center m-0 p-0">
-           PAST EVENTS @ <span style="color: var(--green) ;">IEDC</span>
+        <h2 class="fw-bolder text-black text-center m-0 p-0">
+           BOOTCAMP <span style="color: var(--green) ;">EVENTS</span>
         </h2><br><br class="d-none d-md-block">
 
         <!-- event section -->
-        <div class="d-flex p-md-0  d-flex flex-column flex-wrap flex-md-row gap-1 justify-content-center col-12">
+        <div class="col-11 mx-auto">
             
-        <div class="col-6">
-            <div id="event1bg" class=" card rounded-0 p-0 border-0  col-12">
-                <button class="card-img-overlay h2 h-100 rounded-0 text-end" onclick="openEventDetails('event1')"> <i class="bi bi-chevron-right"></i></button>
+        
+        <div class="row col row-cols-md-2 row-cols-1 p-0 mt-4 border-0">
+            <div id="event1bg" class="col-6 col-md-6 card rounded-0 p-0 border mx-auto">
+                <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" class="img-fluid">
+                <button class="card-img-overlay h2 h-100 rounded-0 border-0" onclick="openEventDetails('event1')"></button>
             </div>
-            <div id="event1" class="col-12 bg-dark eventbody flex-column p-3 text-white">
-                <h5 class="card-title">Event Name</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            <div style="display: none;" id="event1"
+                class="card-body flex-grow-1 col-12 col-md-6 bg-light eventbody flex-column p-3 text-black flex-column">
+                <h5 class="mybtn">Event Name</h5>
+                <p class="mybtn text-black-50">This is a wider card with supporting text below as a natural lead-in to
+                    additional
                     content. This content is a little bit longer.</p>
-                <button class="btn btn-outline-info rounded-0 col-6 col-md-4">Register</button>
+                <span><button class="btn btn-dark mybtn rounded-5">Register</button></span>
             </div>
         </div>
-                
+        <br>
+        <div class="row col row-cols-md-2 row-cols-1 p-0 border-0">
+            <div id="event1bg" class="col-6 col-md-6 card rounded-0 p-0 border mx-auto">
+                <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" class="img-fluid">
+                <button class="card-img-overlay h2 h-100 rounded-0 border-0" onclick="openEventDetails('event2')"></button>
             </div>
+            <div style="display: none;" id="event2"
+                class="card-body flex-grow-1 col-12 col-md-6 bg-light eventbody flex-column p-3 text-black flex-column">
+                <h5 class="mybtn">Event Name</h5>
+                <p class="mybtn text-black-50">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                <span><button class="btn btn-dark mybtn rounded-5">Register</button></span>
+            </div>
+        </div>
+        <br>
+        <div class="row col row-cols-md-2 row-cols-1 p-0 border-0">
+            <div id="event1bg" class="col-6 col-md-6 card rounded-0 p-0 border mx-auto">
+                <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" class="img-fluid">
+                <button class="card-img-overlay h2 h-100 rounded-0 border-0" onclick="openEventDetails('event3')"></button>
+            </div>
+            <div style="display: none;" id="event3"
+                class="card-body flex-grow-1 col-12 col-md-6 bg-light eventbody flex-column p-3 text-black flex-column">
+                <h5 class="mybtn">Event Name</h5>
+                <p class="mybtn text-black-50">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                <span><button class="btn btn-dark mybtn rounded-5">Register</button></span>
+            </div>
+        </div>
+        <br>
+        <div class="row col row-cols-md-2 row-cols-1 p-0 border-0">
+            <div id="event1bg" class="col-6 col-md-6 card rounded-0 p-0 border mx-auto">
+                <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" class="img-fluid">
+                <button class="card-img-overlay h2 h-100 rounded-0 border-0" onclick="openEventDetails('event4')"></button>
+            </div>
+            <div style="display: none;" id="event4"
+                class="card-body flex-grow-1 col-12 col-md-6 bg-light eventbody flex-column p-3 text-black flex-column">
+                <h5 class="mybtn">Event Name</h5>
+                <p class="mybtn text-black-50">This is a wider card with supporting text below as a natural lead-in to
+                    additional
+                    content. This content is a little bit longer.</p>
+                <span><button class="btn btn-dark mybtn rounded-5">Register</button></span>
+            </div>
+        </div>
+        
+                
+        </div>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
