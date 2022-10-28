@@ -1,3 +1,5 @@
+setTimeout(loading(), 60000);
+
 function openAll(){
   var extraTabs = document.getElementById('extraTabs');
   var openButton = document.getElementById('openButton');
@@ -57,3 +59,6 @@ function reveal() {
 }
 
 window.addEventListener("scroll", reveal);
+function notibutton(){
+  document.getElementById('notification').style.visibility = 'hidden'; 
+}
