@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootcamp</title>
-    <link rel="shortcut icon" href="src/asset/bootcamp logo whitefill - Copy.png" type="image/x-icon">
+    <link rel="shortcut icon" href="src/asset/bootcamp logo whitefill - Copy.png" type="image/x-icon" fetchpriority="high">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" fetchpriority="high">
     <link rel="stylesheet" href="src/style/common.css">
     <link rel="stylesheet" href="src/style/form.css">
     <link rel="stylesheet" href="src/style/event-intro.css">
     <link rel="stylesheet" href="src/style/execom-intro.css">
-    <link rel="stylesheet" href="src/style/home.css">
+    <link rel="stylesheet" href="src/style/home.css" fetchpriority="high">
     <link rel="stylesheet" href="src/style/loading.css">
     <link rel="stylesheet" href="src/style/navbar.css">
     <link rel="stylesheet" href="src/style/summit-grid.css">
     <link rel="stylesheet" href="src/style/timeline.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" fetchpriority="high">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
-<body id="bgdots" class="m-0 p-0 bg-white" onload="loading()" style="overflow: hidden">
+<!-- onload="loading()" -->
+<body id="bgdots" class="m-0 p-0 bg-white"  style="overflow: hidden" onload="loading()">
     <div id="loading" class="bg-white vh-100 vw-100">
         <div id="loader" class="lds-ring">
             <div></div>
@@ -29,16 +30,19 @@
             <div></div>
         </div>
     </div>
-    <!-- home page  -->
+    <!-- home page -->
     <div id="homepage" class="homepage w-100 vh-100 m-0 p-0 d-flex flex-column">
-        
+        <img style="display: none;" src="src/media/sjcet.jpg" alt="" fetchpriority="high">
         <div class="w-100 align-self-center m-0 mx-auto p-0">
             <nav id="navbarfloat" class="navbar navbar-expand-md w-100 navbar-dark bg-white bg-transparent mt-md-1 mt-3">
+
+
+
                 <div class="container-xl col-lg-12 col-xl-10 mt-md-3">
                     <a class="navbar-brand lead fs-3 fw-bolder m-0 p-0 col-4 col-md-2" href="#">
-                        <img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="col-12 align-self-center"></a>
+                        <img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="col-12 align-self-center" fetchpriority="high"></a>
 
-                    <button class="navbar-toggler border-0 btn" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    <button class="navbar-toggler border-0 rounded-1 p-0" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="bi bi-list fs-1" style="color:white;"></i>
                     </button>
@@ -70,17 +74,32 @@
                 <h2 class="bigdot text-white col-11 m-auto ms-3 mb-0 fw-bolder display-4">
                     Discovering<br>
                 <!-- <div class="col-6 col-md-7 col-lg-5 text-start m-0 mt-1 ps-1"> -->
-                        <span id="changetext" class="fw-bolder display-5 m-0"></span><br>
+                        <span id="changetext" class="fw-bolder display-4 m-0"></span><br>
                 <!-- </div> -->
                 Students <br class="d-md-none">among us<i class="bi bi-circle-fill ps-1"></i>
                 </h2>
+                <h5 class="m-0 ms-3 fw-normal fs-5 text-light text-end text-md-start">Let Get Your
+                    <span class="greencolor">Dreams</span>
+                    Incubated</h5>
                 <a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-light mybtn2 rounded-5 col-md-4 me-auto mt-3 ms-3 mb-auto">Join us <i class="bi bi-chevron-right"></i></a>
                 <h5 class="m-0 ms-3 mb-3 fw-lighter fs-6 text-end text-md-start">
                     <a href="https://g.page/SJCETPALA?share" class=" text-white-50"><i class="bi bi-geo-alt-fill"></i> SJCET PALAI</a>
                 </h5>
             </div>
-            <div class="col-12 col-md-4 m-0 d-flex p-0">
-                
+            <div class="col-12 col-md-4 m-0 d-flex p-3">
+                <!-- notification box  -->
+
+                <div id="notification" class="w-100 m-auto d-none d-md-flex flex-column justify-content-between text-center rounded-2 bg-light shadow-lg p-2 pb-3">
+                    <div class="w-100 d-flex justify-content-between">
+                        <h3 class="m-0 p-0 d-flex text-dark align-items-center fw-bold fs-6">
+                            <i class="fs-6 bi bi-exclamation-circle-fill text-success"></i>&nbsp;Notification
+                        </h3>
+                        <span><button class="btn p-0" onclick="notibutton()" ><i class="fs-3 bi bi-x"></i></button></span>
+                    </div>
+                    <img src="src/EVENTS/Event details/dronethumbnail.jpg" alt="" srcset="" class="rounded-2" fetchpriority="high">
+                    <p>Workshop is currently alive at Makerspace</p>
+                    <span class="mx-auto"><a href="https://chat.whatsapp.com/FKXYa2wuP8dBpep6tAvSld" class="btn btn-success rounded-5 border text-white">Join <i class="bi bi-whatsapp"></i></a></span>
+                </div>
             </div>
         </div>
         <i id="down-arrow" class="bi bi-chevron-down mx-auto text-light"></i>
@@ -95,44 +114,44 @@
             <h5 class="col text-black-50 text-center fw-light fs-5 m-0">
                 Here students take their <br> first step as innovators and entrepreneurs
             </h5>
-            <div class="col row-cols-md-5 row-cols-2 d-flex flex-row flex-wrap gap-3 mt-5 px-5 px-md-0 list-unstyled">
+            <div class="col row-cols-md-5 row-cols-2 d-flex flex-row flex-wrap gap-3 mt-3 px-2 px-md-0 list-unstyled">
                 <li class="card flex-grow-1 bg-white p-2">
-                    <img class="py-3 whyiedcimg" src="src/media/entreprenuer.png" alt="" srcset="">
-                    <p class="h5 fs-5 p-0 bg-transparent">MENTORING</p>
+                    <img class="mx-auto py-3 whyiedcimg" src="src/media/entreprenuer.png" alt="" srcset="" fetchpriority="high">
+                    <p class="h5 fs-5 p-0 bg-transparent text-center">MENTORING</p>
                     <p class="h5 fs-6 p-0 bg-transparent text-black-50">
                         Startup bootcamp also provides mentoring support to help the students in developing innovative ideas, setting goals
                         and exploring careers which is best suited.
                     </p>
                 </li>
                 <li class="card flex-grow-1 bg-white p-2">
-                    <img class=" py-3 whyiedcimg" src="src/media/incubation.png" alt="" srcset="">
-                    <p class="h5 fs-5 p-0 bg-transparent">INCUBATION</p>
-                    <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
-                        Startup bootcamp provides incubation support to students by giving opportunity to express their innovative ideas and
-                        make it work
-                    </p>
-                </li>
-                <li class="card flex-grow-1 bg-white p-2">
-                    <img class=" py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset="">
-                    <p class="h5 fs-5 p-0 bg-transparent">INNOVATION</p>
+                    <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset="" fetchpriority="high">
+                    <p class="h5 fs-5 p-0 bg-transparent text-center">INNOVATION</p>
                     <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
                         Startup bootcamp provides students with assistance in projects through innovative ideas which can be utilised for future
                         endeavours
                     </p>
                 </li>
                 <li class="card flex-grow-1 bg-white p-2">
-                    <img class=" py-3 whyiedcimg" src="src/media/networking.png" alt="" srcset="">
-                    <p class="h5 fs-5 p-0 bg-transparent">NETWORKING</p>
+                    <img class="mx-auto py-3 whyiedcimg" src="src/media/networking.png" alt="" srcset="" fetchpriority="high">
+                    <p class="h5 fs-5 p-0 bg-transparent text-center">NETWORKING</p>
                     <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
                         Startup bootcamp also helps students in connecting them with other personalities to identify their potential and
                         increase their opportunities
                     </p>
                 </li>
+                <li class="card flex-grow-1 bg-white p-2">
+                    <img class="mx-auto py-3 whyiedcimg" src="src/media/incubation.png" alt="" srcset="" fetchpriority="high"> 
+                    <p class="h5 fs-5 p-0 bg-transparent text-center">INCUBATION</p>
+                    <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
+                        Startup bootcamp provides incubation support to students by giving opportunity to express their innovative ideas and
+                        make it work
+                    </p>
+                </li>
             </div>
         </div>
-        <div class="my-5">
+        <div class="mt-5 mb-1">
             <h2 id="bootcamp" class="text-black fw-bolder display-6 text-center">
-                SJCET <span style="color: var(--green) ;">BOOT</span>CAMP
+                SJCET BOOTCAMP - <span style="color: var(--green) ;">IEDC</span>
             </h2>
             <h5 class="text-black-50 fw-light fs-5 text-start m-0">
                 The SJCET Startup Bootcamp- IEDC (Innovation and Entrepreneurship Development Centre) was set up on 9th March
@@ -145,56 +164,81 @@
                 high quality mentorship, early risk capital and global exposure.
             </h5>
         </div>
-        <div class="my-5">
-            <h2 id="SJCETPALAI" class="text-black fw-bolder text-center display-6">
-                OUR <span style="color: var(--green) ;">VISION</span>
-            </h2>
-            <h5 class="text-black-50 fw-light fs-5 m-0">
-                Our goal is to build an ecosystem that allows students as well as faculties to innovate and create prototypes of
-                their
-                potential ideas with support from the Government, industries, and other renowned academic institutions around
-                the world
-                so that they can realize what they are capable of.
-            </h5>
+        <div class="col row-cols-md-4 row-cols-2 d-flex flex-row flex-wrap gap-3 px-2 px-md-3 list-unstyled">
+            <li class="card flex-grow-1 bg-white p-3 justify-content-center">
+                <!-- <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset=""> -->
+                <p class="h5 fs-5 p-0 bg-transparent text-center">VISION</p>
+                <p class="h5 fs-6 p-0 bg-transparent text-black-50">
+                    To create an innovation culture among Innovators by introducing them the State-of-the-art technologies and positioning the Institution as a Learning and Innovation Platform by delivering technically competent and skilled Entrepreneurs.
+                </p>
+            </li>
+            <!-- <li class="card flex-grow-1 bg-white p-2 justify-content-center">
+                 <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset="">
+                <p class="h5 fs-5 p-0 bg-transparent text-center">PURPOSE</p>
+                <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
+                    The purpose of the IEDCs will be to act as an aspirational platform, for the l student entrepreneurs and tech savvy innovators, in skilling and sharpening their entrepreneurial skill sets. The selected innovators will be exposed to Innovation culture, emerging technologies and Business aspects with the implicit assumption that the delta will become an entrepreneur and all the other skilled talents will get high end jobs with the kind of exposure and skills they acquire.
+                </p>
+            </li> -->
+            <li class="card flex-grow-1 bg-white p-3 justify-content-center">
+                <!-- <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset=""> -->
+                <p class="h5 fs-5 p-0 bg-transparent text-center">MISSION</p>
+                <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
+                    To create IEDC as an Innovation Platform and to create future founders by promoting Innovation, Technology and Business Learning among student community
+                </p>
+                <br>
+            </li>
         </div>
+        
+        <!-- <div class="my-1">
+            <h2 id="SJCETPALAI" class="text-black fw-bolder text-center display-6">
+                <span style="color: var(--green) ;">OBJECTIVE</span>
+            </h2>
+            <h5 class="text-black-50 fw-light fs-5 m-0 ">
+                <li class="list-unstyled">To promote an innovation driven entrepreneurship culture among the students</li>
+                <li class="list-unstyled">To develop and promote commercially viable innovative product and solution from the students.</li>
+                <li class="list-unstyled">To promote enterprise among budding technopreneurs and thereby creating more employment opportunities</li>
+                <li class="list-unstyled">To bridge the gap between Industry and Academia</li>
+                <li class="list-unstyled">To support the budding Entrepreneurs through Grants and to create an entrepreneurship flavour in the academic fraternity.</li>
+            </h5>
+        </div> -->
         <div class="my-5">
-            <h2 id="SJCETPALAI" class="text-black text-center fw-bolder display-6">
+            <h2 id="SJCETPALAI" class="text-black text-center fw-bolder display-6 m-0">
                 OUR <span style="color: var(--green) ;">SUPPORTERS</span>
             </h2>
             <!-- <h5 class="text-black-50 fw-light fs-4 m-0">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, deleniti!
             </h5> -->
             
-            <div class="col row-cols-md-4 row-cols-3 d-flex flex-row flex-wrap gap-3 mt-5 p-0 list-unstyled">
+            <div class="col row-cols-md-4 row-cols-3 d-flex flex-row flex-wrap gap-3 mt-2 p-0 list-unstyled">
                 <li style="min-height:150px ;" class="card flex-grow-1">
                     <img src="src/company-logo/ksum.png" alt="" srcset="" class="card-img m-auto img-fluid">
                         <a href="https://startupmission.kerala.gov.in" class="w-100 h-100 card-img-overlay"></a>
-                </li>
+                    </li>
+                    <li style="min-height:150px ;" class="card flex-grow-1">
+                        <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" srcset="" class="m-auto img-fluid">
+                        <a href="https://industry.kerala.gov.in/" class="w-100 h-100 card-img-overlay"></a>
+                    </li>
                 <li style="min-height:150px ;" class="card flex-grow-1">
                     <img src="src/company-logo/iedc.png" alt="" srcset="" class="m-auto img-fluid mx-3">
                     <a href="https://iedc.startupmission.in" class="w-100 h-100 card-img-overlay"></a>
                 </li>
-                <li style="min-height:150px ;" class="card flex-grow-1">
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
                     <img src="src/company-logo/bootcamp logo.png" alt="" srcset="" class="m-auto img-fluid">
                     <a href="https://iedc.sjcetpalai.ac.in" class="w-100 h-100 card-img-overlay"></a>
-                </li>
-                <li style="min-height:150px ;" class="card flex-grow-1">
+                </li> -->
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
                     <img src="src/company-logo/india startup.png" alt="" srcset="" class="m-auto img-fluid mx-3">
                     <a href="https://www.startupindia.gov.in/" class="w-100 h-100 card-img-overlay"></a>
-                </li>
-                <li style="min-height:150px ;" class="card flex-grow-1">
+                </li> -->
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
                     <img src="src/company-logo/sjcetpalai.png" alt="" srcset="" class="m-auto img-fluid">
                     <a href="https://sjcetpalai.ac.in/" class="w-100 h-100 card-img-overlay"></a>
-                </li>
-                <li style="min-height:150px ;" class="card flex-grow-1">
-                    <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" srcset="" class="m-auto img-fluid">
-                    <a href="https://industry.kerala.gov.in/" class="w-100 h-100 card-img-overlay"></a>
-                </li>
+                </li> -->
             </div>
         </div>
         <div>
-            <h3 class="col-12 text-black-50 fs-6 fw-bold m-0 text-center text-md-start">FOLLOW US ON</h3>
-            <div class="d-flex gap-3 gap-md-5 fs-3 list-unstyled justify-content-md-start justify-content-center">
+            <h3 class="col-12 text-black-50 fs-6 fw-bold m-0 text-md-center text-start">FOLLOW US ON</h3>
+            <div class="d-flex gap-3 gap-md-5 fs-3 list-unstyled justify-content-md-center justify-content-start">
                 <li>
                     <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-black-50"><i
                             class="bi bi-linkedin"></i></a>
@@ -230,24 +274,38 @@
         <h2 id="EVENTS" class="fw-bolder text-black text-center m-0 p-0 display-6 mt-5">
             BOOTCAMP <span style="color: var(--green) ;">EVENTS</span>
         </h2><br><br class="d-none d-md-block">
+<script>
+function notibutton(){
+    document.getElementById('notification').style.visibility = 'hidden'; 
+//   console.log("time end");
+}
+// console.log("loading done");
+function loading() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loading").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflowY = "auto";
 
-        <div class="eventGrid col-12 d-flex flex-column d-md-grid">
+    // noti = setTimeout(notibutton, 60000);
+    // console.log("time starts now");
+}   
+</script>
+        <div class="eventGrid col-12 d-flex flex-column d-md-grid" onload="loading()">
             <div class="Event1 bg-white card border">
+                <div class="card-img">
+                    <img src="src/EVENTS/Event details/2 day drone workshop-29th,30th Oct , 2022.jpg" alt="" srcset="" class="img-fluid">
+                </div>
+                <div class="card-img-overlay rounded-0 d-flex flex-column">
+                    <a href="https://bit.ly/Drone-Wrkshp" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
+                </div>
+            </div>
+            <div class="Event2 bg-white card border">
                 <div class="card-img">
                     
                     <img src="src/EVENTS/Event details/wed.jpg" alt="" srcset=""
                         class="img-fluid my-auto">
                 </div>
                 <div class="card-img-overlay rounded-0 d-flex flex-column">
-                    <a href="http://bit.ly/wed-Cafe" class=" m-auto mb-4 btn btn-light rounded-5 border text-success">Reg now <i class="bi bi-check-circle"></i></a>
-                </div>
-            </div>
-            <div class="Event2 bg-white card border">
-                <div class="card-img">
-                    <img src="src/EVENTS/Event details/2 day drone workshop-29th,30th Oct , 2022.jpg" alt="" srcset="" class="img-fluid">
-                </div>
-                <div class="card-img-overlay rounded-0 d-flex flex-column">
-                    <a href="https://bit.ly/Drone-Wrkshp" class=" m-auto mb-4 btn btn-light rounded-5 border text-danger">Reg closing soon <i class="bi bi-clock"></i></a>
+                    <a href="http://bit.ly/wed-Cafe" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
                 </div>
             </div>
             <div class="Event3 bg-white card border">
@@ -286,6 +344,7 @@
         <br>
     </div>
     </div>
+    
     <!-- the summit page  -->
     <div class="container-xl mx-md-auto m-0 my-5 p-2 d-flex flex-column justify-content-start">
         <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0 display-6">
@@ -538,45 +597,56 @@
             <div class="timeline col-12">
                 <div class="conbox left">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">SEPTEMBER 2019</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">NASA Space Apps Challenge Hackathon</p>
+                        <h3 class="fw-bold fs-5 m-0">IEDC SUMMIT 2022</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">It’s the 6th edition of IEDC summit
+                        It was a 2 day long summit conducted on 5th March 2022
+                        Hosted by St Joseph’s College of Engineering and Technology</p>
                     </div>
                 </div>
                 <div class="conbox  right">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">JANUARY 2020</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">Smart India Hackathon 2020(SIH) by MHRD and AICTE</p>
+                        <h3 class="fw-bold fs-5 m-0">INDIA 500 STARTUP AWARD 2020</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">Hyperthink Technologies by SJCET graduates Mr. Anto Patrex and Mr.Tahseen Amin was nominated</p>
                     </div>
                 </div>
                 <div class="conbox  left">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">OCTOBER 2020</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">WORLD BLOCKCHAIN HACKATHON</p>
+                        <h3 class="fw-bold fs-5 m-0">CASH GRANT OF INR 1 LAC</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">Cash grant was awarded from Idea Fest organized by KSUM
+                        Product prototype was E-LENDING MACHINE that enables lending and booking of development boards,sensors etc</p>
                     </div>
                 </div>
                 <div class="conbox  right">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">JUNE 2021</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">7-DAY ALGORITHM CHALLENGE</p>
+                        <h3 class="fw-bold fs-5 m-0">LAMAARA TECHNOLOGIES</h3>
+                        <p class="text-black-50 fw-bold fs-6 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</p><br>
+                        <ul>
+                            <li class="h3 text-black-50 fw-bold fs-6 m-0">Lamaara Techonologies were selected for idea grand in 2017 of 2 Lakhs</li>
+                            <li class="h3 text-black-50 fw-bold fs-6 m-0">Lamara Techologies achieved investment at TIECON KERALA in the year 2019 from Chennai Angels</li>
+                            <li class="h3 text-black-50 fw-bold fs-6 m-0">Cofounders was being named among the 50 most Influential
+                            People of 2019 in Kerala by the Kerala Insider.</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="conbox  left">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">SEPTEMBER 2021</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">SOCIO-INDUSTRIAL HACKATHON SERIES</p>
+                        <h3 class="fw-bold fs-5 m-0">GRAND FINALE OF STARTUP INDIA</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">IEDC Startup Bootcamp SJCET bagged three prizes at the Grand Finale of Startup India Kerala Stratup Yatra in the year 2018 Organised by Startup India and Kerala Startup Mission at Technopark,Trivandram</p>
                         <p class="text-black-50 fw-bold fs-6 m-0">IDEA FEST 2021</p>
                     </div>
                 </div>
                 <div class="conbox  right">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">NOVEMBER 2021</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">#BUILDWITHAI HACKATHON</p>
+                        <h3 class="fw-bold fs-5 m-0">ENTREPRENEURSHIP ENABLER AWARD 2018</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">Entrepreneurship Enabler Award 2018 of Kerala Startup Mission
+                        Award was handovered by Sri M Sivasankar IAS( Secretary to CM and IT Secretary)</p>
                     </div>
                 </div>
                 <div class="conbox  left">
                     <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-5 m-0">DECEMBER 2021</h3>
-                        <p class="text-black-50 fw-bold fs-6 m-0">HACK-O-FEST</p>
+                        <h3 class="fw-bold fs-5 m-0">ALL INDIA PERSISTENT INSPIRATION AWARD</h3><br>
+                        <p class="text-black-50 fw-bold fs-6 m-0">Reon Saji, Praveen K S, Sandeep Salmon, Smitha John, Hanna George and Neethu Naduvathettu bagged the at the 2nd Smart
+                        India Hackathon, which is the world’s biggest Hackathon.</p>
                     </div>
                 </div>
             </div>
@@ -650,6 +720,7 @@
 
 </div>
 </div>
+
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

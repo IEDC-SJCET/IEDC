@@ -70,6 +70,10 @@
   background-position-x: center;
 }
 
+.bigdot {
+  line-height: 0.9em;
+}
+
 .bigdot > div {
   line-height: 0.4em;
   background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
@@ -79,6 +83,18 @@
   transition: background 0.5s;
 }
 
+#notification {
+  display: flex;
+  visibility: visible;
+  min-height: 250px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #notification {
+    display: none;
+  }
+}
 #bgdots {
   background-image: radial-gradient(rgba(107, 149, 255, 0.4156862745) 0.8px, rgba(253, 253, 254, 0) 0.45px);
   background-size: 9px 9px;
