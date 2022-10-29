@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="src/style/timeline.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" fetchpriority="high">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    
 </head>
 <!-- onload="loading()" -->
 <body id="bgdots" class="m-0 p-0 bg-white"  style="overflow: hidden" onload="loading()">
@@ -33,14 +34,20 @@
     <!-- home page -->
     <div id="homepage" class="homepage w-100 vh-100 m-0 p-0 d-flex flex-column">
         <img style="display: none;" src="src/media/sjcet.jpg" alt="" fetchpriority="high">
+        <style>
+            #homepage {
+                position: relative;
+                background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(src/media/sjcet.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: center;
+            }
+        </style>
         <div class="w-100 align-self-center m-0 mx-auto p-0">
             <nav id="navbarfloat" class="navbar navbar-expand-md w-100 navbar-dark bg-white bg-transparent mt-md-1 mt-3">
-
-
-
-                <div class="container-xl col-lg-12 col-xl-10 mt-md-3">
+                <div class="container-xl col-xl-10 mt-md-3">
                     <a class="navbar-brand lead fs-3 fw-bolder m-0 p-0 col-4 col-md-2" href="#">
-                        <img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="col-12 align-self-center" fetchpriority="high"></a>
+                        <img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid" fetchpriority="high"></a>
 
                     <button class="navbar-toggler border-0 rounded-1 p-0" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -69,24 +76,25 @@
                 </div>
             </nav>
         </div>
-        <div class="row container-xl col-lg-12 col-xl-10 mx-auto p-0 flex-grow-1 flex-wrap-reverse mt-5">
-            <div class="col-12 col-md-8 m-0 d-flex flex-column p-md-0">
-                <h2 class="bigdot text-white col-11 m-auto ms-3 mb-0 fw-bolder display-4">
+        <div class="row container-xl col-lg-12 col-xl-10 mx-auto px-2 px-md-3 flex-grow-1 flex-wrap-reverse mt-5">
+            <div class="col-12 col-md-8 m-0 d-flex flex-column  p-md-0">
+                <div class="mt-5 p-5 d-md-none"></div>
+                <h2 class="bigdot text-white w-100 m-auto mb-0 mt-auto fw-bolder display-4">
                     Discovering<br>
                 <!-- <div class="col-6 col-md-7 col-lg-5 text-start m-0 mt-1 ps-1"> -->
-                        <span id="changetext" class="fw-bolder display-4 m-0"></span><br>
+                        <span id="changetext"></span><br>
                 <!-- </div> -->
-                Students <br class="d-md-none">among us<i class="bi bi-circle-fill ps-1"></i>
+                Students among us&nbsp;<i class="bi bi-circle-fill"></i>
                 </h2>
-                <h5 class="m-0 ms-3 fw-normal fs-5 text-light text-start">Let Get Your
+                <h5 class="m-0 fw-normal fs-5 text-light text-start">&nbsp;Let Get Your
                     <span class="greencolor">Dreams</span>
                     Incubated</h5>
-                <a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-light mybtn2 rounded-5 col-md-4 me-auto mt-3 ms-3 mb-auto">Join us <i class="bi bi-chevron-right"></i></a>
-                <h5 class="m-0 ms-3 mb-3 fw-lighter fs-6 text-end text-md-start">
+                <a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-light mybtn2 rounded-5 col-md-4 me-auto mt-3 mb-auto">Join us <i class="bi bi-chevron-right"></i></a>
+                <!-- <h5 class="m-0 ms-3 mb-3 fw-lighter fs-6 text-end text-md-start">
                     <a href="https://g.page/SJCETPALA?share" class=" text-white-50"><i class="bi bi-geo-alt-fill"></i> SJCET PALAI</a>
-                </h5>
+                </h5> -->
             </div>
-            <div class="col-12 col-md-4 m-0 d-flex p-3">
+            <div class="col-12 col-md-4 m-0 d-none d-md-flex p-3">
                 <!-- notification box  -->
 
                 <div id="notification" class="w-100 m-auto d-none d-md-flex flex-column justify-content-between text-center rounded-2 bg-light shadow-lg p-2 pb-3">
