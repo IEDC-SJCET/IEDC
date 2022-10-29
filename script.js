@@ -21,7 +21,7 @@ function loading() {
     document.getElementById("loading").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
 
-    noti = setTimeout(notibutton(), 10000);
+    //noti = setTimeout(notibutton(), 10000);
     
 }
 
