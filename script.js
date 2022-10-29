@@ -1,4 +1,4 @@
-setTimeout(loading(), 60000);
+
 
 function openAll(){
   var extraTabs = document.getElementById('extraTabs');
@@ -20,6 +20,9 @@ function loading() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loading").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
+
+    noti = setTimeout(notibutton(), 10000);
+    
 }
 
 // eventexternal
@@ -57,8 +60,5 @@ function reveal() {
         }
     }
 }
-
-window.addEventListener("scroll", reveal);
-function notibutton(){
-  document.getElementById('notification').style.visibility = 'hidden'; 
-}
+// window.addEventListener("scroll", reveal);
+load = setTimeout(loading(), 150000);
