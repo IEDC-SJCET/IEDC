@@ -5,6 +5,7 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
+    js:loading();
     &>div {
         background-size: cover;
         background-position: center;

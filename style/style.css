@@ -162,15 +162,10 @@ p, nav, h5, h3, .h3 {
   background-position-x: center;
 }
 
-.bigdot > div,
-.nav-item > a {
-  line-height: 0.4em;
-  background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
-  background-position: 0 1em 1em;
-  background-size: 0 100%;
-  background-repeat: no-repeat;
-  transition: background 0.5s;
+.bigdot {
+  line-height: .9em;
 }
+
 .bigdot > div:hover, .bigdot > div:active, .bigdot > div:focus,
 .nav-item > a:hover,
 .nav-item > a:active,
@@ -485,8 +480,22 @@ textarea {
 }/*# sourceMappingURL=style.css.map */
 
 #DETAILEDPAGE{
-background-color: white;
+  background-color: white;
   opacity: 0.9;
   background-image: radial-gradient(#6b95ff75 .045px, #fdfdfe .45px);
   background-size: 9px 9px;
 }
+
+#notification {
+  display: flex;
+  visibility:visible;
+  height: 300px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  #notification {
+    display: none;
+  }
+}
+
