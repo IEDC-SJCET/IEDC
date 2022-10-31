@@ -8,23 +8,24 @@
     <link rel="shortcut icon" href="src/asset/bootcamp logo whitefill - Copy.png" type="image/x-icon" fetchpriority="high">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" fetchpriority="high">
-    <link rel="stylesheet" href="src/style/common.css">
+    <link rel="stylesheet" href="src/style/common.css" fetchpriority="high">
     <link rel="stylesheet" href="src/style/form.css">
     <link rel="stylesheet" href="src/style/event-intro.css">
     <link rel="stylesheet" href="src/style/execom-intro.css">
     <link rel="stylesheet" href="src/style/home.css" fetchpriority="high">
-    <link rel="stylesheet" href="src/style/loading.css">
-    <link rel="stylesheet" href="src/style/navbar.css">
+    <link rel="stylesheet" href="src/style/loading.css" fetchpriority="high">
+    <link rel="stylesheet" href="src/style/navbar.css" fetchpriority="high">
     <link rel="stylesheet" href="src/style/summit-grid.css">
     <link rel="stylesheet" href="src/style/timeline.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" fetchpriority="high">
     <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" fetchpriority="high">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <!-- onload="loading()" -->
-<body id="bgdots" class="m-0 p-0 bg-white"  style="overflow: hidden" onload="loading()">
-    <div id="loading" class="bg-white vh-100 vw-100">
-        <div id="loader" class="lds-ring">
+<body id="bgdots" class="m-0 p-0"  style="overflow: hidden" onload="loading()">
+    <div id="loading" class="vh-100 vw-100">
+        <div id="loader" class="lds-ring shadow-lg">
             <div></div>
             <div></div>
             <div></div>
@@ -56,19 +57,19 @@
 
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="ms-auto mt-3 navbar-nav gap-md-4 gap-3 fs-6 fw-bold">
-                            <li class="nav-item">
+                            <li class="nav-item" data-aos="fade-left" data-aos-duration="500">
                                 <a class="nav-link active text-white" href="#whyiedc">WHY IEDC</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-aos="fade-left" data-aos-duration="700">
                                 <a class="nav-link active text-white" href="#EVENTS">EVENTS</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-aos="fade-left" data-aos-duration="900">
                                 <a class="nav-link active text-white" href="#SUMMIT2022">SUMMIT</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-aos="fade-left" data-aos-duration="1100">
                                 <a class="nav-link active text-white" href="#EXECOM">EXECOM</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item" data-aos="fade-left" data-aos-duration="1300">
                                 <a class="nav-link active text-white" href="#ABOUTUS">ABOUT US</a>
                             </li>
                         </ul>
@@ -77,27 +78,27 @@
             </nav>
         </div>
         <div class="row container-xl col-lg-12 col-xl-10 mx-auto px-2 px-md-3 flex-grow-1 flex-wrap-reverse mt-5">
-            <div class="col-12 col-md-8 m-0 d-flex flex-column  p-md-0">
+            <div class="col-12 col-md-8 m-0 d-flex flex-column  p-md-0" >
                 <div class="mt-5 p-5 d-md-none"></div>
-                <h2 class="bigdot text-white w-100 m-auto mb-0 mt-auto fw-bolder display-4">
+                <h2 class="bigdot text-white w-100 m-auto mb-0 mt-auto fw-bolder display-4" data-aos="fade-up" data-aos-duration="2000">
                     Discovering<br>
                 <!-- <div class="col-6 col-md-7 col-lg-5 text-start m-0 mt-1 ps-1"> -->
-                        <span id="changetext"></span><br>
+                        <span id="changetext"> </span><br>
                 <!-- </div> -->
                 Students among us&nbsp;<i class="bi bi-circle-fill"></i>
                 </h2>
-                <h5 class="m-0 fw-normal fs-5 text-light text-start">&nbsp;Let Get Your
+                <h5 class="m-0 fw-normal fs-5 text-light text-start" data-aos="fade-up" data-aos-duration="2500">&nbsp;Let Get Your
                     <span class="greencolor">Dreams</span>
                     Incubated</h5>
-                <a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-light mybtn2 rounded-5 col-md-4 me-auto mt-3 mb-auto">Join us <i class="bi bi-chevron-right"></i></a>
+                <a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-light mybtn2 rounded-5 col-md-4 me-auto mt-3 mb-auto" data-aos="fade-up" data-aos-duration="3000">Join us <i class="bi bi-chevron-right"></i></a>
                 <!-- <h5 class="m-0 ms-3 mb-3 fw-lighter fs-6 text-end text-md-start">
                     <a href="https://g.page/SJCETPALA?share" class=" text-white-50"><i class="bi bi-geo-alt-fill"></i> SJCET PALAI</a>
                 </h5> -->
             </div>
             <div class="col-12 col-md-4 m-0 d-none d-md-flex p-3">
                 <!-- notification box  -->
-
-                <div id="notification" class="w-100 m-auto d-none d-md-flex flex-column justify-content-between text-center rounded-2 bg-light shadow-lg p-2 pb-3">
+                <!-- d-md-flex -->
+                <div id="notification" class="w-100 m-auto d-none  flex-column justify-content-between text-center rounded-2 bg-light shadow-lg rounded-3 p-2 pb-3" data-aos="fade-up" data-aos-duration="3000">
                     <div class="w-100 d-flex justify-content-between">
                         <h3 class="m-0 p-0 d-flex text-dark align-items-center fw-bold fs-6">
                             <i class="fs-6 bi bi-exclamation-circle-fill text-success"></i>&nbsp;Notification
@@ -116,14 +117,14 @@
     <div>
     <div class="row container-xl mx-md-auto m-0 p-0 d-flex flex-column justify-content-around gap-5">
         <div class="my-5">
-            <div id="whyiedc" class="col text-black fw-bolder display-6 text-center">
+            <div id="whyiedc" class="col text-black fw-bolder display-6 text-center" data-aos="fade-up" data-aos-duration="1200">
                 WHY <span style="color: var(--green) ;">IEDC</span>?
             </div>
-            <h5 class="col text-black-50 text-center fw-light fs-5 m-0">
+            <h5 class="col text-black-50 text-center fw-light fs-5 m-0" data-aos="fade-up" data-aos-duration="1400">
                 Here students take their <br> first step as innovators and entrepreneurs
             </h5>
             <div class="col row-cols-md-5 row-cols-2 d-flex flex-row flex-wrap gap-3 mt-3 px-2 px-md-0 list-unstyled">
-                <li class="card flex-grow-1 bg-white p-2">
+                <li class="card flex-grow-1 bg-white p-2 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="1000">
                     <img class="mx-auto py-3 whyiedcimg" src="src/media/entreprenuer.png" alt="" srcset="" fetchpriority="high">
                     <p class="h5 fs-5 p-0 bg-transparent text-center">MENTORING</p>
                     <p class="h5 fs-6 p-0 bg-transparent text-black-50">
@@ -131,7 +132,7 @@
                         and exploring careers which is best suited.
                     </p>
                 </li>
-                <li class="card flex-grow-1 bg-white p-2">
+                <li class="card flex-grow-1 bg-white p-2 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="1500">
                     <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset="" fetchpriority="high">
                     <p class="h5 fs-5 p-0 bg-transparent text-center">INNOVATION</p>
                     <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
@@ -139,7 +140,7 @@
                         endeavours
                     </p>
                 </li>
-                <li class="card flex-grow-1 bg-white p-2">
+                <li class="card flex-grow-1 bg-white p-2 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="2000">
                     <img class="mx-auto py-3 whyiedcimg" src="src/media/networking.png" alt="" srcset="" fetchpriority="high">
                     <p class="h5 fs-5 p-0 bg-transparent text-center">NETWORKING</p>
                     <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
@@ -147,7 +148,7 @@
                         increase their opportunities
                     </p>
                 </li>
-                <li class="card flex-grow-1 bg-white p-2">
+                <li class="card flex-grow-1 bg-white p-2 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="2500">
                     <img class="mx-auto py-3 whyiedcimg" src="src/media/incubation.png" alt="" srcset="" fetchpriority="high"> 
                     <p class="h5 fs-5 p-0 bg-transparent text-center">INCUBATION</p>
                     <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
@@ -158,10 +159,10 @@
             </div>
         </div>
         <div class="mt-5 mb-1">
-            <h2 id="bootcamp" class="text-black fw-bolder display-6 text-center">
+            <h2 id="bootcamp" class="text-black fw-bolder display-6 text-center" data-aos="fade-up" data-aos-duration="1000">
                 SJCET BOOTCAMP - <span style="color: var(--green) ;">IEDC</span>
             </h2>
-            <h5 class="text-black-50 fw-light fs-5 text-start m-0">
+            <h5 class="text-black-50 fw-light fs-5 text-start m-0" data-aos="fade-up" data-aos-duration="1400">
                 The SJCET Startup Bootcamp- IEDC (Innovation and Entrepreneurship Development Centre) was set up on 9th March
                 2015 as a part of the Kerala Startup Mission (KSUM) initiative to develop a startup culture amongst students.
                 The IEDCs are platforms set up in Engineering, Management, Arts & Science Colleges and Polytechnics with an aim
@@ -173,7 +174,7 @@
             </h5>
         </div>
         <div class="col row-cols-md-4 row-cols-2 d-flex flex-row flex-wrap gap-3 px-2 px-md-3 list-unstyled">
-            <li class="card flex-grow-1 bg-white p-3 justify-content-center">
+            <li class="card flex-grow-1 bg-white p-3 justify-content-center shadow-lg rounded-3"  data-aos="fade-left" data-aos-duration="1500">
                 <!-- <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset=""> -->
                 <p class="h5 fs-5 p-0 bg-transparent text-center">VISION</p>
                 <p class="h5 fs-6 p-0 bg-transparent text-black-50">
@@ -187,7 +188,7 @@
                     The purpose of the IEDCs will be to act as an aspirational platform, for the l student entrepreneurs and tech savvy innovators, in skilling and sharpening their entrepreneurial skill sets. The selected innovators will be exposed to Innovation culture, emerging technologies and Business aspects with the implicit assumption that the delta will become an entrepreneur and all the other skilled talents will get high end jobs with the kind of exposure and skills they acquire.
                 </p>
             </li> -->
-            <li class="card flex-grow-1 bg-white p-3 justify-content-center">
+            <li class="card flex-grow-1 bg-white p-3 justify-content-center shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="2000">
                 <!-- <img class="mx-auto py-3 whyiedcimg" src="src/media/bulb.png" alt="" srcset=""> -->
                 <p class="h5 fs-5 p-0 bg-transparent text-center">MISSION</p>
                 <p class="h5 fs-6 p-0 text-black-50 bg-transparent">
@@ -218,56 +219,56 @@
             </h5> -->
             
             <div class="col row-cols-md-4 row-cols-3 d-flex flex-row flex-wrap gap-3 mt-2 p-0 list-unstyled">
-                <li style="min-height:150px ;" class="card flex-grow-1">
+                <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="1500">
                     <img src="src/company-logo/ksum.png" alt="" srcset="" class="card-img m-auto img-fluid">
                         <a href="https://startupmission.kerala.gov.in" class="w-100 h-100 card-img-overlay"></a>
                     </li>
-                    <li style="min-height:150px ;" class="card flex-grow-1">
-                        <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" srcset="" class="m-auto img-fluid">
+                    <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="2000">
+                        <img src="src/company-logo/1363215-department-of-industries-kerala.webp" alt="" srcset="" class="card-img m-auto rounded-3 img-fluid">
                         <a href="https://industry.kerala.gov.in/" class="w-100 h-100 card-img-overlay"></a>
                     </li>
-                <li style="min-height:150px ;" class="card flex-grow-1">
+                <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3" data-aos="fade-left" data-aos-duration="2500">
                     <img src="src/company-logo/iedc.png" alt="" srcset="" class="m-auto img-fluid mx-3">
                     <a href="https://iedc.startupmission.in" class="w-100 h-100 card-img-overlay"></a>
                 </li>
-                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3">
                     <img src="src/company-logo/bootcamp logo.png" alt="" srcset="" class="m-auto img-fluid">
                     <a href="https://iedc.sjcetpalai.ac.in" class="w-100 h-100 card-img-overlay"></a>
                 </li> -->
-                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3">
                     <img src="src/company-logo/india startup.png" alt="" srcset="" class="m-auto img-fluid mx-3">
                     <a href="https://www.startupindia.gov.in/" class="w-100 h-100 card-img-overlay"></a>
                 </li> -->
-                <!-- <li style="min-height:150px ;" class="card flex-grow-1">
+                <!-- <li style="min-height:150px ;" class="card flex-grow-1 shadow-lg rounded-3">
                     <img src="src/company-logo/sjcetpalai.png" alt="" srcset="" class="m-auto img-fluid">
                     <a href="https://sjcetpalai.ac.in/" class="w-100 h-100 card-img-overlay"></a>
                 </li> -->
             </div>
         </div>
         <div>
-            <h3 class="col-12 text-black-50 fs-6 fw-bold m-0 text-md-center text-start">FOLLOW US ON</h3>
+            <h3 class="col-12 text-black-50 fs-6 fw-bold m-0 text-md-center text-start" data-aos="fade-up" data-aos-duration="1200">FOLLOW US ON</h3>
             <div class="d-flex gap-3 gap-md-5 fs-3 list-unstyled justify-content-md-center justify-content-start">
-                <li>
+                <li data-aos="fade-up" data-aos-duration="1400">
                     <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-black-50"><i
                             class="bi bi-linkedin"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-duration="1700">
                     <a href="https://www.instagram.com/sjcetbootcamp/" class=" text-black-50"><i
                             class="bi bi-instagram"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-duration="2000">
                     <a href="https://www.twitter.com/sjcetbootcamp" class=" text-black-50"><i
                             class="bi bi-twitter"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-duration="2300">
                     <a href="https://www.facebook.com/sjcetbootcamp" class=" text-black-50 p-0"><i
                             class="bi bi-facebook"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-duration="2600">
                     <a href="https://discord.gg/5FCxcERP" class=" text-black-50 p-0"><i
                             class="bi bi-discord"></i></a>
                 </li>
-                <li>
+                <li data-aos="fade-up" data-aos-duration="2900">
                     <a href="https://www.youtube.com/channel/UC6v9cPvbBx4b4uyPUgtN5g" class=" text-black-50 p-0"><i
                             class="bi bi-youtube"></i></a>
                 </li>
@@ -279,7 +280,7 @@
     <div>
     <div class="container-xl mx-md-auto m-0 p-2 d-flex flex-column justify-content-start">
         <br><br>
-        <h2 id="EVENTS" class="fw-bolder text-black text-center m-0 p-0 display-6 mt-5">
+        <h2 id="EVENTS" class="fw-bolder text-black text-center m-0 p-0 display-6 mt-5" data-aos="fade-up" data-aos-duration="1200">
             BOOTCAMP <span style="color: var(--green) ;">EVENTS</span>
         </h2><br><br class="d-none d-md-block">
 <script>
@@ -298,7 +299,7 @@ function loading() {
 }   
 </script>
         <div class="eventGrid col-12 d-flex flex-column d-md-grid" onload="loading()">
-            <div class="Event1 bg-white card border">
+            <div class="Event1 bg-white card border" data-aos="fade-up" data-aos-duration="1200">
                 <div class="card-img">
                     <img src="src/EVENTS/Event details/2 day drone workshop-29th,30th Oct , 2022.jpg" alt="" srcset="" class="img-fluid">
                 </div>
@@ -306,7 +307,7 @@ function loading() {
                     <a href="https://bit.ly/Drone-Wrkshp" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
                 </div>
             </div>
-            <div class="Event2 bg-white card border">
+            <div class="Event2 bg-white card border" data-aos="fade-up" data-aos-duration="1700">
                 <div class="card-img">
                     
                     <img src="src/EVENTS/Event details/wed.jpg" alt="" srcset=""
@@ -316,16 +317,16 @@ function loading() {
                     <a href="http://bit.ly/wed-Cafe" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
                 </div>
             </div>
-            <div class="Event3 bg-white card border">
+            <div class="Event3 bg-white card border" data-aos="fade-up" data-aos-duration="2200">
                 <div class="card-img">
                     <img src="src/EVENTS/Event details/Talk on Interdisciplinary competencies and Innovation by Dr. Rajesh Baby-19th Oct,2022.jpg" alt="" srcset=""
                         class="img-fluid m-auto">
                 </div>
-                <div class="card-img-overlay rounded-0 d-flex flex-column">
+                <div class="card-img-overlay rounded-0 d-flex flex-column" >
                     <a href="" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
                 </div>
             </div>
-            <div class="Event4 bg-white card d-none d-md-block border">
+            <div class="Event4 bg-white card d-none d-md-block border" data-aos="fade-up" data-aos-duration="1700">
                 <div class="card-img">
                     <img src="src/EVENTS/Event details/Talk on free and open source software by Abhiram Reji-7th Oct 2022.jpg" alt="" srcset=""
                         class="img-fluid m-auto">
@@ -334,7 +335,7 @@ function loading() {
                     <a href="" class=" m-auto mb-4 btn btn-light rounded-5 border text-black-50">Expired <i class="bi bi-clock"></i></a>
                 </div>
             </div>
-            <div class="Event5 bg-white card d-none d-md-block border">
+            <div class="Event5 bg-white card d-none d-md-block border" data-aos="fade-up" data-aos-duration="2200">
                 <div class="card-img">
                     <img src="src/EVENTS/Event details/Iedc summit-5th March 2022.jpg" alt="" srcset=""
                         class="img-fluid m-auto">
@@ -344,7 +345,7 @@ function loading() {
                 </div>
             </div>
         </div><br>
-        <span class="p-0 mx-auto col-8 col-md-3">
+        <span class="p-0 mx-auto col-8 col-md-3" data-aos="fade-up" data-aos-duration="2900">
             <a class="btn btn-outline-dark mybtn border rounded-5 h2 fs-6 fw-semibold  d-flex" href="EVENTS.html">
                 <span class="m-auto">ALL EVENTS&nbsp; <i class="bi bi-chevron-right"></i></span>
             </a>
@@ -355,10 +356,10 @@ function loading() {
     
     <!-- the summit page  -->
     <div class="container-xl mx-md-auto m-0 my-5 p-2 d-flex flex-column justify-content-start">
-        <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0 display-6">
+        <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0 display-6" data-aos="fade-up" data-aos-duration="1200">
             <span style="color: var(--green) ;">SUMMIT 2022</span> HIGHLIGHTS
         </h2><br>
-        <h5 class="text-black-50 fw-light fs-5 text-start m-0">
+        <h5 class="text-black-50 fw-light fs-5 text-start m-0" data-aos="fade-up" data-aos-duration="1400">
             IEDC summit 2022 has been hosted by St. Joseph's College of Engineering and technology, Palai on 5th March 2022.This
             flagship event brought together all student innovators and all other connected stakeholders under one umbrella.
             More than 20 speakers were presented in the event. More than 3000 participants across more than 14 districts
@@ -372,7 +373,7 @@ function loading() {
         <div class="flex-grow-1 Summitparent d-flex flex-column d-md-grid col-12">
 
             
-            <div class="div1 bg-white border">
+            <div class="div1 bg-white border" data-aos="fade-up" data-aos-duration="1200">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
 
@@ -401,7 +402,7 @@ function loading() {
                 </div>
             </div>
             <!-- div2 -->
-            <div class="div2 bg-white border">
+            <div class="div2 bg-white border" data-aos="fade-up" data-aos-duration="1600">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
             
@@ -433,7 +434,7 @@ function loading() {
                 </div>
             </div>
             <!-- div 3 -->
-            <div class="div3 bg-white border d-none d-md-grid">
+            <div class="div3 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="2000">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
             
@@ -465,7 +466,7 @@ function loading() {
                 </div>
             </div>
             <!-- div4 -->
-            <div class="div4 bg-white border d-none d-md-grid">
+            <div class="div4 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="1400">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
             
@@ -497,7 +498,7 @@ function loading() {
                 </div>
             </div>
             <!-- div5 -->
-            <div class="div5 bg-white border">
+            <div class="div5 bg-white border" data-aos="fade-up" data-aos-duration="1800">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
             
@@ -529,7 +530,7 @@ function loading() {
                 </div>
             </div>
             <!-- div6 -->
-            <div class="div6 bg-white border">
+            <div class="div6 bg-white border" data-aos="fade-up" data-aos-duration="2300">
                 <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
                     <div class="carousel-inner h-100">
             
@@ -564,7 +565,7 @@ function loading() {
             
         </div>
         <br>
-        <span class="d-none p-0 m-0 mx-auto col-8 col-md-4">
+        <span class="d-none p-0 m-0 mx-auto col-8 col-md-4" data-aos="fade-up" data-aos-duration="3000">
             <a class="btn btn-outline-dark mybtn rounded-5 border h2 fs-6 fw-semibold  d-flex" href="">
                 <span class="m-auto">VIEW ALL &nbsp; <i class="bi bi-chevron-right"></i></span>
             </a>
@@ -578,14 +579,14 @@ function loading() {
         </h2><br><br class="d-none d-md-block">
         <div id="super-pics" class="card col p-0 border">
             <div class="execom-container flex-grow-1">
-                <div class="img1 gridpics"></div>
-                <div class="img2 gridpics"></div>
-                <div class="img3 gridpics"></div>
-                <div class="img4 gridpics"></div>
-                <div class="img5 gridpics"></div>
-                <div class="img6 gridpics"></div>
-                <div class="img7 gridpics"></div>
-                <div class="img8 gridpics"></div>
+                <div class="img1 gridpics" data-aos="fade-up" data-aos-duration="1200"></div>
+                <div class="img2 gridpics" data-aos="fade-up" data-aos-duration="1400"></div>
+                <div class="img3 gridpics" data-aos="fade-up" data-aos-duration="1600"></div>
+                <div class="img4 gridpics" data-aos="fade-up" data-aos-duration="1800"></div>
+                <div class="img5 gridpics" data-aos="fade-up" data-aos-duration="2000"></div>
+                <div class="img6 gridpics" data-aos="fade-up" data-aos-duration="2200"></div>
+                <div class="img7 gridpics" data-aos="fade-up" data-aos-duration="2400"></div>
+                <div class="img8 gridpics" data-aos="fade-up" data-aos-duration="2600"></div>
             </div>
             <div class="card-img-overlay d-flex rounded-0 p-0">
                 <a class=" m-auto mb-3 btn mybtn2 btn-outline-light rounded-5" href="EXECOM/">
@@ -599,32 +600,32 @@ function loading() {
     <!-- history page -->
     <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 my-2 p-0 d-flex flex-column">
         <div class="the-past col-12 p-4 p-md-5 bg-transparent m-0">
-            <h2 class="fw-bolder text-black text-center me-4 m-md-0 mb-md-5">
+            <h2 class="fw-bolder text-black text-center me-4 m-md-0 mb-md-5" data-aos="fade-up" data-aos-duration="1400">
                 HISTORY OF OUR <span style="color: var(--green) ;">BOOTCAMP</span>
             </h2>
             <div class="timeline col-12">
-                <div class="conbox left">
-                    <div class="content p-3 text-center">
+                <div class="conbox left" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="content p-3 text-center" >
                         <h3 class="fw-bold fs-5 m-0">IEDC SUMMIT 2022</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">It’s the 6th edition of IEDC summit
                         It was a 2 day long summit conducted on 5th March 2022
                         Hosted by St Joseph’s College of Engineering and Technology</p>
                     </div>
                 </div>
-                <div class="conbox  right">
+                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">INDIA 500 STARTUP AWARD 2020</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">Hyperthink Technologies by SJCET graduates Mr. Anto Patrex and Mr.Tahseen Amin was nominated</p>
                     </div>
                 </div>
-                <div class="conbox  left">
+                <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">CASH GRANT OF INR 1 LAC</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">Cash grant was awarded from Idea Fest organized by KSUM
                         Product prototype was E-LENDING MACHINE that enables lending and booking of development boards,sensors etc</p>
                     </div>
                 </div>
-                <div class="conbox  right">
+                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">LAMAARA TECHNOLOGIES</h3>
                         <p class="text-black-50 fw-bold fs-6 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</p><br>
@@ -636,21 +637,21 @@ function loading() {
                         </ul>
                     </div>
                 </div>
-                <div class="conbox  left">
+                <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">GRAND FINALE OF STARTUP INDIA</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">IEDC Startup Bootcamp SJCET bagged three prizes at the Grand Finale of Startup India Kerala Stratup Yatra in the year 2018 Organised by Startup India and Kerala Startup Mission at Technopark,Trivandram</p>
                         <p class="text-black-50 fw-bold fs-6 m-0">IDEA FEST 2021</p>
                     </div>
                 </div>
-                <div class="conbox  right">
+                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">ENTREPRENEURSHIP ENABLER AWARD 2018</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">Entrepreneurship Enabler Award 2018 of Kerala Startup Mission
                         Award was handovered by Sri M Sivasankar IAS( Secretary to CM and IT Secretary)</p>
                     </div>
                 </div>
-                <div class="conbox  left">
+                <div class="conbox  left" data-aos="fade-up" data-aos-duration="1400">
                     <div class="content p-3 text-center">
                         <h3 class="fw-bold fs-5 m-0">ALL INDIA PERSISTENT INSPIRATION AWARD</h3><br>
                         <p class="text-black-50 fw-bold fs-6 m-0">Reon Saji, Praveen K S, Sandeep Salmon, Smitha John, Hanna George and Neethu Naduvathettu bagged the at the 2nd Smart
@@ -663,27 +664,27 @@ function loading() {
     </div>
 
     <!-- contact and feedback form -->
-    <div class="col-12 bg-black">
+    <div class="col-12 mybg-black">
     <div class="row container-xl col-lg-12 col-xl-10 mx-md-auto m-0 p-0 d-flex flex-column">
         <div id="footer" class="d-flex flex-column flex-md-row gap-5 justify-content-between my-3">
             <div class="col d-flex flex-column">
-                <h3 class="text-white fs-5 fw-bold text-center">REACH US</h3>
+                <h3 class="text-white fs-5 fw-bold text-center" data-aos="fade-up" data-aos-duration="1400">REACH US</h3>
 
                 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="flex-grow-1"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d503167.5740352092!2d76.23294812656607!3d9.85064521519969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cc024cb7c83f%3A0xc8944aaebb3ba492!2sSt.%20Joseph&#39;s%20College%20of%20Engineering%20and%20Technology%2C%20Palai!5e0!3m2!1sen!2sin!4v1617135156377!5m2!1sen!2sin"
                     title="St. Joseph's College of Engineering and Technology, Palai"
-                    aria-label="St. Joseph's College of Engineering and Technology, Palai">
+                    aria-label="St. Joseph's College of Engineering and Technology, Palai" data-aos="fade-up" data-aos-duration="1800">
                 </iframe>
             
             </div>
-            <div class="col text-center border-1 border-white">
-                <h3 id="ABOUTUS" class="text-white fs-5 fw-bold text-center">GIVE US FEEDBACK</h3>
+            <div class="col text-center border-1 border-white" >
+                <h3 id="ABOUTUS" class="text-white fs-5 fw-bold text-center" data-aos="fade-up" data-aos-duration="2100">GIVE US FEEDBACK</h3>
                 <form class="pageclip-form d-flex flex-column text-white-50 gap-3" action="https://send.pageclip.co/2iQkv2SIchA9E8fFPu7yiNBuAs2igWGB" method="post">
-                    <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="form-field" placeholder="Your Name" required>
-                    <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="form-field" placeholder="Email" required>
-                    <textarea id="q1or2or3" name="body" type="text" minlength="2" maxlength="200" class="form-field py-4" placeholder="Feedbacks" required style="min-height:100px ;"></textarea>
+                    <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="form-field" placeholder="Your Name" required data-aos="fade-up" data-aos-duration="2300">
+                    <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="form-field" placeholder="Email" required data-aos="fade-up" data-aos-duration="2500">
+                    <textarea id="q1or2or3" name="body" type="text" minlength="2" maxlength="200" class="form-field py-4" placeholder="Feedbacks" required style="min-height:100px ;"data-aos="fade-up" data-aos-duration="2700"></textarea>
                     <span>
-                        <button class="btn mybtn2 btn-outline-light fw-semibold rounded-5 border px-4 pageclip-form__submit" type="submit">
+                        <button class="btn mybtn2 btn-outline-light fw-semibold rounded-5 border px-4 pageclip-form__submit" type="submit" data-aos="fade-up" data-aos-duration="2900">
                             <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
                         </button>
                     </span>
@@ -691,31 +692,32 @@ function loading() {
             </div>
         </div>
     </div>
-    <div class="row container-xl col-lg-12 col-xl-10 p-0 py-5 d-flex mx-auto flex-column flex-md-row gap-md-5 bg-black">
+    <div class="row container-xl col-lg-12 col-xl-10 p-0 py-5 d-flex mx-auto flex-column flex-md-row gap-md-5 ">
         <div class="col text-start d-flex flex-column gap-4">
-            <a href="#"><img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8 m-0"></a>
+            <a href="#"><img src="src/asset/bootcamp logo whitefill - Copy (2).png" alt="Bootcamp" class="img-fluid col-8 m-0" data-aos="fade-up" data-aos-duration="1200"></a>
             <br><br>
-            <h3 class="text-white fs-5 fw-bold mt-auto text-start ms-1 mb-0 pb-0">FOLLOW US</h3>
-            <div class="col p-0 d-flex gap-3 gap-md-5 fs-4 ms-1 mt-0">
-                <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-white-50"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.instagram.com/sjcetbootcamp/" class=" text-white-50"><i class="bi bi-instagram"></i></a>
-                <a href="https://www.tiwtter.com/sjcetbootcamp/" class=" text-white-50"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.facebook.com/sjcetbootcamp/" class=" text-white-50"><i class="bi bi-facebook"></i></a>
-                <a href="https://discord.gg/eQjz6RXD" class=" text-white-50"><i class="bi bi-discord"></i></a>
-                <a href="https://www.youtube.com/channel/UC6v9cPvbBx4b4uyPUgtN5g" class=" text-white-50"><i class="bi bi-youtube"></i></a>
+            <h3 class="text-white fs-5 fw-bold mt-auto text-start ms-1 mb-0 pb-0" data-aos="fade-up" data-aos-duration="1400">FOLLOW US</h3>
+            <div class="col p-0 d-flex gap-3 gap-md-5 fs-4 ms-1 mt-0" >
+                <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-white-50" data-aos="fade-up" data-aos-duration="1400"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/sjcetbootcamp/" class=" text-white-50" data-aos="fade-up" data-aos-duration="1700"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiwtter.com/sjcetbootcamp/" class=" text-white-50" data-aos="fade-up" data-aos-duration="2000"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/sjcetbootcamp/" class=" text-white-50" data-aos="fade-up" data-aos-duration="2300"><i class="bi bi-facebook"></i></a>
+                <a href="https://discord.gg/eQjz6RXD" class=" text-white-50" data-aos="fade-up" data-aos-duration="2600"><i class="bi bi-discord"></i></a>
+                <a href="https://www.youtube.com/channel/UC6v9cPvbBx4b4uyPUgtN5g" class=" text-white-50" data-aos="fade-up" data-aos-duration="2900"><i class="bi bi-youtube"></i></a>
             </div>
+            <br>
         </div>
         <div class="col ms-md-5 ps-md-5 mt-5 mt-md-4">
-            <span class="col text-white fs-5 lead fw-bold h3 border-bottom border-2 greencolor pb-1">MORE LINKS</span>
+            <span class="text-white fs-5 lead fw-bold h3 border-bottom border-2 greencolor pb-1" data-aos="fade-up" data-aos-duration="2200">MORE LINKS</span>
             <div class="d-flex flex-row justify-content-between mt-4">
-            <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column gap-3" data-aos="fade-up" data-aos-duration="2000">
                 <a href="" class=" text-white-50">HOME</a>
                 <a href="" class=" text-white-50">WHY IEDC</a>
                 <a href="" class=" text-white-50">SUMMIT 2022</a>
                 <a href="" class=" text-white-50">EXECOM</a>
                 <a href="" class=" text-white-50">EVENTS</a>
             </div>
-            <div class="d-flex flex-column gap-3">
+            <div class="d-flex flex-column gap-3" data-aos="fade-up" data-aos-duration="2400">
                 <a href="https://g.page/SJCETPALA?share" class=" text-white-50">SJCET PALAI</a>
                 <a href="" class=" text-white-50">HISTORY</a>
                 <a href="" class=" text-white-50">LOCATION</a>
@@ -728,7 +730,9 @@ function loading() {
 
 </div>
 </div>
-
+<script>
+    AOS.init();
+</script>
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"

@@ -3,7 +3,7 @@
     font-size: 8px;
 }
 #changetext:before {
-    content: ' ';
+    content: 'Innovative';
     animation-name: dropshow;
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -63,11 +63,6 @@
     #notification {
         display: none;
     }
-}
-#bgdots{
-        background-image: radial-gradient(#6b95ff6a .8px, #fdfdfe00 .45px);
-        background-size: 9px 9px;
-        background-position:center;
 }
 #down-arrow {
     font-size: 20px;

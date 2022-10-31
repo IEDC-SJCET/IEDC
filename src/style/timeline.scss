@@ -78,8 +78,13 @@
     }
     /* The actual content */
     .content {
-        background-color: var(--grey);
         position: relative;
+        -webkit-border-radius: 9px !important;
+            border-radius: 9px !important;
+            background: #ffffff !important;
+            -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
+            box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
+            border: none !important;
     }
 
     @media screen and (max-width: 600px) {

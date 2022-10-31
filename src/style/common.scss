@@ -70,6 +70,18 @@ html {
     border-radius: 0!important;
 }
 
+.shadow-lg {
+    -webkit-border-radius: 13px!important;
+    border-radius: 13px!important;
+    background: #ffffff!important;
+    -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff!important;
+    box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff!important;
+    border: none!important;
+}
+// .shadow-lg {
+//     box-shadow: 0px 0rem 2rem 1px rgb(0 0 0 / 23%) !important;
+// }
+
 a,button{
     text-decoration: none;
     border-radius: 0 !important;
@@ -78,7 +90,9 @@ a,button{
 
 }
 #bgdots {
-    background-image: radial-gradient(#6b95ff6a .8px, #fdfdfe00 .45px);
-    background-size: 9px 9px;
-    background-position: center;
+    background-color: rgb(240, 240, 240);
+}
+
+.mybg-black {
+    background-color: #121212;
 }

@@ -2,6 +2,7 @@
 #loader {
   position: fixed;
   z-index: 999999;
+  background-color: rgb(240, 240, 240);
 }
 
 #loader {
@@ -12,9 +13,13 @@
 
 .lds-ring {
   top: 50vh;
-  display: inline-block;
-  width: 80px;
-  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 10rem !important;
+  background-color: white;
 }
 
 .lds-ring div {
