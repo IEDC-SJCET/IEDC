@@ -78,8 +78,13 @@ html {
 
 .shadow-lg {
   border-radius: 13px !important;
-  background: #ffffff !important;
   box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
+  border: none !important;
+}
+
+.shadow-sm {
+  border-radius: 13px !important;
+  box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   border: none !important;
 }
 
@@ -95,5 +100,5 @@ a, button {
 }
 
 .mybg-black {
-  background-color: #121212;
+  background-color: #313131;
 }/*# sourceMappingURL=common.css.map */

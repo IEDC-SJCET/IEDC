@@ -286,16 +286,11 @@
 <script>
 function notibutton(){
     document.getElementById('notification').style.visibility = 'hidden'; 
-//   console.log("time end");
 }
-// console.log("loading done");
 function loading() {
     document.getElementById("loader").style.display = "none";
     document.getElementById("loading").style.display = "none";
     document.getElementsByTagName("body")[0].style.overflowY = "auto";
-
-    // noti = setTimeout(notibutton, 60000);
-    // console.log("time starts now");
 }   
 </script>
         <div class="eventGrid col-12 d-flex flex-column d-md-grid" onload="loading()">
