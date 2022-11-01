@@ -76,6 +76,18 @@ html {
   border-radius: 0 !important;
 }
 
+.shadow-lg {
+  border-radius: 13px !important;
+  box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
+  border: none !important;
+}
+
+.shadow-sm {
+  border-radius: 13px !important;
+  box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
+  border: none !important;
+}
+
 a, button {
   text-decoration: none;
   border-radius: 0 !important;
@@ -84,7 +96,9 @@ a, button {
 }
 
 #bgdots {
-  background-image: radial-gradient(rgba(107, 149, 255, 0.4156862745) 0.8px, rgba(253, 253, 254, 0) 0.45px);
-  background-size: 9px 9px;
-  background-position: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.mybg-black {
+  background-color: #313131;
 }/*# sourceMappingURL=common.css.map */

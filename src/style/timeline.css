@@ -78,8 +78,11 @@
   left: -9px;
 }
 .the-past .content {
-  background-color: var(--grey);
   position: relative;
+  border-radius: 9px !important;
+  background: #ffffff !important;
+  box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
+  border: none !important;
 }
 @media screen and (max-width: 600px) {
   .the-past {
