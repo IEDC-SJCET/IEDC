@@ -4,7 +4,7 @@
 }
 
 #changetext:before {
-  content: "Innovative";
+  content: 'Innovative';
   -webkit-animation-name: dropshow;
           animation-name: dropshow;
   -webkit-animation-duration: 5s;
@@ -16,66 +16,85 @@
 }
 
 @-webkit-keyframes dropshow {
-  0%, 9%, 100% {
-    content: "Innovative";
+  0%,
+  9%,
+  100% {
+    content: 'Innovative';
     opacity: 1;
   }
-  16%, 25% {
+  16%,
+  25% {
     opacity: 0;
   }
-  32%, 41% {
+  32%,
+  41% {
     content: "Creative";
     opacity: 1;
   }
-  48%, 57% {
+  48%,
+  57% {
     opacity: 0;
   }
-  64%, 73% {
+  64%,
+  73% {
     content: "Technical";
     opacity: 1;
   }
-  80%, 89% {
+  80%,
+  89% {
     opacity: 0;
   }
 }
 
 @keyframes dropshow {
-  0%, 9%, 100% {
-    content: "Innovative";
+  0%,
+  9%,
+  100% {
+    content: 'Innovative';
     opacity: 1;
   }
-  16%, 25% {
+  16%,
+  25% {
     opacity: 0;
   }
-  32%, 41% {
+  32%,
+  41% {
     content: "Creative";
     opacity: 1;
   }
-  48%, 57% {
+  48%,
+  57% {
     opacity: 0;
   }
-  64%, 73% {
+  64%,
+  73% {
     content: "Technical";
     opacity: 1;
   }
-  80%, 89% {
+  80%,
+  89% {
     opacity: 0;
   }
 }
+
 .bigdot {
   line-height: 1em;
 }
 
 .bigdot > div {
-  line-height: 0.4em;
+  line-height: .4em;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, var(--green)), to(var(--green)));
   background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
   background-position: 0 1em 1em;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  transition: background 0.5s;
+  -webkit-transition: background .5s;
+  transition: background .5s;
 }
 
 #notification {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   visibility: visible;
   min-height: 250px;
@@ -87,6 +106,7 @@
     display: none;
   }
 }
+
 #down-arrow {
   font-size: 20px;
   position: absolute;
@@ -98,4 +118,5 @@
   width: 100px;
   height: auto;
   margin-bottom: 10px;
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */

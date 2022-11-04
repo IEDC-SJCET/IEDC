@@ -1,1 +1,9 @@
-{"version":3,"sources":["eventfeed.scss","eventfeed.css"],"names":[],"mappings":"AAAA;EACI,0BAAA;ACCJ;;ADCA;EACI,yBAAA;ACEJ;;ADAA;EACI,yBAAA;ACGJ","file":"eventfeed.css"}
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,GAAG,KAAK,CAAC;EACf,SAAS,EAAE,IAAI,CAAA,UAAU;CAC5B;;AACD,AAAA,UAAU,GAAC,KAAK,CAAC;EACb,SAAS,EAAE,cAAc;CAC5B;;AACD,AAAA,UAAU,GAAC,KAAK,CAAC;EACb,SAAS,EAAE,cAAc;CAC5B",
+    "sources": [
+        "eventfeed.scss"
+    ],
+    "names": [],
+    "file": "eventfeed.css"
+}
