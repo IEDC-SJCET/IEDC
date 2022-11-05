@@ -22,8 +22,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.preselection,
-::-moz-selection,
 ::-moz-selection {
   color: white;
   background: var(--green);
@@ -44,13 +42,11 @@ html {
   color: white;
   outline: 0;
   background: rgba(48, 48, 48, 0.536);
-  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-
 .form-field:hover, .form-field:focus {
   color: white;
-  background: #303030;
+  background: rgb(48, 48, 48);
 }
 
 .mybtn {
@@ -83,14 +79,12 @@ html {
 
 .shadow-lg {
   border-radius: 13px !important;
-  -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   border: none !important;
 }
 
 .shadow-sm {
   border-radius: 13px !important;
-  -webkit-box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   border: none !important;
 }
@@ -103,10 +97,9 @@ a, button {
 }
 
 #bgdots {
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
 }
 
 .mybg-black {
   background-color: #313131;
-}
-/*# sourceMappingURL=common.css.map */
+}/*# sourceMappingURL=common.css.map */
