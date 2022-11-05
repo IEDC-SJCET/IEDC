@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,UAAU,GAAG,KAAK,CAAC;EACf,SAAS,EAAE,IAAI,CAAA,UAAU;CAC5B;;AACD,AAAA,UAAU,GAAC,KAAK,CAAC;EACb,SAAS,EAAE,cAAc;CAC5B;;AACD,AAAA,UAAU,GAAC,KAAK,CAAC;EACb,SAAS,EAAE,cAAc;CAC5B",
-    "sources": [
-        "eventfeed.scss"
-    ],
-    "names": [],
-    "file": "eventfeed.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"eventfeed.css"}
