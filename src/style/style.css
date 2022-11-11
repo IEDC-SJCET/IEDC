@@ -21,9 +21,12 @@
 
 .fab:hover {
   color: red;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 .contact-icon i {
-  transform: translateY(-20%);
-}/*# sourceMappingURL=style.css.map */
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+/*# sourceMappingURL=style.css.map */

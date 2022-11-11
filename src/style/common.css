@@ -10,18 +10,16 @@
   border-color: var(--green) !important;
 }
 
-h2, .h2 {
+p, nav, h5, h3, .h3, h2, .h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-p, nav, h5, h3, .h3 {
-  font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-html {
+html, body {
   scroll-behavior: smooth;
 }
 
+.preselection,
+::-moz-selection,
 ::-moz-selection {
   color: white;
   background: var(--green);
@@ -41,12 +39,14 @@ html {
   padding: 0 16px;
   color: white;
   outline: 0;
-  background: rgb(2, 2, 2);
+  background: #020202;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+
 .form-field:hover, .form-field:focus {
   color: white;
-  background: rgb(48, 48, 48);
+  background: #303030;
 }
 
 .mybtn {
@@ -79,12 +79,14 @@ html {
 
 .shadow-lg {
   border-radius: 13px !important;
+  -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   border: none !important;
 }
 
 .shadow-sm {
   border-radius: 13px !important;
+  -webkit-box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   border: none !important;
 }
@@ -97,9 +99,20 @@ a, button {
 }
 
 #bgdots {
-  background-color: rgb(240, 240, 240);
+  background-color: #f0f0f0;
 }
 
 .mybg-black {
   background-color: #313131;
-}/*# sourceMappingURL=common.css.map */
+}
+
+.fs-7 {
+  font-size: .9rem !important;
+}
+
+@media (max-width: 768px) {
+  .fs-7 {
+    font-size: .8rem !important;
+  }
+}
+/*# sourceMappingURL=common.css.map */

@@ -1,7 +1,10 @@
 .Summitparent {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 15px;
   grid-row-gap: 15px;
 }
@@ -12,6 +15,7 @@
     grid-row-gap: 3px;
   }
 }
+
 .summit-cards {
   border-left: 3px solid var(--green);
   padding: 0 16px;
@@ -20,42 +24,80 @@
   font-size: 1rem;
   color: white;
   background: rgba(48, 48, 48, 0.2);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   text-decoration: none;
 }
+
 .summit-cards:hover, .summit-cards:focus {
   color: white;
   background: rgba(48, 48, 48, 0.6);
 }
 
 .div1 {
-  flex: 1;
-  grid-area: 1/1/3/3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 1 / 1 / 3 / 3;
 }
 
 .div2 {
-  flex: 1;
-  grid-area: 1/4/3/5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 4 / 3 / 5;
 }
 
 .div3 {
-  flex: 1;
-  grid-area: 3/4/4/5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 4 / 4 / 5;
 }
 
 .div4 {
-  flex: 1;
-  grid-area: 3/1/4/3;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 3 / 1 / 4 / 3;
 }
 
 .div5 {
-  flex: 1;
-  grid-area: 2/3/4/4;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 3 / 4 / 4;
 }
 
 .div6 {
-  flex: 1;
-  grid-area: 1/3/2/4;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 .div1-carousel-item-1 {
@@ -139,4 +181,5 @@
 
 .carousel-item {
   border: none;
-}/*# sourceMappingURL=summit-grid.css.map */
+}
+/*# sourceMappingURL=summit-grid.css.map */
