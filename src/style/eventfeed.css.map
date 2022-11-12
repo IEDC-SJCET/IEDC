@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"eventfeed.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "eventfeed.scss"
+    ],
+    "names": [],
+    "file": "eventfeed.css"
+}

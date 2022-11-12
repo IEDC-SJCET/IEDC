@@ -2,6 +2,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .team-lead > span {
   background-color: var(--green);
   height: 80px;
@@ -10,7 +11,8 @@
   z-index: 2;
   top: -50px;
   width: 80px;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .card {
@@ -22,27 +24,37 @@
 .card-body {
   position: relative;
 }
+
 .card-body > .card-text {
   z-index: 2;
 }
 
 .card-img-overlay {
   background: rgba(0, 0, 0, 0);
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.card-img-overlay > a, .card-img-overlay > p, .card-img-overlay > button {
+
+.card-img-overlay > a,
+.card-img-overlay > p,
+.card-img-overlay > button {
   margin: auto;
   color: white;
   visibility: hidden;
   font-size: 0px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .card:hover > .card-img-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
-.card:hover > .card-img-overlay > a, .card:hover > .card-img-overlay > p, .card:hover > .card-img-overlay > button {
+
+.card:hover > .card-img-overlay > a,
+.card:hover > .card-img-overlay > p,
+.card:hover > .card-img-overlay > button {
   visibility: visible;
   color: white;
   font-size: 25px;
-}/*# sourceMappingURL=exexom-cards.css.map */
+}
+/*# sourceMappingURL=exexom-cards.css.map */

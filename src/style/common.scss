@@ -9,15 +9,14 @@
     color: var(--green);
     border-color: var(--green) !important;
 }
-h2,.h2 {
+p,nav,h5,h3,.h3,h2,.h2 {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
-p,nav,h5,h3,.h3 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-}
-html {
+
+html,body {
     scroll-behavior: smooth;
 }
+
 .preselection,
 ::-moz-selection,
 ::selection {
@@ -104,4 +103,15 @@ a,button{
 
 .mybg-black {
     background-color: #313131;
+}
+
+.fs-7 {
+    font-size: .9rem !important;
+}
+
+@media (max-width:768px) {
+    
+.fs-7 {
+    font-size: .8rem !important;
+}
 }
