@@ -10,19 +10,15 @@
   /* Fix the circle for containers on the right side */
   /* The actual content */
 }
-
 .the-past * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
-
 .the-past .timeline {
   position: relative;
   margin: 0 auto;
 }
-
 .the-past .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 6px;
   background: var(--green);
@@ -31,16 +27,14 @@
   left: 50%;
   margin-left: -3px;
 }
-
 .the-past .conbox {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
 }
-
 .the-past .conbox::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 18px;
   height: 18px;
@@ -50,15 +44,12 @@
   border-radius: 50%;
   z-index: 10;
 }
-
 .the-past .left {
   left: 0;
 }
-
 .the-past .right {
   left: 50%;
 }
-
 .the-past .left::before {
   content: " ";
   height: 0;
@@ -71,7 +62,6 @@
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent white;
 }
-
 .the-past .right::before {
   content: " ";
   height: 0;
@@ -84,20 +74,16 @@
   border-width: 10px 10px 10px 0;
   border-color: transparent white transparent transparent;
 }
-
 .the-past .right::after {
   left: -9px;
 }
-
 .the-past .content {
   position: relative;
   border-radius: 9px !important;
   background: #ffffff !important;
-  -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff !important;
   border: none !important;
 }
-
 @media screen and (max-width: 600px) {
   .the-past {
     /* Place the timelime to the left */
@@ -121,11 +107,10 @@
     border-color: transparent white transparent transparent;
   }
   .the-past .left::after,
-  .the-past .right::after {
+.the-past .right::after {
     left: 22px;
   }
   .the-past .right {
     left: 0%;
   }
-}
-/*# sourceMappingURL=timeline.css.map */
+}/*# sourceMappingURL=timeline.css.map */

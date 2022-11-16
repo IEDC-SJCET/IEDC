@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap");
 :root {
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-      0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   --transition: linear 0.17s;
-  --anime: 0 14px 28px rgba(0, 0, 0, 0.25),
-      0 10px 10px rgba(0, 0, 0, 0.22);
+  --anime: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   --green: #56c23e;
   --bggrey: #f0f0f0;
 }
@@ -65,13 +63,12 @@ a > .bi > img {
 }
 
 a > .bi:active,
-a > .bi:active:after,
+a > .bi:active,
 a > .bi:hover {
   font-size: 3.8rem;
 }
-
-a > .bi:active,
-a > .bi:active:after,
+a > .bi:active > img,
+a > .bi:active > img,
 a > .bi:hover > img {
   height: 60%;
 }
