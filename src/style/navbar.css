@@ -1,14 +1,11 @@
 .nav-item > a {
-  line-height: .4em;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, var(--green)), to(var(--green)));
+  line-height: 0.4em;
   background-image: linear-gradient(to right, var(--green) 0, var(--green) 100%);
   background-position: 0 1em 1em;
   background-size: 0 100%;
   background-repeat: no-repeat;
-  -webkit-transition: background .5s;
-  transition: background .5s;
+  transition: background 0.5s;
 }
-
 .nav-item > a:hover, .nav-item > a:active, .nav-item > a:focus {
   background-size: 100% 100%;
 }
@@ -17,5 +14,4 @@
   position: absolute;
   top: 0;
   left: 0;
-}
-/*# sourceMappingURL=navbar.css.map */
+}/*# sourceMappingURL=navbar.css.map */

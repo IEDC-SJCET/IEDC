@@ -1,15 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap");
 
 :root {
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --transition: linear 0.17s;
-    --anime: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
-        --green: #56c23e;
-        --bggrey: #f0f0f0;
+    --anime: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    --green: #56c23e;
+    --bggrey: #f0f0f0;
 }
-
 
 body {
     // background: rgb(209, 209, 209) !important;
@@ -46,7 +43,7 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    background-color:#242526;
+    background-color: #242526;
     transition: 300ms;
 }
 
@@ -62,21 +59,20 @@ body {
     border: none !important;
 }
 
-a>.bi>img {
+a > .bi > img {
     transition: 300ms;
     width: auto;
     height: 45%;
 }
-a>.bi:active,
-a>.bi:active:after,
-a>.bi:hover {
+a > .bi:active,
+a > .bi:active,
+a > .bi:hover {
+    &>img {
+        height: 60%;
+    }
     font-size: 3.8rem;
 }
-a>.bi:active,
-a>.bi:active:after,
-a>.bi:hover>img {
-    height: 60%;
-}
+
 // .instagram {
 //     background: #c13584;
 //     background: -moz-linear-gradient(45deg, #c13584 0%, #e1306c 30%, #f56040 67%, #f77737 100%);
@@ -143,11 +139,11 @@ a>.bi:hover>img {
 // }
 
 .mybox {
-    width: calc(100%);
-    height: calc(100%);
+    width: 100%;
+    height: 100%;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .bi {
         height: 20vh;
     }
