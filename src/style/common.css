@@ -102,11 +102,13 @@ a, button {
 }
 
 .fs-7 {
+  font-weight: lighter !important;
   font-size: 0.9rem !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 426px) {
   .fs-7 {
+    font-weight: normal !important;
     font-size: 0.8rem !important;
   }
 }/*# sourceMappingURL=common.css.map */
