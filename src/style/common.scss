@@ -5,6 +5,8 @@
     --green: #56c23e;
     --grey: rgb(201, 201, 201);
     --bggrey: #f0f0f0;
+    --lightgreen: #56c23e46;
+    --dark:#313131;
 }
 .greencolor {
     color: var(--green);
@@ -65,8 +67,16 @@ html,body {
     color: var(--green)!important;
 }
 .btn-success {
-    background-color: var(--green)!important;
+    background: var(--green)!important;
+    border: none!important;
+    display: inline-block;
+    transition: all 0.4s;
 }
+.btn-success:hover{
+            color: var(--dark)!important;
+            background: var(--lightgreen)!important;
+}
+
 .card{
     border-radius: 0!important;
 }
