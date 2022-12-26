@@ -8,6 +8,10 @@
   --dark:#313131;
 }
 
+.bg-green {
+  background-color: var(--lightgreen) !important;
+}
+
 .greencolor {
   color: var(--green);
   border-color: var(--green) !important;
