@@ -42,7 +42,7 @@ const templete = (data) => {
                         <div class="fs-4 fw-bold text-black card-header">${data.EventName}</div>
                         <div class="fs-7 text-black-50 card-body">
                             <p>${data.Description}</p>
-                            <p>${null}</p>
+                            <p>${data.EventVenue}</p>
                         </div>
                         <div class="card-footer ${validity.btnBG} text-end">
                         <a href=${data.RedirectLink} class="${validity.btnCOLOR} py-2 fs-6 fw-bold">
