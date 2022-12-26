@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"eventfeed.css"}
+{"version":3,"sources":["eventfeed.scss","eventfeed.css"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,iBAAA;EACA,gBAAA;ACCJ","file":"eventfeed.css"}

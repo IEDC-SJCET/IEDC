@@ -32,13 +32,12 @@ const templete = (data) => {
     let collapseTarget = data.EventName.toString().replace(/ +/g,"");
     return `
             <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                <div style="max-width: 400px; max-height: 400px;">
+                <div class="boxDesign">
                     <a data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#${collapseTarget}" aria-controls="${collapseTarget}">
                         <img src=${data.IMG_URL} alt="EventIMG" class="img-fluid rounded-3">
                     </a>
                 </div>
-                <div class="${collider}" id="${collapseTarget}"
-                    style="max-width: 400px; max-height: 400px;">
+                <div class="${collider} boxDesign" id="${collapseTarget}">
                     <div class="card shadow-lg  text-black">
                         <div class="fs-4 fw-bold text-black card-header">${data.EventName}</div>
                         <div class="fs-7 text-black-50 card-body">

@@ -1,1 +1,5 @@
-/*# sourceMappingURL=eventfeed.css.map */
+.boxDesign {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: scroll;
+}/*# sourceMappingURL=eventfeed.css.map */
