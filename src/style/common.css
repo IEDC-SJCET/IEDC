@@ -142,13 +142,12 @@ html, body {
 
 a, btn-success {
   text-decoration: none;
-  border-radius: 0 !important;
   border: 0;
   background-color: transparent;
 }
 
 #bgdots {
-  background-color: #f2f3f5;
+  background-color: var(--bggrey);
 }
 
 .mybg-black {
