@@ -12,7 +12,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
 
-let collider = (window.innerWidth < 768)? "collapse img-fluid" : "collapse-horizontal collapse img-fluid";
+let collider = (window.innerWidth < 768)? "collapse img-fluid" : "collapse-horizontal show collapse img-fluid";
 let valid = {
         btnBG : "",
         btnCOLOR: "greencolor",
@@ -38,7 +38,7 @@ const templete = (data,i) => {
                         <img src=${data.IMG_URL} alt="EventIMG" class="img-fluid rounded-3">
                     </a>
                 </div>
-                <div class="card shadow-lg m-1 text-black ${collider} boxDesign" id="${collapseTarget}">
+                <div class="card shadow-lg text-black ${collider} boxDesign" id="${collapseTarget}">
                     <div class="fs-4 fw-bold text-black card-header">${data.EventName}</div>
                     <div class="fs-7 text-black-50 fw-bolder card-body p-1 px-3">
                         <p>${data.Description}</p><br>
