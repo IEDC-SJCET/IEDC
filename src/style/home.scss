@@ -65,14 +65,81 @@
     }
 }
 #down-arrow {
-    font-size: 20px;
     position: absolute;
-        bottom: 0;
-        left: calc(50vw - 10px);
+    bottom: 0;
+    padding: 0%;
+        &>div {
+            width: auto;
+            height: 5rem;
+            position: relative;
+            &> .dotNot{
+                position: absolute;
+                top: -.4rem;
+                left: -.4rem;
+                color: var(--green);
+            }
+        }
 }
 
+//write a left to right slide-in animation for the #down-arrow and stay for 10 sec and then slide out then display none forever
+#down-arrow {
+    animation-name: slidein;
+    animation-duration: 30s;
+}
+@keyframes slidein {
+    0% {
+        left: -100%;
+        width: 100%;
+    }
+    30% {
+        left: 0%;
+        width: 100%;
+    }
+    80% {
+        left: 0%;
+        width: 100%;
+    }
+    100% {
+        left: 0%;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    #down-arrow {
+        &>div {
+            width: auto;
+            height: 5rem;
+        }
+    }
+}
+@media (max-width: 425px) {
+    #down-arrow {
+        &>div {
+            width: 100%;
+            height: 5rem;
+        }
+    }
+    .dotNot {
+        display: none;
+    }
+}
 .whyiedcimg {
     width: 100px;
     height: auto;
     margin-bottom: 10px;
+}
+
+#homepage {
+    position: relative;
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.70) 70%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, .2) 100%), url(/src/media/sjcet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
 }
