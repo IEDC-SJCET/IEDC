@@ -4,7 +4,7 @@
 :root {
     --green: #56c23e;
     --grey: rgb(201, 201, 201);
-    --bggrey: #f0f0f0;
+    --bggrey: #f2f3f5;
     --lightgreen: #56c23e46;
     --dark:#313131;
 }
@@ -83,12 +83,22 @@ html,body {
 
 .card{
     border-radius: 0!important;
+    background-color: #ffffff!important;
+}
+.card-header{
+    border-radius: 13px 13px 0 0!important;
+    // background-color: #f2f3f5 !important;
+    background-color: #ffffff!important;
+}
+.card-footer{
+    border-radius: 0 0 13px 13px!important;
+    // background-color: #f2f3f5!important;
+    background-color: #ffffff!important;
 }
 
 .shadow-lg {
     -webkit-border-radius: 13px!important;
     border-radius: 13px!important;
-    // background: #ffffff!important;
     -webkit-box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff!important;
     box-shadow: 5px 5px 17px #dbdbdb, -5px -5px 17px #ffffff!important;
     border: none!important;
@@ -96,15 +106,10 @@ html,body {
 .shadow-sm {
     -webkit-border-radius: 13px !important;
     border-radius: 13px !important;
-    // background: #ffffff !important;
     -webkit-box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
     box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
     border: none !important;
 }
-// .shadow-lg {
-//     box-shadow: 0px 0rem 2rem 1px rgb(0 0 0 / 23%) !important;
-// }
-
 a,button{
     text-decoration: none;
     border-radius: 0 !important;
@@ -113,7 +118,7 @@ a,button{
 
 }
 #bgdots {
-    background-color: rgb(240, 240, 240);
+    background-color: #f2f3f5;
 }
 
 .mybg-black {

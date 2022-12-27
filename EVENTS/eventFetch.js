@@ -26,29 +26,29 @@ let invalid = {
         icon: "bi bi-clock"
     }
 
-const templete = (data) => {
+const templete = (data,i) => {
     let validity = data.LinkExpireAt > Date.now()? valid : invalid;
+    let EventDate = new Date(data.EventStartsAt);
     data.Description = data.Description.toString().replace(/(?:\r\n|\r|\n)/g, '<br>');
-    let collapseTarget = data.EventName.toString().replace(/ +/g,"");
+    let collapseTarget = "EventBody" + i.toString();
     return `
-            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3">
                 <div class="boxDesign">
                     <a data-bs-toggle="collapse" aria-expanded="true" data-bs-target="#${collapseTarget}" aria-controls="${collapseTarget}">
                         <img src=${data.IMG_URL} alt="EventIMG" class="img-fluid rounded-3">
                     </a>
                 </div>
-                <div class="${collider} boxDesign" id="${collapseTarget}">
-                    <div class="card shadow-lg  text-black">
-                        <div class="fs-4 fw-bold text-black card-header">${data.EventName}</div>
-                        <div class="fs-7 text-black-50 card-body">
-                            <p>${data.Description}</p>
-                            <p>${data.EventVenue}</p>
-                        </div>
-                        <div class="card-footer ${validity.btnBG} text-end">
-                        <a href=${data.RedirectLink} class="${validity.btnCOLOR} py-2 fs-6 fw-bold">
-                            ${validity.btnText} <i class="${validity.icon}"></i>
-                        </a>
-                        </div>
+                <div class="card shadow-lg m-1 text-black ${collider} boxDesign" id="${collapseTarget}">
+                    <div class="fs-4 fw-bold text-black card-header">${data.EventName}</div>
+                    <div class="fs-7 text-black-50 fw-bolder card-body p-1 px-3">
+                        <p>${data.Description}</p><br>
+                        <p>Venue: ${data.EventVenue}</p>
+                        <p>Date: ${EventDate.getDate()} - ${EventDate.getMonth()} - ${EventDate.getFullYear()}</p>
+                    </div>
+                    <div class="card-footer ${validity.btnBG} text-end">
+                    <a href=${data.RedirectLink} class="${validity.btnCOLOR} py-2 fs-6 fw-bold">
+                        ${validity.btnText} <i class="${validity.icon}"></i>
+                    </a>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,10 @@ const qry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const eventContainer = document.getElementById("eventSECTION");
     eventContainer.innerHTML = "";
     const querySnapshot = await getDocs(qry);
+    let i = 1;
     querySnapshot.forEach((doc) => {
         let data = doc.data();
-        eventContainer.innerHTML += templete(data);
+        eventContainer.innerHTML += templete(data,i);
+        i++;
     });
+    

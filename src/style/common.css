@@ -3,7 +3,7 @@
 :root {
   --green: #56c23e;
   --grey: rgb(201, 201, 201);
-  --bggrey: #f0f0f0;
+  --bggrey: #f2f3f5;
   --lightgreen: #56c23e46;
   --dark:#313131;
 }
@@ -87,6 +87,17 @@ html, body {
 
 .card {
   border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.card-header {
+  border-radius: 13px 13px 0 0 !important;
+  background-color: #ffffff !important;
+}
+
+.card-footer {
+  border-radius: 0 0 13px 13px !important;
+  background-color: #ffffff !important;
 }
 
 .shadow-lg {
@@ -109,7 +120,7 @@ a, button {
 }
 
 #bgdots {
-  background-color: rgb(240, 240, 240);
+  background-color: #f2f3f5;
 }
 
 .mybg-black {

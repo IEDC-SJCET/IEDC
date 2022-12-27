@@ -1,5 +1,8 @@
 .boxDesign {
   max-width: 400px;
   max-height: 400px;
-  overflow: scroll;
+}
+
+.card-body {
+  overflow-y: scroll;
 }/*# sourceMappingURL=eventfeed.css.map */

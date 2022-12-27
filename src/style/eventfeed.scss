@@ -1,5 +1,8 @@
 .boxDesign {
-    max-width: 400px; 
-    max-height: 400px;
-    overflow: scroll;
+	max-width: 400px;
+	max-height: 400px;
+}
+
+.card-body {
+    overflow-y: scroll;
 }
