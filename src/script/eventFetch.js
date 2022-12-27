@@ -26,33 +26,31 @@ let invalid = {
         icon: "bi bi-clock"
     }
 
-const templete = (i,srcLINK,redirect,validity) => {
-    console.log(validity);
-    let btnSET = "btn-light";
+const templete = (i,data) => {
+    let validity = data.LinkExpireAt < Date.now()? valid : invalid;
     let display = i > 3? "d-none d-md-block" : " ";
     return `<div class="Event${i} bg-white card  border ${display}">
                 <div class="card-img">
-                    <img src="${srcLINK}" alt="" srcset=""
+                    <img src=${data.IMG_URL} alt="" srcset=""
                     class="img-fluid m-auto">
                 </div>
-                <div class="card-img-overlay rounded-0 d-flex flex-column">
-                    <a href = ${redirect} class=" m-auto mb-4 btn ${btnSET} rounded-5 border text-black-50">Expired &nbsp;<i class="bi bi-clock"></i></a>
+                <div class="card-img-overlay eventIMGoverlay rounded-0 d-flex flex-column">
+                    <a href = ${data.RedirectLink} class=" m-auto mb-4 btn ${validity.btn} rounded-5 border">${validity.btnText} &nbsp;<i class="${validity.icon}"></i></a>
                 </div>
             </div>`;
 }
 
 const EVENTS = collection(DB,'EVENTS');
-const qry = query(EVENTS, orderBy('timeStamp'));
+const qry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const container5 = document.getElementById("container5");
 window.onload = async function () {
     container5.innerHTML = "";
-    const querySnapshot = await getDocs(EVENTS);
+    const querySnapshot = await getDocs(qry);
     let i = 1;
     querySnapshot.forEach((doc) => {
-        console.log(i);
         let data = doc.data();
         if (i < 6) {
-            container5.innerHTML += templete(i, data.fileLINK, data.redirect, data.firstDate);
+            container5.innerHTML += templete(i,data);
         }
         i++;
     });
