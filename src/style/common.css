@@ -138,8 +138,9 @@ a, btn-success {
   background-color: transparent;
 }
 
+.bg-white,
 #bgdots {
-  background-color: var(--bggrey);
+  background-color: var(--bggrey) !important;
 }
 
 .mybg-black {
@@ -162,7 +163,6 @@ a, btn-success {
   background-color: var(--grey) !important;
   color: #000;
   font-weight: bold;
-  padding: 0.5rem 5rem;
   font-size: 1rem;
   font-family: "Dm Sans", sans-serif;
   border-radius: 10rem;
