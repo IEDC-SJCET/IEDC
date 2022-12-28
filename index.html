@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="src/style/common.css" fetchpriority="high">
     <link rel="stylesheet" href="src/style/form.css">
     <link rel="stylesheet" href="src/style/event-intro.css">
+    <link rel="stylesheet" href="src/style/eventfeed.css">
     <link rel="stylesheet" href="src/style/execom-intro.css">
     <link rel="stylesheet" href="src/style/home.css" fetchpriority="high">
     <link rel="stylesheet" href="src/style/loading.css" fetchpriority="high">
@@ -79,36 +80,23 @@
                     Incubated
                 </h5>
                 <span>
-                    <a href="https://innovate.startupmission.in/#/register" class=" btn mybtn bg-white px-5" data-aos="fade-up" data-aos-duration="3000">
+                    <a href="https://innovate.startupmission.in/#/register" class="btn-outline-dark btn px-5" data-aos="fade-up" data-aos-duration="3000">
                         Join us <i class="bi bi-chevron-right"></i></a>
                     </span>
             </div>
             <div class="flex-grow-1"></div>
-            <!-- notification panel -->
-            <!-- <div class="col-12 col-md-4 m-0 d-none d-md-flex flex-column justify-content-center ">
-                <div class="w-100 h-25 row" data-aos="fade-up" data-aos-duration="3000">
-                    
-                </div>
-            </div> -->
         </div>
-        <div id="down-arrow" class="container d-none justify-content-end">
-            <div class="d-flex p-0 m-0">
-                <div class="spinner-grow spinner-grow-sm dotNot" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <img src="src/EVENTS/Event details/panel.jpg" alt="" srcset="" class="">
-                <a href="" style="color: #fff ;background-color: #000 ;" class="d-flex align-items-center justify-content-center rounded-0 fs-1"><i class="bi bi-chevron-compact-right"></i></a>
-            </div>
-        </div>
-        <!-- <i id="down-arrow" class="bi bi-chevron-down mx-auto text-light"></i> -->
+        <i id="down-arrow" class="bi bi-chevron-compact-down text-light"></i>
     </div>
-    <!-- why iedc -->
-    
-    <div class="row container mx-auto m-0 p-0 d-flex flex-column align-items-center justify-content-evenly gap-5">
-        <div class="mt-5 gap-3 d-flex flex-column">
-            <div id="whyiedc" class="text-black fw-bolder fs-2 text-center" data-aos="fade-up" data-aos-duration="1200">
+    <!-- whole container -->
+    <div class="row container m-0 py-4 d-flex flex-column align-items-center justify-content-evenly gap-5">
+        <!-- Intro Event -->
+        <div id="homeEvent"></div>
+        <!-- why iedc -->
+        <div class="gap-3 d-flex flex-column text-center">
+            <h2 id="whyiedc" class="text-black fw-bolder fs-2 text-center" data-aos="fade-up" data-aos-duration="1200">
                 WHY IEDC <span style="color: var(--green) ;"><i class="bi bi-intersect"></i></span> 
-            </div>
+            </h2>
             <h5 class="text-black-50 text-center fw-light fs-6 m-0" data-aos="fade-up" data-aos-duration="1200">
                 Here students take their <br> first step as innovators and entrepreneurs
             </h5>
@@ -148,19 +136,31 @@
             </div>
         </div>
         
-        <div class="d-flex">
-            <div class="bg-white shadow-lg rounded-3 d-flex flex-column flex-md-row gap-3 p-3" data-aos="fade-up" data-aos-duration="1000">
-                <div class="col d-flex justify-content-center align-items-center p-md-5 p-2">
-                    <img src="/src/EVENTS/ipl-logo.png" alt="" class="img-fluid">
+        <div data-aos="fade-up" data-aos-duration="1200">
+            <div class="card shadow-lg w-100 text-black img-fluid">
+                <div class="fs-4 fw-bold text-black card-header">
+                    Innovators Premier League <span class="greencolor">2.0</span>
                 </div>
-                <div class="col d-flex flex-column justify-content-center">
-                    
-                    <h2 class="fw-bold display-6 p-0 text-black bg-transparent text-start ">IPL <span style="color: var(--green) ;">2.0</span></h2>
-                    <p class="fw-normal fs-5 p-0 text-black bg-transparent text-start ">Innovators Premier League <span style="color: var(--green) ;"><i class="bi bi-soundwave"></i></span></p>
-                    <p class="h5 fs-7 fw-light p-0 text-black-50 bg-transparent">
-                     Initiative of the Kerala Startup Mission to bring out the best talents from the Kerala Innovation Hubs. IPL aims to bring awareness and sensitization of IEDC & its activities among students, building a competitive & entrepreneurial mindset among innovators, and create the pipeline of startups.
-                    </p>
-                    <span><a href="https://innovate.startupmission.in/#/register" class=" btn btn-outline-dark px-4 rounded-5 fs-6">Reg Now <i class="bi bi-chevron-right"></i></a></span>
+                <div class="w-100 p-0 m-0 d-flex flex-column flex-md-row">
+                    <div class="w-100 p-3 pb-0">
+                        <img src="/src/media/iplSJCET.png" alt="" class="img-fluid rounded-3">
+                    </div>
+                    <div class="w-100 fs-7 text-black-50 fw-bolder card-body p-1 pt-3 px-3">
+                        <p>Initiative of the Kerala Startup Mission to bring out the best talents from the Kerala Innovation Hubs. IPL aims to
+                        bring awareness and sensitization of IEDC & its activities among students, building a competitive & entrepreneurial
+                        mindset among innovators, and create the pipeline of startups.</p>
+                        <br><br>
+                        <p>During IPL, the students in the institution will compete with each other at the College level, followed by Regional level and at the State level challenges under the 3 major pillars - Innovation, Technology & Entrepreneurship. The league competition runs on a point scale where 
+                            institutions and students can achieve points by organizing and taking part in boot camps, workshops, ideathons, hackathons, etc. under various categories.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer text-center p-3 border-0">
+                    <span>
+                        <a href="https://innovate.startupmission.in/#/register" class="btn mybtn bg-light border-1 border-dark px-5">
+                            Reg Now <i class="bi bi-chevron-right"></i>
+                        </a>
+                    </span>
                 </div>
             </div>
         </div>
@@ -170,16 +170,16 @@
                 SJCET BOOTCAMP - <span style="color: var(--green) ;">IEDC <i class="bi bi-patch-check-fill"></i></span>
             </h2>
             <div style="min-height:200px ;" class="card flex-grow-1 shadow-lg rounded-3 p-3 justify-content-center" data-aos="fade-up" data-aos-duration="2000">
-            <h5 class="text-black-50 fs-7 text-start">
-               <strong>The SJCET Startup Bootcamp- IEDC</strong> (Innovation and Entrepreneurship Development Centre) was set up on 9th March
-                2015 as a part of the Kerala Startup Mission (KSUM) initiative to develop a startup culture amongst students.
-                The IEDCs are platforms set up in Engineering, Management, Arts & Science Colleges and Polytechnics with an aim
-                to provide students an opportunity to experiment and innovate. KSUM has set up IEDCs in 226 institutions across
-                the State which provide avenues for creative students to learn, collaborate and transform their innovative ideas
-                into prototypes of viable products and services. IEDCs works as the first launch pad for a student’s
-                entrepreneurial journey and provide them with access to cutting edge technology, world class infrastructure,
-                high quality mentorship, early risk capital and global exposure.
-            </h5>
+                <h5 class="text-black-50 fs-7 text-start">
+                   <strong>The SJCET Startup Bootcamp- IEDC</strong> (Innovation and Entrepreneurship Development Centre) was set up on 9th March
+                    2015 as a part of the Kerala Startup Mission (KSUM) initiative to develop a startup culture amongst students.
+                    The IEDCs are platforms set up in Engineering, Management, Arts & Science Colleges and Polytechnics with an aim
+                    to provide students an opportunity to experiment and innovate. KSUM has set up IEDCs in 226 institutions across
+                    the State which provide avenues for creative students to learn, collaborate and transform their innovative ideas
+                    into prototypes of viable products and services. IEDCs works as the first launch pad for a student’s
+                    entrepreneurial journey and provide them with access to cutting edge technology, world class infrastructure,
+                    high quality mentorship, early risk capital and global exposure.
+                </h5>
             </div>
             <div class="p-0 row-cols-md-4 row-cols-2 d-flex flex-row flex-wrap gap-3 list-unstyled">
                 <li class="card flex-grow-1 bg-white p-3 justify-content-center shadow-lg rounded-3"  data-aos="fade-up" data-aos-duration="1500">
@@ -221,7 +221,7 @@
             </h5>
         </div> -->
         <div class="d-flex flex-column gap-3">
-            <h2 id="SJCETPALAI" class="text-black text-center fw-bolder fs-2 m-0" data-aos="fade-up" data-aos-duration="1200">
+            <h2 id="SJCETPALAI" class="text-black text-center fw-bolder fs-2" data-aos="fade-up" data-aos-duration="1200">
                 OUR SUPPORTERS <span class="greencolor"><i class="bi bi-star-fill"></i></span>
             </h2>
             
@@ -253,7 +253,8 @@
             </div>
         </div>
         <div class="d-flex flex-column gap-3">
-            <h3 class="text-black-50 fs-7 fw-bold m-0 text-center" data-aos="fade-up" data-aos-duration="1200">FOLLOW US ON</h3>
+            <h3 class="text-black-50 fs-7 fw-bold m-0 text-center" data-aos="fade-up" data-aos-duration="1200">
+                FOLLOW US ON</h3>
             <div class="d-flex gap-3 gap-md-5 fs-4 list-unstyled justify-content-center">
                 <li data-aos="fade-up" data-aos-duration="1400">
                     <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-black-50"><i
@@ -283,327 +284,327 @@
         </div>
     
     
-    <!-- the Event section  -->
-    <div>
-    <div class="m-0 d-flex flex-column gap-3 text-center">
-        <h2 id="EVENTS" class="fw-bolder text-black text-center m-0 p-0 fs-2" data-aos="fade-up" data-aos-duration="1200">
-            BOOTCAMP EVENTS <span class="greencolor"><i class="bi bi-lightning-fill"></i></span>
-        </h2>
-        <div id="container5" class="eventGrid w-100 d-flex flex-column d-md-grid"  data-aos="fade-up" data-aos-duration="1000"></div>
-        <span>
-            <a class="mybtn p-1 px-4" href="EVENTS/" data-aos="fade-up" data-aos-duration="2900">
-                ALL EVENTS&nbsp;<i class="bi bi-chevron-right"></i>
-            </a>
-        </span>
-        <br>
-    </div>
-    </div>
+        <!-- the Event section  -->
+        
+        <div class="m-0 d-flex flex-column gap-3 text-center">
+            <h2 id="EVENTS" class="fw-bolder text-black text-center m-0 p-0 fs-2" data-aos="fade-up" data-aos-duration="1200">
+                BOOTCAMP EVENTS <span class="greencolor"><i class="bi bi-lightning-fill"></i></span>
+            </h2>
+            <!-- Intro 5 Events -->
+            <div id="container5"  class="eventGrid w-100 d-flex flex-column d-md-grid align-items-center"  data-aos="fade-up" data-aos-duration="1000">
+                <span class="text-center spinner-border text-success" role="status"></span>
+            </div>
+            <span>
+                <a class="mybtn p-1 px-4" href="EVENTS/" data-aos="fade-up" data-aos-duration="2900">
+                    ALL EVENTS&nbsp;<i class="bi bi-chevron-right"></i>
+                </a>
+            </span>
+        </div>
+    
     
     <!-- the summit page  -->
-    <div class="m-0 d-flex flex-column gap-3 justify-content-start vh-100">
-        <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0 fs-2" data-aos="fade-up" data-aos-duration="1200">
-            <span class="greencolor">SUMMIT</span> 2022 <span class"greencolor"'><i class="bi bi-play-circle-fill"></i></span>
-        </h2>
-        <div class="card shadow-lg rounded-3 p-3 justify-content-center"
-            data-aos="fade-up" data-aos-duration="2000">
-        <h5 class="text-black-50 fs-7 text-start">
-            IEDC summit 2022 has been hosted by St. Joseph's College of Engineering and technology, Palai on 5th March 2022.This
-            flagship event brought together all student innovators and all other connected stakeholders under one umbrella.
-            More than 20 speakers were presented in the event. More than 3000 participants across more than 14 districts
-            participated in this event. The summit witnessed a series of technology tracks, brainstorming sessions, interactive
-            community meetup and product exhibition. The presence of cooperative leaders provided the participants with a deeper
-            insight with latest technology.
-        </h5>
-        </div>
-        <div class="flex-grow-1 Summitparent d-flex flex-column d-md-grid col-12">
-                <div class="div1 bg-white border" data-aos="fade-up" data-aos-duration="1200">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-    
-                            <div class="carousel-item active div1-carousel-item-1 h-100 card" data-bs-interval="3000">
-                                <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">    
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div1-carousel-item-2 h-100 card" data-bs-interval="3000">
-                                <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div1-carousel-item-3 h-100 card" data-bs-interval="3000">
-                                <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- div2 -->
-                <div class="div2 bg-white border" data-aos="fade-up" data-aos-duration="1600">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                
-                            <div class="carousel-item active div2-carousel-item-1 h-100 card" data-bs-interval="3500">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div2-carousel-item-2 h-100 card" data-bs-interval="3500">
-                                <div
-                                    class="card-img-overlay h-100 rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div2-carousel-item-3 h-100 card" data-bs-interval="3500">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- div 3 -->
-                <div class="div3 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="2000">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                
-                            <div class="carousel-item active div3-carousel-item-1 h-100 card" data-bs-interval="2000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div3-carousel-item-2 h-100 card" data-bs-interval="2000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div3-carousel-item-3 h-100 card" data-bs-interval="2000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- div4 -->
-                <div class="div4 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="1400">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                
-                            <div class="carousel-item active div4-carousel-item-1 h-100 card" data-bs-interval="3750">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div4-carousel-item-2 h-100 card" data-bs-interval="3750">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div4-carousel-item-3 h-100 card" data-bs-interval="3750">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- div5 -->
-                <div class="div5 bg-white border" data-aos="fade-up" data-aos-duration="1800">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                
-                            <div class="carousel-item active div5-carousel-item-1 h-100 card" data-bs-interval="4500">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div5-carousel-item-2 h-100 card" data-bs-interval="4500">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div5-carousel-item-3 h-100 card" data-bs-interval="4500">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- div6 -->
-                <div class="div6 bg-white border" data-aos="fade-up" data-aos-duration="2300">
-                    <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
-                        <div class="carousel-inner h-100">
-                
-                            <div class="carousel-item active div6-carousel-item-1 h-100 card" data-bs-interval="4000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div6-carousel-item-2 h-100 card" data-bs-interval="4000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="carousel-item div6-carousel-item-3 h-100 card" data-bs-interval="4000">
-                                <div
-                                    class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
-                                    <a href="1" class="summit-cards">
-                                        
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
-    
-    <!-- the team page -->
-    <div class="d-flex flex-column gap-3 w-100 text-center vh-100 py-2">
-        <h2 id="EXECOM" class="fw-bolder text-black display-6" data-aos="fade-up" data-aos-duration="1200">
-            <span class="greencolor">IEDC</span> EXECOM <span class="greencolor"><i class="bi bi-people-fill"></i></span>
-        </h2>
-        <div id="super-pics" class="w-100 h-100">
-            <div class="execom-container h-100" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300">
-                <div class="img1 gridpics"></div>
-                <div class="img2 gridpics"></div>
-                <div class="img3 gridpics"></div>
-                <div class="img4 gridpics"></div>
-                <div class="img5 gridpics"></div>
-                <div class="img6 gridpics"></div>
-                <div class="img7 gridpics"></div>
-                <div class="img8 gridpics"></div>
-            </div>
-        </div>
-        <span>
-            <a class="mybtn p-1 px-4" href="EXECOM/">
-                MEET THE DREAM TEAM <i class="bi bi-chevron-right"></i>
-            </a>
-        </span>
-    </div>
-
-    <!-- history page -->
-    <div class="container p-0 d-flex flex-column text-center">
-        <div class="the-past p-4 p-md-5 bg-transparent m-0">
-            <h2 id="history" class="fw-bolder display-6 text-black" data-aos="fade-up" data-aos-duration="1400">
-                BOOTCAMP REWIND <span class="greencolor"><i class="bi bi-skip-backward-circle-fill"></i></span>
+        <div class="m-0 d-flex flex-column gap-3 justify-content-start vh-100">
+            <h2 id="SUMMIT2022" class="fw-bolder text-black text-center m-0 p-0 fs-2" data-aos="fade-up" data-aos-duration="1200">
+                <span class="greencolor">SUMMIT</span> 2022 <span class"greencolor"'><i class="bi bi-play-circle-fill"></i></span>
             </h2>
-            <div class="timeline w-100">
-                <div class="conbox left" data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center" >
-                        <h3 class="fw-bold fs-6 m-0">IEDC SUMMIT 2022</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">It’s the 6th edition of IEDC summit
-                        It was a 2 day long summit conducted on 5th March 2022
-                        Hosted by St Joseph’s College of Engineering and Technology</p>
+            <div class="card shadow-lg rounded-3 p-3 justify-content-center"
+                data-aos="fade-up" data-aos-duration="2000">
+            <h5 class="text-black-50 fs-7 text-start">
+                IEDC summit 2022 has been hosted by St. Joseph's College of Engineering and technology, Palai on 5th March 2022.This
+                flagship event brought together all student innovators and all other connected stakeholders under one umbrella.
+                More than 20 speakers were presented in the event. More than 3000 participants across more than 14 districts
+                participated in this event. The summit witnessed a series of technology tracks, brainstorming sessions, interactive
+                community meetup and product exhibition. The presence of cooperative leaders provided the participants with a deeper
+                insight with latest technology.
+            </h5>
+            </div>
+            <div class="flex-grow-1 Summitparent d-flex flex-column d-md-grid col-12">
+                    <div class="div1 bg-white border" data-aos="fade-up" data-aos-duration="1200">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div1-carousel-item-1 h-100 card" data-bs-interval="3000">
+                                    <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">    
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div1-carousel-item-2 h-100 card" data-bs-interval="3000">
+                                    <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div1-carousel-item-3 h-100 card" data-bs-interval="3000">
+                                    <div class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">INDIA 500 STARTUP AWARD 2020</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">Hyperthink Technologies by SJCET graduates Mr. Anto Patrex and Mr.Tahseen Amin was nominated</p>
+                    <!-- div2 -->
+                    <div class="div2 bg-white border" data-aos="fade-up" data-aos-duration="1600">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div2-carousel-item-1 h-100 card" data-bs-interval="3500">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div2-carousel-item-2 h-100 card" data-bs-interval="3500">
+                                    <div
+                                        class="card-img-overlay h-100 rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div2-carousel-item-3 h-100 card" data-bs-interval="3500">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">CASH GRANT OF INR 1 LAC</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">Cash grant was awarded from Idea Fest organized by KSUM
-                        Product prototype was E-LENDING MACHINE that enables lending and booking of development boards,sensors etc</p>
+                    <!-- div 3 -->
+                    <div class="div3 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="2000">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div3-carousel-item-1 h-100 card" data-bs-interval="2000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div3-carousel-item-2 h-100 card" data-bs-interval="2000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div3-carousel-item-3 h-100 card" data-bs-interval="2000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">LAMAARA TECHNOLOGIES</h3>
-                        <!-- <p class="text-black-50 fw-light fs-7 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</p>--><br>
-                        <ul class="p-0 list-unstyled">
-                            <li class="h3 text-black-50 fw-light fs-7 m-0">Lamaara Techonologies were selected for idea grand in 2017 of 2 Lakhs</li>
-                            <li class="h3 text-black-50 fw-light fs-7 m-0">Lamara Techologies achieved investment at TIECON KERALA in the year 2019 from Chennai Angels</li>
-                            <li class="h3 text-black-50 fw-light fs-7 m-0">Cofounders was being named among the 50 most Influential
-                            People of 2019 in Kerala by the Kerala Insider.</li>
-                            <li class="h3 text-black-50 fw-light fs-7 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</li>
-                        </ul>
+                    <!-- div4 -->
+                    <div class="div4 bg-white border d-none d-md-grid" data-aos="fade-up" data-aos-duration="1400">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div4-carousel-item-1 h-100 card" data-bs-interval="3750">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div4-carousel-item-2 h-100 card" data-bs-interval="3750">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div4-carousel-item-3 h-100 card" data-bs-interval="3750">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">GRAND FINALE OF STARTUP INDIA</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">IEDC Startup Bootcamp SJCET bagged three prizes at the Grand Finale of Startup India Kerala Stratup Yatra in the year 2018 Organised by Startup India and Kerala Startup Mission at Technopark,Trivandram</p>
-                        <p class="text-black-50 fw-light fs-7 m-0">IDEA FEST 2021</p>
+                    <!-- div5 -->
+                    <div class="div5 bg-white border" data-aos="fade-up" data-aos-duration="1800">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div5-carousel-item-1 h-100 card" data-bs-interval="4500">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div5-carousel-item-2 h-100 card" data-bs-interval="4500">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div5-carousel-item-3 h-100 card" data-bs-interval="4500">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">ENTREPRENEURSHIP ENABLER AWARD 2018</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">Entrepreneurship Enabler Award 2018 of Kerala Startup Mission
-                        Award was handovered by Sri M Sivasankar IAS( Secretary to CM and IT Secretary)</p>
+                    <!-- div6 -->
+                    <div class="div6 bg-white border" data-aos="fade-up" data-aos-duration="2300">
+                        <div id="carouselExampleInterval" class="carousel slide col-12 h-100" data-bs-ride="carousel">
+                            <div class="carousel-inner h-100">
+                            
+                                <div class="carousel-item active div6-carousel-item-1 h-100 card" data-bs-interval="4000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div6-carousel-item-2 h-100 card" data-bs-interval="4000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item div6-carousel-item-3 h-100 card" data-bs-interval="4000">
+                                    <div
+                                        class="card-img-overlay rounded-0 p-2 d-flex flex-column justify-content-end text-start text-white-50">
+                                        <a href="1" class="summit-cards">
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+            </div>
+        </div>
+    
+        <!-- the team page -->
+        <div class="d-flex flex-column gap-3 w-100 text-center vh-100 py-2">
+            <h2 id="EXECOM" class="fw-bolder text-black display-6" data-aos="fade-up" data-aos-duration="1200">
+                <span class="greencolor">IEDC</span> EXECOM <span class="greencolor"><i class="bi bi-people-fill"></i></span>
+            </h2>
+            <div id="super-pics" class="w-100 h-100">
+                <div class="execom-container h-100" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300">
+                    <div class="img1 gridpics"></div>
+                    <div class="img2 gridpics"></div>
+                    <div class="img3 gridpics"></div>
+                    <div class="img4 gridpics"></div>
+                    <div class="img5 gridpics"></div>
+                    <div class="img6 gridpics"></div>
+                    <div class="img7 gridpics"></div>
+                    <div class="img8 gridpics"></div>
                 </div>
-                <div class="conbox  left" data-aos="fade-up" data-aos-duration="1400">
-                    <div class="content p-3 text-center">
-                        <h3 class="fw-bold fs-6 m-0">ALL INDIA PERSISTENT INSPIRATION AWARD</h3><br>
-                        <p class="text-black-50 fw-light fs-7 m-0">Reon Saji, Praveen K S, Sandeep Salmon, Smitha John, Hanna George and Neethu Naduvathettu bagged the at the 2nd Smart
-                        India Hackathon, which is the world’s biggest Hackathon.</p>
+            </div>
+            <span>
+                <a class="mybtn p-1 px-4" href="EXECOM/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">
+                    MEET THE DREAM TEAM <i class="bi bi-chevron-right"></i>
+                </a>
+            </span>
+        </div>
+
+        <!-- history page -->
+        <div class="container p-0 d-flex flex-column text-center">
+            <div class="the-past p-4 p-md-5 bg-transparent m-0">
+                <h2 id="history" class="fw-bolder display-6 text-black" data-aos="fade-up" data-aos-duration="1400">
+                    BOOTCAMP REWIND <span class="greencolor"><i class="bi bi-skip-backward-circle-fill"></i></span>
+                </h2>
+                <div class="timeline w-100">
+                    <div class="conbox left" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center" >
+                            <h3 class="fw-bold fs-6 m-0">IEDC SUMMIT 2022</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">It’s the 6th edition of IEDC summit
+                            It was a 2 day long summit conducted on 5th March 2022
+                            Hosted by St Joseph’s College of Engineering and Technology</p>
+                        </div>
+                    </div>
+                    <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">INDIA 500 STARTUP AWARD 2020</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">Hyperthink Technologies by SJCET graduates Mr. Anto Patrex and Mr.Tahseen Amin was nominated</p>
+                        </div>
+                    </div>
+                    <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">CASH GRANT OF INR 1 LAC</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">Cash grant was awarded from Idea Fest organized by KSUM
+                            Product prototype was E-LENDING MACHINE that enables lending and booking of development boards,sensors etc</p>
+                        </div>
+                    </div>
+                    <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">LAMAARA TECHNOLOGIES</h3>
+                            <!-- <p class="text-black-50 fw-light fs-7 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</p>--><br>
+                            <ul class="p-0 list-unstyled">
+                                <li class="h3 text-black-50 fw-light fs-7 m-0">Lamaara Techonologies were selected for idea grand in 2017 of 2 Lakhs</li>
+                                <li class="h3 text-black-50 fw-light fs-7 m-0">Lamara Techologies achieved investment at TIECON KERALA in the year 2019 from Chennai Angels</li>
+                                <li class="h3 text-black-50 fw-light fs-7 m-0">Cofounders was being named among the 50 most Influential
+                                People of 2019 in Kerala by the Kerala Insider.</li>
+                                <li class="h3 text-black-50 fw-light fs-7 m-0">Founded by Mr Anto Patrex and Mr Thomas Cyriac</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="conbox  left"data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">GRAND FINALE OF STARTUP INDIA</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">IEDC Startup Bootcamp SJCET bagged three prizes at the Grand Finale of Startup India Kerala Stratup Yatra in the year 2018 Organised by Startup India and Kerala Startup Mission at Technopark,Trivandram</p>
+                            <p class="text-black-50 fw-light fs-7 m-0">IDEA FEST 2021</p>
+                        </div>
+                    </div>
+                    <div class="conbox  right"data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">ENTREPRENEURSHIP ENABLER AWARD 2018</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">Entrepreneurship Enabler Award 2018 of Kerala Startup Mission
+                            Award was handovered by Sri M Sivasankar IAS( Secretary to CM and IT Secretary)</p>
+                        </div>
+                    </div>
+                    <div class="conbox  left" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="content p-3 text-center">
+                            <h3 class="fw-bold fs-6 m-0">ALL INDIA PERSISTENT INSPIRATION AWARD</h3><br>
+                            <p class="text-black-50 fw-light fs-7 m-0">Reon Saji, Praveen K S, Sandeep Salmon, Smitha John, Hanna George and Neethu Naduvathettu bagged the at the 2nd Smart
+                            India Hackathon, which is the world’s biggest Hackathon.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <br><br>
     </div>
-    <br>
-</div>
     <!-- contact and feedback form -->
-    <div class="col-12 bg-black">
-    <div class="row container col-lg-12 col-xl-10 mx-auto m-0 p-0 d-flex flex-column">
-        <div id="footer" class="d-flex flex-column flex-md-row gap-5 justify-content-between my-3">
-            <div class="col d-flex flex-column">
+<div class="w-100 bg-black p-3">
+    <div class="container mx-auto m-0 p-0 d-flex flex-column gap-5">
+        <div id="footer" class="d-flex flex-column flex-md-row gap-5 gap-md-3 justify-content-center">
+            <div class="d-flex flex-column gap-3 flex-grow-1">
                 <h3 class="text-white fs-6 fw-bold text-center">REACH US</h3>
                 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="flex-grow-1"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d503167.5740352092!2d76.23294812656607!3d9.85064521519969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b07cc024cb7c83f%3A0xc8944aaebb3ba492!2sSt.%20Joseph&#39;s%20College%20of%20Engineering%20and%20Technology%2C%20Palai!5e0!3m2!1sen!2sin!4v1617135156377!5m2!1sen!2sin"
@@ -611,59 +612,60 @@
                     aria-label="St. Joseph's College of Engineering and Technology, Palai">
                 </iframe>
             </div>
-            <div class="col text-center border-1 border-white" >
+            <div class="text-center border-1 border-white d-flex flex-column gap-3 flex-grow-1">
                 <h3 id="ABOUTUS" class="text-white fs-6 fw-bold text-center"  >GIVE US FEEDBACK</h3>
-                <form class="pageclip-form d-flex flex-column text-white-50 gap-3" action="https://send.pageclip.co/2iQkv2SIchA9E8fFPu7yiNBuAs2igWGB" method="post">
+                <form id="feedbackFORM" class="d-flex flex-column text-white-50 gap-3">
                     <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="form-field bg-dark" placeholder="Your Name" required  >
                     <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="form-field bg-dark" placeholder="Email" required  >
                     <textarea id="q1or2or3" name="body" type="text" minlength="2" maxlength="200" class="form-field bg-dark py-4" placeholder="Feedbacks" required style="min-height:100px ;" ></textarea>
                     <span>
-                        <button class="mybtn2 btn btn-outline-light fw-semibold rounded-5 border px-4 pageclip-form__submit" type="submit"  >
+                        <button class="btn-outline-dark btn px-5" type="submit">
                             <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
                         </button>
                     </span>
                 </form>
             </div>
         </div>
-    </div>
-
-    <div class="row container col-lg-12 col-xl-10 p-0 d-flex mx-auto flex-column flex-md-row gap-md-5 ">
-        <div class="col text-start d-flex flex-column gap-4">
-            <a href="#"><img src="src/asset/bootcamp(white).png" alt="Bootcamp" class="img-fluid col-md-6 col-6"  ></a>
-            <br><br>
-            <h3 class="text-white fs-6 fw-bold mt-auto text-start ms-1 mb-0 pb-0"  >FOLLOW US</h3>
-            <div class="col p-0 d-flex gap-3 gap-md-5 fs-4 ms-1 mt-0" >
-                <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class=" text-white-50"  ><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.instagram.com/sjcetbootcamp/" class=" text-white-50"  ><i class="bi bi-instagram"></i></a>
-                <a href="https://www.tiwtter.com/sjcetbootcamp/" class=" text-white-50"  ><i class="bi bi-twitter"></i></a>
-                <a href="https://www.facebook.com/sjcetbootcamp/" class=" text-white-50"  ><i class="bi bi-facebook"></i></a>
-                <a href="https://discord.gg/eQjz6RXD" class=" text-white-50"  ><i class="bi bi-discord"></i></a>
-                <a href="https://www.youtube.com/channel/UC6v9cPvbBx4b4uyPUgtN5g" class=" text-white-50"  ><i class="bi bi-youtube"></i></a>
+        <div class="d-flex flex-column flex-md-row gap-5">
+        <div class=" d-flex flex-column gap-3">
+            <div class="d-flex">
+                <img src="src/asset/bootcamp(white).png" alt="Bootcamp" class="img-fluid col-md-6 col-6">
             </div>
-            <br>
-        </div>
-        <div class="col">
-            <span class="text-white fs-6 lead fw-bold h3 border-bottom border-2 greencolor"  >MORE LINKS</span>
-            <div class="d-flex flex-row justify-content-between my-4">
-            <div class="d-flex flex-column gap-3"  >
-                <a href="#home" class=" text-white-50">HOME</a>
-                <a href="#whyiedc" class=" text-white-50">WHY IEDC</a>
-                <a href="#SUMMIT2022" class=" text-white-50">SUMMIT 2022</a>
-                <a href="#EXECOM" class=" text-white-50">EXECOM</a>
-                <a href="#EVENTS" class=" text-white-50">EVENTS</a>
-            </div>
-            <div class="d-flex flex-column gap-3">
-                <a href="https://sjcetpalai.ac.in/" class=" text-white-50">SJCET PALAI</a>
-                <a href="#history" class=" text-white-50">HISTORY</a>
-                <a href="https://g.page/SJCETPALA?share" class=" text-white-50">LOCATION</a>
-                <a href="#ABOUTUS" class=" text-white-50">FEEDBACK</a>
-                <a href="https://github.com/rajatsandeepsen" class=" text-white-50">WEBDEV</a>
-            </div>
+            <h3 class="text-white fs-6 fw-bold text-start">FOLLOW US</h3>
+            <div class="d-flex gap-3 gap-md-5">
+                <a href="https://www.linkedin.com/company/startup-bootcamp-sjcet/" class="text-white-50 fs-3"><i
+                        class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/sjcetbootcamp/" class=" text-white-50 fs-3"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.tiwtter.com/sjcetbootcamp/" class=" text-white-50 fs-3"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.facebook.com/sjcetbootcamp/" class=" text-white-50 fs-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://discord.gg/eQjz6RXD" class="text-white-50 fs-3"><i class="bi bi-discord"></i></a>
+                <a href="https://www.youtube.com/channel/UC6v9cPvbBx4b4uyPUgtN5g" class="text-white-50 fs-3"><i
+                        class="bi bi-youtube"></i></a>
             </div>
         </div>
+        <div class="w-auto">
+            <span class="text-white fs-6 fw-bold h3 border-bottom border-2 greencolor">MORE LINKS</span>
+            <div class="d-flex flex-row justify-content-between justify-content-md-start gap-5 my-4">
+                <div class="d-flex flex-column gap-3">
+                    <a href="#home" class=" text-white-50">HOME</a>
+                    <a href="#whyiedc" class=" text-white-50">WHY IEDC</a>
+                    <a href="#SUMMIT2022" class=" text-white-50">SUMMIT 2022</a>
+                    
+                </div>
+                <div class="d-flex ms-2 flex-column gap-3">
+                    <a href="#EXECOM" class=" text-white-50">EXECOM</a>
+                    <a href="#EVENTS" class=" text-white-50">EVENTS</a>
+                    <a href="https://sjcetpalai.ac.in/" class=" text-white-50">SJCET PALAI</a>
+                </div>
+                <div class="d-flex ms-2 flex-column gap-3">
+                    <a href="#history" class=" text-white-50">HISTORY</a>
+                    <a href="https://g.page/SJCETPALA?share" class=" text-white-50">LOCATION</a>
+                    <a href="https://github.com/rajatsandeepsen" class=" text-white-50">WEBDEV</a>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
-
-</div>
 </div>
 <!-- <script>
     AOS.init();
@@ -672,5 +674,6 @@
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script type="module" src="/src/script/homeEventFetch.js"></script>
 </body>
 </html>

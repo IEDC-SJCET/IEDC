@@ -1,8 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { getFirestore, collection, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
-
-// import { initializeApp } from 'firebase/app';
-// import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
 
 const firebaseConfig = {
                 apiKey: "AIzaSyCNbmkHVo6YAOk69h9OgMGbQJBUlW5xz4c",
@@ -14,20 +11,68 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
+const EVENTS = collection(DB,'EVENTS');
 
 let valid = {
-        btn : "btn-success",
+        btn : "btn-success px-4",
         btnText : "Reg Now",
         icon: "bi bi-chevron-right"
     }
 let invalid = {
-        btn : "btn-light",
+        btn : "mybtn px-4",
         btnText : "Expired",
         icon: "bi bi-clock"
     }
 
+
+    const homeEventTemplate = (data) => {
+    let validity = data.LinkExpireAt > Date.now()? valid : false;
+
+    if (validity) {
+            let EventDate = new Date(data.EventStartsAt);
+            data.Description = data.Description.toString().replace(/(?:\r\n|\r|\n)/g, '<br>');
+            return `<h2 class="text-black fw-bold text-center fs-2 pb-3" data-aos="fade-up" data-aos-duration="1200">
+                        BOOTCAMP LIVE <span class="greencolor">EVENT<i class="bi bi-thunder"></i></span> 
+                    </h2>
+                    <div class="d-flex w-100 flex-column flex-md-row justify-content-center align-items-center gap-3">
+                        <div class="boxDesign">
+                            <img src=${data.IMG_URL} alt="EventIMG" class="img-fluid rounded-3">
+                        </div>
+                        <div class="card shadow-lg text-black boxDesign img-fluid">
+                            <div class="fs-4 fw-bold text-black card-header d-flex align-items-center gap-2">${data.EventName}
+                                <div class="spinner-grow text-success spinner-grow-sm" role="status"></div>
+                            </div>
+                            <div class="fs-7 text-black-50 fw-bolder card-body p-1 px-3">
+                                <p>${data.Description}</p><br>
+                                <p>Venue: ${data.EventVenue}</p>
+                                <p>Date: ${EventDate.getDate()} - ${EventDate.getMonth()} - ${EventDate.getFullYear()}</p>
+                            </div>
+                            <div class="card-footer text-end">
+                            <a href=${data.RedirectLink} class="btn btn-success px-4 fs-6 fw-bold">
+                                Reg Now <i class="bi bi-chevron-right"></i>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+    }
+    else return -1;
+}
+
+
+const Aqry = query(EVENTS, orderBy('EventStartsAt', "desc"), limit(1));
+const homeEventContainer = document.getElementById("homeEvent");
+    homeEventContainer.innerHTML = "";
+    const AquerySnapshot = await getDocs(Aqry);
+    AquerySnapshot.forEach((doc) => {
+        let data = doc.data();
+        let returnEvent =  homeEventTemplate(data)
+        if (returnEvent != -1)
+            homeEventContainer.innerHTML += returnEvent;
+    });
+    
 const templete = (i,data) => {
-    let validity = data.LinkExpireAt < Date.now()? valid : invalid;
+    let validity = data.LinkExpireAt > Date.now()? valid : invalid;
     let display = i > 3? "d-none d-md-block" : " ";
     return `<div class="Event${i} bg-white card  border ${display}">
                 <div class="card-img">
@@ -40,13 +85,13 @@ const templete = (i,data) => {
             </div>`;
 }
 
-const EVENTS = collection(DB,'EVENTS');
 const qry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const container5 = document.getElementById("container5");
 window.onload = async function () {
-    container5.innerHTML = "";
+    
     const querySnapshot = await getDocs(qry);
     let i = 1;
+    container5.innerHTML = "";
     querySnapshot.forEach((doc) => {
         let data = doc.data();
         if (i < 6) {
@@ -55,6 +100,3 @@ window.onload = async function () {
         i++;
     });
 }
-
-
-// str = str.replace(/(?:\r\n|\r|\n)/g, '<br>');
