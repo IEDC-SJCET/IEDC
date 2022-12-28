@@ -21,4 +21,41 @@
 
 textarea {
   resize: none;
+}
+
+.newFormField {
+  height: 46px;
+  border: none;
+  border-radius: 4px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1254901961) !important;
+  padding: 0 16px;
+  color: #000;
+  outline: 0;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.newFormField:hover,
+.newFormField:focus {
+  color: #000;
+  background-color: var(--lightgreen);
+}
+
+.newFormField:required:valid {
+  border-color: var(--green);
+  background-color: var(--lightgreen);
+}
+
+.newFormField:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% yellow;
+  background-size: 25px;
+}
+
+label {
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: -0.6rem;
+  font-family: "Dm Sans", sans-serif;
 }/*# sourceMappingURL=form.css.map */
