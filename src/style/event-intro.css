@@ -22,6 +22,9 @@
   font-size: 0px;
   transition: all 0.7s;
 }
+.eventGrid > span {
+  grid-area: 1/1/3/5;
+}
 
 .eventGrid > div:hover > .card-img-overlay > a, .eventGrid > div:hover > .card-img-overlay > p,
 .eventGrid > div:active > .card-img-overlay > a,

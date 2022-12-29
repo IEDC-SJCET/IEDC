@@ -615,12 +615,12 @@
             <div class="text-center border-1 border-white d-flex flex-column gap-3 flex-grow-1">
                 <h3 id="ABOUTUS" class="text-white fs-6 fw-bold text-center"  >GIVE US FEEDBACK</h3>
                 <form id="feedbackFORM" class="d-flex flex-column text-white-50 gap-3">
-                    <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="form-field bg-dark" placeholder="Your Name" required  >
-                    <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="form-field bg-dark" placeholder="Email" required  >
-                    <textarea id="q1or2or3" name="body" type="text" minlength="2" maxlength="200" class="form-field bg-dark py-4" placeholder="Feedbacks" required style="min-height:100px ;" ></textarea>
+                    <input name="name" type="text" minlength="2" maxlength="20" class="form-field bg-dark" placeholder="Your Name" required>
+                    <input name="email" type="email" minlength="2" maxlength="30" class="form-field bg-dark" placeholder="Email" required>
+                    <textarea name="feedback" type="text" minlength="2" maxlength="200" class="form-field bg-dark py-4" placeholder="Message" required style="min-height:100px ;" ></textarea>
                     <span>
-                        <button class="btn-outline-dark btn px-5" type="submit">
-                            <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
+                        <button id="btnSubmit" class="btn-outline-dark btn px-5" type="submit">
+                            SUBMIT <i class="bi bi-chevron-right"></i>
                         </button>
                     </span>
                 </form>
@@ -673,7 +673,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <script type="module" src="/src/script/homeEventFetch.js"></script>
+<script src="/src/script/script.js"></script>
+<!-- <script type="module" src="/src/script/feedback.js"></script> -->
+
 </body>
 </html>

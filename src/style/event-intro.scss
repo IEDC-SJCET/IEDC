@@ -24,6 +24,10 @@
             }
         }
     }
+    &> span {
+        // for loading 
+        grid-area: 1 / 1 / 3 / 5;
+    }
 }
 .eventGrid>div:hover>.card-img-overlay,
 .eventGrid>div:active>.card-img-overlay,

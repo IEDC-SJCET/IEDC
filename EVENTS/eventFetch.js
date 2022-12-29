@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { getFirestore, collection, getDocs, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
+import { getFirestore, collection, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
 
 const firebaseConfig = {
                 apiKey: "AIzaSyCNbmkHVo6YAOk69h9OgMGbQJBUlW5xz4c",
@@ -66,16 +66,3 @@ const eventContainer = document.getElementById("eventSECTION");
         eventContainer.innerHTML += templete(data,i);
         i++;
     });
-    
-
-const feedbackFORM = document.getElementById("feedbackFORM");
-feedbackFORM.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let feedback = {
-        Name: feedbackFORM.Name.value,
-        Email: feedbackFORM.Email.value,
-        Message: feedbackFORM.Message.value
-    }
-    console.log(feedback);
-    feedbackFORM.reset();
-})

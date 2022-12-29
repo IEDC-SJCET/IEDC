@@ -1,7 +1,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { getFirestore, collection, getDocs, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
-
-const firebaseConfig = {
+import { addDoc, getFirestore, collection, getDocs, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
+import { openSpinner, submitDone, submitNOTDone } from './main.js';
+ const firebaseConfig = {
                 apiKey: "AIzaSyCNbmkHVo6YAOk69h9OgMGbQJBUlW5xz4c",
                 authDomain: "iedc-admin.firebaseapp.com",
                 projectId: "iedc-admin",
@@ -12,6 +12,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
 const EVENTS = collection(DB,'EVENTS');
+const FEEDBACK = collection(DB,'FEEDBACK');
 
 let valid = {
         btn : "btn-success px-4",
@@ -87,8 +88,7 @@ const templete = (i,data) => {
 
 const qry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const container5 = document.getElementById("container5");
-window.onload = async function () {
-    
+window.addEventListener('load', async function () {
     const querySnapshot = await getDocs(qry);
     let i = 1;
     container5.innerHTML = "";
@@ -99,4 +99,23 @@ window.onload = async function () {
         }
         i++;
     });
-}
+})
+
+const feedbackFORM = document.getElementById("feedbackFORM");
+feedbackFORM.addEventListener('submit', (e) => {
+    e.preventDefault();
+    openSpinner();
+        addDoc(FEEDBACK, {
+                    name: feedbackFORM.name.value,
+                    email: feedbackFORM.email.value,
+                    feedback: feedbackFORM.feedback.value,
+                    UploadTimeStamp: Date.now()
+                }).then(() => {
+                    feedbackFORM.reset();
+                    submitDone();
+                })
+                .catch((error) => {
+                    console.error("Error adding document: ", error);
+                    submitNOTDone();
+                });
+})
