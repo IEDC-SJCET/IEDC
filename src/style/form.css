@@ -38,24 +38,31 @@ textarea {
 .newFormField:hover,
 .newFormField:focus {
   color: #000;
-  background-color: var(--lightgreen);
 }
 
 .newFormField:required:valid {
-  border-color: var(--green);
-  background-color: var(--lightgreen);
+  background: url("/src/media/check.svg") no-repeat 95% 50% var(--lightgreen);
+  background-size: 25px;
+  color: #000;
 }
 
 .newFormField:required:focus:valid {
-  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% yellow;
+  background-color: var(--lightgreen);
+}
+
+.newFormField:required:focus:invalid {
+  background: url("/src/media/exclamation.svg") no-repeat 95% 50% #fff;
   background-size: 25px;
 }
 
 label {
   color: #000;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: left;
   font-size: 1rem;
-  margin-bottom: -0.6rem;
   font-family: "Dm Sans", sans-serif;
+}
+
+input[type=checkbox] {
+  accent-color: var(--green);
 }/*# sourceMappingURL=form.css.map */

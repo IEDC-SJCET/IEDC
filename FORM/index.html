@@ -31,42 +31,92 @@
                 <!-- <img id="ads" src="../src/EVENTS/Event details/panel.jpg" alt="" class="img-fluid col-md-8 col-lg-6 d-none"> -->
                 <h2 class="text-black fs-2 fw-bolder text-center">BOOTCAMP <span class="greencolor">FORM <i class="bi bi-cloud-fill"></i></span></h2>
         </div>
-        <div class="d-flex flex-column w-100 gap-3">
-                <form id="feedbackFORM" class="w-100">
-                <div class="w-100 d-flex flex-column flex-md-row gap-3 my-3 p-3">
-                    <div class="w-100 flex-column d-flex gap-3">
-                        <label for="name">Your Name</label>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
-                        <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="newFormField shadow-lg " placeholder="Email" required>
-                        <input id="q1or2or3" name="phone" type="tel" minlength="2" maxlength="30" class="newFormField shadow-lg " placeholder="Email" required>
-                        <label for="name">Your Name</label>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
+        <div class="d-flex flex-column gap-3">
+                <form id="SUBMITFORM">
+                <div class="d-flex flex-column gap-4 my-3 p-3">
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <label>TEAM DETAILS</label>
+                        <input name="teamName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Team Name" required>
+                        <input name="leaderName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Team Lead Name" required>
+                        <input name="leaderEmail" type="email" minlength="4" maxlength="30" class="newFormField shadow-lg " placeholder="Leader Email ID" required>
+                        <input name="leaderPhone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Leader Phone Number" required>
+                        
                     </div>
-                    <div class="w-100 flex-column d-flex gap-3 text-center">
-                        <label for="name">Your Name</label>
-                        <input id="q1or2or3" name="name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Your Name" required>
-                        <input id="q1or2or3" name="email" type="email" minlength="2" maxlength="30" class="newFormField shadow-lg " placeholder="Email" required>
-                        <textarea id="q1or2or3" name="body" type="text" minlength="2" maxlength="200" class="newFormField shadow-lg  py-4" placeholder="Feedbacks" required style="min-height:100px ;"></textarea>
-                        <span>
-                            <button class="btn-success btn px-5 mt-3" type="submit">
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <div>
+                            <label>INSTITUTIONAL DETAILS</label>
+                            <p>In what type of educational institution are you currently
+                            enrolled in?</p>
+                        </div>
+                        <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Institution Name" required>
+                        <input name="fieldOfStudy" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Field of Study" required>
+                        <input name="graduationYear" type="tel"  pattern="[0-9]{4}" minlength="4" maxlength="4" class="newFormField shadow-lg " placeholder="Graduation Year" required>
+                        <input name="homeTown" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Hometown" required>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <label>TEAM MEMBER 2</label>
+                        <input name="member2Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
+                        <input name="member2Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email" required>
+                        <input name="member2Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone" required>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <label>TEAM MEMBER 3</label>
+                        <input name="member3Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
+                        <input name="member3Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email" required>
+                        <input name="member3Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone" required>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member4" aria-expanded="false" aria-controls="member4">
+                            <label>TEAM MEMBER 4 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+                        <div class="collapse" id="member4">
+                            <div class="d-flex flex-column gap-2">
+                                <input name="member4Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name">
+                                <input name="member4Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email">
+                                <input name="member4Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone">
+                            </div>
+                        </div>
+                    <div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member5" aria-expanded="false" aria-controls="member5">
+                            <label>TEAM MEMBER 5 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+                        <div class="collapse" id="member5">
+                            <div class="d-flex flex-column gap-2">
+                                <input name="member5Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name">
+                                <input name="member5Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email">
+                                <input name="member5Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone">
+                            </div>
+                        </div>
+                    
+                    <div class="w-100 d-flex align-items-center gap-2">
+                        <label>I AGREE TO <a href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                    </div>
+                    <div class="w-100 d-flex gap-2 justify-content-center mt-4">
+                            <button class="mybtn btn px-5 flex-grow-1" type="reset">
+                                <span>RESET <i class="bi bi-trash-fill"></i></span>
+                            </button>
+                            <button id="btnSubmit" class="btn-success btn px-5 flex-grow-1" type="submit" disabled>
                                 <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
                             </button>
-                        </span>
                     </div>
+                    
                     
                 </div>
                 
                 </form>
         </div>
     </div>
-    <script src="../src/script/script.js"></script>
+<script src="/src/script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script type="module" src="formSubmit.js"></script>
 </body>
 <script>
-    document.getElementById('Bootcamp').ondragstart = function () { return false; };
+    const submitBTN = document.getElementById('btnSubmit');
+    const checkBOX = (element)=>{
+        submitBTN.disabled = element.checked? false : true;
+    }
 </script>
-
-
 </html>
