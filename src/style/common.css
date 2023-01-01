@@ -12,6 +12,10 @@
   background-color: var(--lightgreen) !important;
 }
 
+.bg-darkGreen {
+  background-color: var(--green) !important;
+}
+
 .greencolor {
   color: var(--green);
   border-color: var(--green) !important;
@@ -133,6 +137,20 @@ html, body {
   border-radius: 13px !important;
   box-shadow: 5px 5px 17px #2a2a2a, -5px -5px 17px #383838 !important;
   border: none !important;
+}
+
+.card-img-top {
+  border-top-left-radius: 13px !important;
+  border-top-right-radius: 13px !important;
+}
+
+.card-img-bottom {
+  border-bottom-left-radius: 13px !important;
+  border-bottom-right-radius: 13px !important;
+}
+
+.new-rounded {
+  border-radius: 13px !important;
 }
 
 a, btn-success {
