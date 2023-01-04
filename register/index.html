@@ -49,46 +49,67 @@
                     <div class="w-100 flex-column d-flex gap-2">
                         <div>
                             <label class="req">ACADEMIC DETAILS</label>
-                            <!-- <p>In what educational institution are you currently
-                            enrolled in?</p> -->
+                            <p>In what educational institution are you currently
+                            enrolled in?</p>
                         </div>
                         <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Institution Name" required>
                         
                         <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                             <span class="w-100">Branch</span>
-                            <div class="w-50">
-                                <input type="radio" value="AD" name="branch" required>
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="AD" name="branch">
+                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                <span class="d-md-none">AD</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CSE" name="branch">
+                                <span class="d-none d-md-block">Computer Science</span>
+                                <span class="d-md-none">CSE</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CE" name="branch">
+                                <span class="d-none d-md-block">Civil Engineering</span>
+                                <span class="d-md-none">CE</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECE" name="branch">
+                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                <span class="d-md-none">ECE</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EEE" name="branch">
+                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                <span class="d-md-none">EEE</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ME" name="branch">
+                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                <span class="d-md-none">ME</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EI" name="branch">
+                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                <span class="d-md-none">EI</span>
                             </div>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="branch">
-                                <span>AD</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECS" name="branch">
+                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                <span class="d-md-none">ECS</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CYB" name="branch">
+                                <span class="d-none d-md-block">Cyber Security</span>
+                                <span class="d-md-none">CYB</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input id="otherRadio" name="branch" value="other" type="radio" class="collapsed" data-bs-toggle="collapse" data-bs-target="#otherText" aria-expanded="false" aria-controls="otherText">
+                                <span>Other</span>                                
+                            </div>
+                            <div class="w-100">
+                                <input id="otherText" name="otherBranch" type="text" minlength="3" maxlength="20" class="newFormField w-100 collapse" placeholder="Other?">
                             </div>
                         </div>
+
                         <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                             <span class="w-100">Year</span>
                             <div class="w-50">
@@ -109,16 +130,18 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="w-100 flex-column d-flex gap-2">
                         <div>
-                            <label></label>
+                            <label>HOLA 👋</label>
                             <p>Why do you want to join this program?</p>
                         </div>
                         <textarea name="message" class="newFormField shadow-lg p-1" placeholder="&nbsp;&nbsp;Your Answer" required></textarea>
                         <div class="d-flex align-items-center gap-2">
-                        <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                            <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                        </div>
                     </div>
-                    </div>
+
                     <div class="w-100 d-flex gap-2 justify-content-center mt-4">
                             <button class="mybtn btn w-50" type="reset">
                                 <span>RESET <i class="bi bi-trash-fill"></i></span>

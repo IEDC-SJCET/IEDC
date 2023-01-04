@@ -84,6 +84,10 @@ label {
   font-family: "Dm Sans", sans-serif;
 }
 
+label + p {
+  padding-left: 3px;
+}
+
 .req::after {
   content: " *";
   color: var(--green);
@@ -95,6 +99,10 @@ input[type=checkbox] {
 
 input[type=radio] {
   accent-color: var(--green);
+}
+
+input[type=radio]:checked ~ span {
+  color: var(--green);
 }
 
 .showWidth {

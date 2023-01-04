@@ -11,7 +11,7 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const FORM = collection(DB,'FORMS');
+const REGISTER = collection(DB,'REGISTER');
 
 
 
@@ -19,7 +19,10 @@ const SUBMITFORM = document.getElementById('SUBMITFORM');
 SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
         openSpinner();
-        addDoc(FORM, {
+        if (SUBMITFORM.branch.value == "Other") {
+            console.log(SUBMITFORM.otherBranch.value)
+        }
+        addDoc(REGISTER, {
             // here is the actual code lives
                     Name: SUBMITFORM.Name.value,
                     Email: SUBMITFORM.Email.value,
