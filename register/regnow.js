@@ -1,4 +1,4 @@
-import {openSpinner, submitDone, submitNOTDone} from '/src/script/main.js';
+import { openSpinner, submitDone, submitNOTDone } from '/src/script/main.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
 import { addDoc, getFirestore, collection } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
 const firebaseConfig = {
@@ -19,15 +19,22 @@ const SUBMITFORM = document.getElementById('SUBMITFORM');
 SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
         openSpinner();
-        if (SUBMITFORM.branch.value == "Other") {
-            console.log(SUBMITFORM.otherBranch.value)
+        let branch = SUBMITFORM.branch.value;
+        if (branch == 'other'){
+            if (SUBMITFORM.otherBranch.value == "")
+                branch = "unknown";
+            else branch = SUBMITFORM.otherBranch.value;
         }
+        
         addDoc(REGISTER, {
-            // here is the actual code lives
                     Name: SUBMITFORM.Name.value,
                     Email: SUBMITFORM.Email.value,
-                    Phone: SUBMITFORM.Phone.value,
-                    UploadTimeStamp: Date.now()
+                    WhatsappNumber: SUBMITFORM.WhatsappNumber.value,
+                    College: SUBMITFORM.institutionName.value,
+                    Branch: branch,
+                    Year: SUBMITFORM.currentYear.value,
+                    Text: SUBMITFORM.message.value,
+                    TimeStamp: Date.now()
                 }).then(() => {
                     SUBMITFORM.reset();
                     submitDone();

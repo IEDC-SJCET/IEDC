@@ -10,6 +10,6 @@ export const submitDone = () => {
     submitBTN.disabled = false;
 }
 export const submitNOTDone = () => {
-    submitBTN.innerHTML = `Upload failed <i class="bi bi-x"></i>`;
+    submitBTN.innerHTML = `Upload failed <i class="bi bi-x-lg"></i>`;
     submitBTN.disabled = false;
 }
