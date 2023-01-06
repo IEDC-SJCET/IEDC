@@ -1,11 +1,11 @@
 .execom-container {
-display: grid;
-// grid-template-columns: repeat(7, 1fr);
-// grid-template-rows: repeat(3, 1fr);
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 3px;
-grid-row-gap: 3px;
+    display: grid;
+    // grid-template-columns: repeat(7, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
 
     
     .img1 { 
@@ -79,25 +79,5 @@ grid-row-gap: 3px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }
-}
-#super-pics{
-.card-img-overlay {
-    background: rgba(0, 0, 0, 0);
-    transition: 0.3s;
-    &>a,
-    &>p,
-    &>button {
-        visibility: hidden;
-        font-size: 0px;
-        transition: 0.4s;
-    }
-}
-}
-#super-pics:hover>.card-img-overlay {
-    background: rgba(0, 0, 0, .3);
-    &>a{
-        visibility: visible;
-        font-size: 1rem;
     }
 }

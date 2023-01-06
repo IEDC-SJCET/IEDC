@@ -68,22 +68,4 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-#super-pics .card-img-overlay {
-  background: rgba(0, 0, 0, 0);
-  transition: 0.3s;
-}
-#super-pics .card-img-overlay > a, #super-pics .card-img-overlay > p, #super-pics .card-img-overlay > button {
-  visibility: hidden;
-  font-size: 0px;
-  transition: 0.4s;
-}
-
-#super-pics:hover > .card-img-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-#super-pics:hover > .card-img-overlay > a {
-  visibility: visible;
-  font-size: 1rem;
 }/*# sourceMappingURL=execom-intro.css.map */
