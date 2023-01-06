@@ -11,39 +11,60 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const FORM = collection(DB,'FORMS');
-
-let m4 ;
-let m5 ;
-
-if (isVisible('member4')) {
-    m4 = {
-            Name:SUBMITFORM.member4Name.value,
-            Email:SUBMITFORM.member4Email.value,
-            Phone:SUBMITFORM.member4Phone.value
+const HACKATHON = collection(DB,'HACKATHON');
+let m1,m2,m3,m4,m5;
+const takeMemeberData = ()=>{
+    m1 = {
+                Name:SUBMITFORM.leaderName.value,
+                Email:SUBMITFORM.leaderEmail.value,
+                Phone:SUBMITFORM.leaderPhone.value
+        }
+    m2 = {
+                Name:SUBMITFORM.member2Name.value,
+                Email:SUBMITFORM.member2Email.value,
+                Phone:SUBMITFORM.member2Phone.value
+        }
+    m3 = {
+                Name:SUBMITFORM.member3Name.value,
+                Email:SUBMITFORM.member3Email.value,
+                Phone:SUBMITFORM.member3Phone.value
+        }
+    if (isVisible('member4')) {
+        m4 = {
+                Name:SUBMITFORM.member4Name.value,
+                Email:SUBMITFORM.member4Email.value,
+                Phone:SUBMITFORM.member4Phone.value
+        }
     }
-}
-else m4 = "NA";
+    else m4 = "NA";
 
-if (isVisible('member5')) {
-    m5 = {
-            Name:SUBMITFORM.member5Name.value,
-            Email:SUBMITFORM.member5Email.value,
-            Phone:SUBMITFORM.member5Phone.value
+    if (isVisible('member5')) {
+        m5 = {
+                Name:SUBMITFORM.member5Name.value,
+                Email:SUBMITFORM.member5Email.value,
+                Phone:SUBMITFORM.member5Phone.value
+        }
     }
+    else m5 = "NA";
 }
-else m5 = "NA";
-
 
 const SUBMITFORM = document.getElementById('SUBMITFORM');
 SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
         openSpinner();
-        addDoc(FORM, {
+        takeMemeberData();
+        console.log(m1,m2,m3,m4,m5);
+        addDoc(HACKATHON, {
             // here is the actual code lives
-                    Name: SUBMITFORM.Name.value,
-                    Email: SUBMITFORM.Email.value,
-                    Phone: SUBMITFORM.Phone.value,
+                    TeamName: SUBMITFORM.teamName.value,
+                    Leader: m1,
+                    Member2: m2,
+                    Member3: m3,
+                    Member4: m4,
+                    Member5: m5,
+                    Institution: SUBMITFORM.institutionName.value,
+                    FieldOfStudy: SUBMITFORM.fieldOfStudy.value,
+                    GraduationYear: SUBMITFORM.graduationYear.value,
                     UploadTimeStamp: Date.now()
                 }).then(() => {
                     SUBMITFORM.reset();
@@ -56,7 +77,5 @@ SUBMITFORM.addEventListener('submit',e => {
 })
 
 function isVisible(element) {
-    if (getElementById(element).style.display == "none")
-        return false;
-    else return true;
+    return (document.getElementById(element).classList.contains('show'));
 }
