@@ -5,14 +5,13 @@
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
-    js:loading();
     &>div {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border: solid 1.8px white;
         &>.card-img-overlay {
-            transition: 0.3s;
+            transition: all 0.5s;
             &>a,
             &>p {
                 // background-color: rgba(255, 255, 255, 0.7);
@@ -21,9 +20,13 @@
                 margin: auto;
                 visibility: hidden;
                 font-size: 0px;
-                transition: 0.4s;
+                transition: all 0.7s;
             }
         }
+    }
+    &> span {
+        // for loading 
+        grid-area: 1 / 1 / 3 / 5;
     }
 }
 .eventGrid>div:hover>.card-img-overlay,
@@ -64,4 +67,8 @@
         background-image: radial-gradient(#56c23e96 1.1px, transparent 1.1px), radial-gradient(#56c23e96 1.1px, #e5e5f700 1.1px);
         background-size: 44px 44px;
         background-position: 0 0, 22px 22px;
+}
+
+.eventIMGoverlay {
+
 }

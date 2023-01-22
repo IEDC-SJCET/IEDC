@@ -2,8 +2,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap");
 :root {
   --green: #56c23e;
-  --grey: rgb(201, 201, 201);
-  --bggrey: #f0f0f0;
+  --grey: #c9c9c9;
+  --bggrey: #f2f3f5;
+  --lightgreen: #56c23e83;
+  --dark:#313131;
+}
+
+.bg-green {
+  background-color: var(--lightgreen) !important;
+}
+
+.bg-darkGreen {
+  background-color: var(--green) !important;
 }
 
 .greencolor {
@@ -13,6 +23,7 @@
 
 p, nav, h5, h3, .h3, h2, .h2 {
   font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
 }
 
 html, body {
@@ -46,14 +57,6 @@ html, body {
   background: rgb(48, 48, 48);
 }
 
-.mybtn {
-  background-color: var(--grey);
-  color: black;
-  font-family: "Dm Sans", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
 .mybtn2 {
   background-color: transparent;
   color: white;
@@ -67,11 +70,61 @@ html, body {
 }
 
 .btn-success {
+  display: inline-block;
   background-color: var(--green) !important;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Dm Sans", sans-serif;
+  color: #fff;
+  border-radius: 10rem;
+  border: solid transparent 1px !important;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-success::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--bggrey);
+  z-index: -1;
+  border-radius: 10rem;
+  transition: 0.4s ease all;
+  transform: scale(0, 1);
+  transform-origin: top right;
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-success:hover {
+  color: var(--green) !important;
+  background-color: var(--green);
+  border: solid var(--green) 1px !important;
+}
+
+.btn-success:hover::after {
+  transform: scale(1, 1);
+  transform-origin: top left;
 }
 
 .card {
   border-radius: 0 !important;
+  background-color: #ffffff !important;
+}
+
+.card-header {
+  border-radius: 13px 13px 0 0 !important;
+  background-color: #ffffff !important;
+}
+
+.card-footer {
+  border-radius: 0 0 13px 13px !important;
+  background-color: #ffffff !important;
 }
 
 .shadow-lg {
@@ -86,15 +139,28 @@ html, body {
   border: none !important;
 }
 
-a, button {
+.card-img-top {
+  border-top-left-radius: 13px !important;
+  border-top-right-radius: 13px !important;
+}
+
+.card-img-bottom {
+  border-bottom-left-radius: 13px !important;
+  border-bottom-right-radius: 13px !important;
+}
+
+.new-rounded {
+  border-radius: 13px !important;
+}
+
+a, btn-success {
   text-decoration: none;
-  border-radius: 0 !important;
   border: 0;
   background-color: transparent;
 }
 
 #bgdots {
-  background-color: rgb(240, 240, 240);
+  background-color: var(--bggrey) !important;
 }
 
 .mybg-black {
@@ -111,4 +177,85 @@ a, button {
     font-weight: normal !important;
     font-size: 0.8rem !important;
   }
+}
+.mybtn {
+  display: inline-block;
+  background-color: var(--grey);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Dm Sans", sans-serif;
+  border-radius: 10rem;
+  border: solid transparent 1px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mybtn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  z-index: -1;
+  border-radius: 10rem;
+  transition: 0.4s ease all;
+  transform: scale(0, 1);
+  transform-origin: top right;
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.mybtn:hover {
+  color: #fff !important;
+}
+
+.mybtn:hover::after {
+  transform: scale(1, 1);
+  transform-origin: top left;
+}
+
+.btn-outline-dark {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Dm Sans", sans-serif;
+  border-radius: 10rem;
+  border: solid #fff 1px !important;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-outline-dark::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  z-index: -1;
+  border-radius: 10rem;
+  transition: 0.4s ease all;
+  transform: scale(0, 1);
+  transform-origin: top right;
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+  transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-outline-dark:hover {
+  color: #000 !important;
+}
+
+.btn-outline-dark:hover::after {
+  transform: scale(1, 1);
+  transform-origin: top left;
 }/*# sourceMappingURL=common.css.map */

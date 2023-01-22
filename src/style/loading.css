@@ -1,8 +1,10 @@
 #loading,
 #loader {
+  top: 0;
+  left: 0;
   position: fixed;
   z-index: 999999;
-  background-color: rgb(240, 240, 240);
+  background-color: var(--bggrey) !important;
 }
 
 #loader {
