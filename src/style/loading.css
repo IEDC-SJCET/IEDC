@@ -3,25 +3,28 @@
   top: 0;
   left: 0;
   position: fixed;
-  z-index: 999999;
+}
+
+#loading {
   background-color: var(--bggrey) !important;
+  z-index: 90;
 }
 
 #loader {
+  z-index: 100;
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
 }
 
 .lds-ring {
-  top: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
   height: 100px;
   border-radius: 10rem !important;
-  background-color: white;
+  background-color: white !important;
 }
 
 .lds-ring div {
