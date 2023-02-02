@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="shortcut icon" href="/src/asset/purewhite.png" type="image/x-icon" fetchpriority="high">
+    <title>Register</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
         fetchpriority="high">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -34,7 +35,7 @@
                 <p class="card-body">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. In pariatur adipisci eveniet minus blanditiis nesciunt consequuntur cum nulla mollitia aut, et expedita veritatis quos, sit doloremque cupiditate quasi repellat eaque.
                 </p>
-            <div class="bg-darkGreen card-img-bottom" style="height:8px;"></div>
+            <!-- <div class="bg-darkGreen card-img-bottom" style="height:8px;"></div> -->
         </div>
         <div class="d-flex flex-column gap-3 align-items-center w-100">
                 <form class="showWidth container p-0" id="SUBMITFORM">
@@ -130,19 +131,53 @@
                             </div>
                         </div>
                     </div>
-
+                    <div id="extQ" class="w-100 flex-column d-flex gap-2">
+                        <div>
+                            <label class="req">IMPORTANT DETAILS</label>
+                            <p>required here</p>
+                        </div>
+                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
+                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
+                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
+                    </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <div>
                             <label>HOLA 👋</label>
-                            <p>Why do you want to join this program?</p>
                         </div>
-                        <textarea name="message" class="newFormField shadow-lg p-1" placeholder="&nbsp;&nbsp;Your Answer" required></textarea>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Why do you want to join this program?</span>
+                                <div class="w-100">
+                                    <input name="message" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer">
+                                </div>
+                            </div>
+                            <div class="choice justify-content-between d-flex flex-row flex-wrap w-100">
+                                <span class="w-100">How do you know about this program?</span>
+                                <div class="w-50">
+                                    <input type="radio" value="WA" name="ads">
+                                    <span>Whatsapp</span>
+                                </div>
+                                <div class="w-50">
+                                    <input type="radio" value="DIS" name="ads">
+                                    <span>Discord</span>
+                                </div>
+                                <div class="w-50">
+                                    <input type="radio" value="IG" name="ads">
+                                    <span>Instagram</span>
+                                </div>
+                                <div class="w-50">
+                                    <input type="radio" value="FRND" name="ads">
+                                    <span>Friends told me</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="d-flex align-items-center gap-2">
                             <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
                         </div>
                     </div>
 
-                    <div class="w-100 d-flex gap-2 justify-content-center mt-4">
+                    <div class="w-100 d-flex gap-2 justify-content-center my-2">
                             <button class="mybtn btn w-50" type="reset">
                                 <span>RESET <i class="bi bi-trash-fill"></i></span>
                             </button>
