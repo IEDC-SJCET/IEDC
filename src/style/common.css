@@ -8,6 +8,10 @@
   --dark:#313131;
 }
 
+strong {
+  font-weight: 700;
+}
+
 .bg-green {
   background-color: var(--lightgreen) !important;
 }
