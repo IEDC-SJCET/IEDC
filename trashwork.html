@@ -20,8 +20,17 @@
 <body class="bg-dark">
     
     <section class="animation">
+        <!-- <div>
+            <img class="img-fluid col-1" src="/newplane.png">
+        </div> -->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="105%" height="auto" style="margin-top:2rem ;" viewBox="-0.001 0.141603 2.6 1.133" xml:space="preserve">
+            <path xmlns="http://www.w3.org/2000/svg" id="imgpath"
+            d="M 0 1 C 0.256 0.979 0.831 1.354 1.005 1.258 C 1.471 1.059 1.084 0.46 0.997 0.4 C 0.671 0.17 0.649 1.229 0.992 1.142 C 1.453 1.031 1.73 0.641 2.154 0.972 C 2.328 1.089 2.4903 0.9827 2.598 0.999"
+            stroke="#FF0000" stroke-width="0" fill="none" />            
+        </svg>
+                
         <img id="0" class="allplane0 plane" src="/newplane.png">
-        <i id="1" class="bi bi-square-fill plane allplane1"></i>
+        <!-- <i id="1" class="bi bi-square-fill plane allplane1"></i>
         <i id="2" class="bi bi-square-fill plane allplane2"></i>
         <i id="3" class="bi bi-square-fill plane allplane3"></i>
         <i id="4" class="bi bi-square-fill plane allplane4"></i>
@@ -30,7 +39,7 @@
         <i id="7" class="bi bi-square-fill plane allplane7"></i>
         <i id="8" class="bi bi-square-fill plane allplane8"></i>
         <i id="9" class="bi bi-square-fill plane allplane9"></i>
-        <i id="10" class="bi bi-square-fill plane allplane10"></i>
+        <i id="10" class="bi bi-square-fill plane allplane10"></i> -->
     </section>
     <h2 class="text-white p-3">nice alle vro</h2>
     <style>
@@ -41,9 +50,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow: hidden;
         }
         .animation{
-            height: 400px;
+            /* height: 400px; */
             position: relative;
             overflow: hidden;
         }
@@ -82,20 +92,24 @@
                 repeat:-1,
                 delay: number * 0.05,
                 duration: 15,
-                ease: "Power2.easeOut",
+                 ease: "power2.out",
                 motionPath: {
-                    
-                    path: [
-                        { x: X * .2, y: 70 },
+                    path:"#imgpath",
+                    align: "#imgpath",
+                    // autoRotate: true,
+                    offsetY: -12,
+                    offsetX: -12,
+                    // path: [
+                    //     { x: X * .2, y: 70 },
                         
-                        { x: X * .7, y: -70 },
-                        { x: X * .36, y: -150 },
-                        { x: X * .1, y: -50 },
-                        { x: X * .4, y: -20 },
-                        { x: X * .7, y: -50 },
-                        { x: X + .9, y: 0 },
-                        { x: X + 200, y: 30 },
-                    ],
+                    //     { x: X * .7, y: -70 },
+                    //     { x: X * .36, y: -150 },
+                    //     { x: X * .1, y: -50 },
+                    //     { x: X * .4, y: -20 },
+                    //     { x: X * .7, y: -50 },
+                    //     { x: X + .9, y: 0 },
+                    //     { x: X + 200, y: 30 },
+                    // ],
                     curviness: 1.8,
                     autoRotate: true
                 }
