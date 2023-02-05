@@ -1,8 +1,6 @@
-import { openSpinner, submitDone, submitNOTDone } from '/src/script/main.js';
+import { openSpinner, submitDone, submitNOTDone,timeDifference, common } from '/src/script/main.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
 import { addDoc, getFirestore, collection, getDocs, query, orderBy, limit } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
-
-
 
 const firebaseConfig = {
                 apiKey: "AIzaSyCNbmkHVo6YAOk69h9OgMGbQJBUlW5xz4c",
@@ -14,7 +12,6 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-// const newForm = null;
 
 
 const formHead = document.getElementById('formHead');
@@ -22,7 +19,7 @@ const formBody = document.getElementById('formBody');
 const FORMS = collection(DB,'FORMS');
 const qry = query(FORMS, orderBy("TimeStamp", "desc"), limit(1));
 
-let firstHalf = `<div class="d-flex flex-column gap-4 my-3 w-100">
+let firstHalf = `<div class="d-flex flex-column gap-4 mt-3 w-100">
                     <div class="w-100 flex-column d-flex gap-2">
                         <label class="req">STUDENTS DETAILS</label>
                         <input name="Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
@@ -161,7 +158,7 @@ let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
                     </div>
                     <p class="text-black-50 fs-7 d-flex flex-column gap-1">
                         Never submit passwords through Forms.
-                         <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp; Report Issues</a> &nbsp; | &nbsp;
+                         <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp; Report an issue</a> &nbsp; | &nbsp;
                          <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
                     </p>
                 </div>
@@ -171,10 +168,48 @@ let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
 const querySnapshot = await getDocs(qry);
 querySnapshot.forEach((doc) => {
     let data = doc.data()
+    common()
     if (data.FormEndsAt > Date.now()){
         formHead.innerHTML = formTemplate(data, true)
         formBody.innerHTML = firstHalf + formInput(data) + secondHalf;
+        const newCollection = collection(DB, data.collectionName);
+
         formBody.style.display = "block";
+
+
+        const SUBMITFORM = document.getElementById('formBody');
+        SUBMITFORM.addEventListener('submit',e => {
+            e.preventDefault();
+            openSpinner()
+            console.log("Submitted")
+
+
+            const formData = new FormData(SUBMITFORM);
+            formData.delete('terms');//to delete entite input field
+            let data = {};
+            for (const [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            if (data.branch === "other"){
+                data.branch = data.otherBranch;
+                delete data.otherBranch;
+            }
+            data["TimeStamp"] = Date.now();
+            console.log(data)
+
+            addDoc(newCollection, data).then((docRef) => {
+                submitDone()
+                let URL = "./success/#" + docRef.id;
+                setTimeout(() => {
+                    window.location.replace(URL);
+                }, 2500);
+            })
+            .catch((error) => {
+                submitNOTDone()
+                console.error("Error adding document: ", error);
+            })
+
+        })
     }
     else
         formHead.innerHTML += formTemplate(data, false)
@@ -201,31 +236,21 @@ function formInput(data){
             </div>`
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  function formTemplate(data, isFormAlive){
     let formAlive = isFormAlive ? 
-            `<p class="card-body">
-                <i class="bi bi-calendar-check greencolor"></i> &nbsp;
+            `<p class="card-body d-flex flex-column">
+                <span><i class="bi bi-stars greencolor"></i> &nbsp; 
+                    Event Starts in ${timeDifference(new Date(), new Date(data.EventStartAt))}</span>
+                <span><i class="bi bi-calendar-check greencolor"></i> &nbsp;
                 Registration ends in
-                    ${timeDifference(new Date(), new Date(data.FormEndsAt))}
+                    ${timeDifference(new Date(), new Date(data.FormEndsAt))}</span>
             </p>` 
-            : `<p class="card-body d-flex flex-column gap-1"> <span><i class="bi bi-calendar-x-fill text-danger"></i> &nbsp; Registration closed</span>
-                <a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="greencolor"><i class="bi bi-envelope-fill"></i> &nbsp; Contact CTO</a>
+            : `<p class="card-body d-flex flex-column">
+                <span><i class="bi bi-stars greencolor"></i> &nbsp; 
+                    Event Starts in ${timeDifference(new Date(), new Date(data.EventStartAt))}</span>
+                <span><i class="bi bi-calendar-x-fill text-danger"></i> &nbsp; Registration closed</span>
+                <a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="greencolor"><i class="bi bi-envelope-fill"></i> &nbsp; Report an issue</a>
+                <span></span>
             </p>`;
 
 
@@ -247,74 +272,3 @@ function formInput(data){
 
 
 
- function timeDifference(current, previous) {
-
-    var msPerMinute = 60 * 1000;
-    var msPerHour = msPerMinute * 60;
-    var msPerDay = msPerHour * 24;
-    var msPerMonth = msPerDay * 30;
-    var msPerYear = msPerDay * 365;
-
-    var elapsed = -(current - previous);
-
-    if (elapsed < msPerMinute) {
-         return Math.round(elapsed/1000) + ' seconds';   
-    }
-
-    else if (elapsed < msPerHour) {
-         return Math.round(elapsed/msPerMinute) + ' minutes';   
-    }
-
-    else if (elapsed < msPerDay ) {
-         return Math.round(elapsed/msPerHour ) + ' hours';   
-    }
-
-    else if (elapsed < msPerMonth) {
-        return Math.round(elapsed/msPerDay) + ' days';   
-    }
-
-    else if (elapsed < msPerYear) {
-        return Math.round(elapsed/msPerMonth) + ' months';   
-    }
-
-    else {
-        return Math.round(elapsed/msPerYear ) + ' years';   
-    }
-}
-
-
-
-
-
-
-
-
-// const SUBMITFORM = document.getElementById('SUBMITFORM');
-// SUBMITFORM.addEventListener('submit',e => {
-//         e.preventDefault();
-//         openSpinner();
-//         let branch = SUBMITFORM.branch.value;
-//         if (branch == 'other'){
-//             if (SUBMITFORM.otherBranch.value == "")
-//                 branch = "unknown";
-//             else branch = SUBMITFORM.otherBranch.value;
-//         }
-        
-//         addDoc(newForm, {
-//                     Name: SUBMITFORM.Name.value,
-//                     Email: SUBMITFORM.Email.value,
-//                     WhatsappNumber: SUBMITFORM.WhatsappNumber.value,
-//                     College: SUBMITFORM.institutionName.value,
-//                     Branch: branch,
-//                     Year: SUBMITFORM.currentYear.value,
-//                     Text: SUBMITFORM.message.value,
-//                     TimeStamp: Date.now()
-//                 }).then(() => {
-//                     SUBMITFORM.reset();
-//                     submitDone();
-//                 })
-//                 .catch((error) => {
-//                     console.error("Error adding document: ", error);
-//                     submitNOTDone();
-//                 });
-// })

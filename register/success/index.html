@@ -20,15 +20,31 @@
     <div class="vh-100 container d-flex flex-column justify-content-center align-items-center p-4">
         <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
             <!-- <img src="/src/asset/success" alt="" class="card-img-top"> -->
-            <h2 class="text-black fs-3 fw-bolder card-header">Registration Done <span class="greencolor">
-                 <i class="bi bi-check-lg"></i></span></h2>
+            <h2 class="card-header d-flex justify-content-between text-black fs-3 fw-bolder">
+                Registration Done
+                <i class="bi bi-check-circle-fill greencolor"></i>
+                </h2>
             <p class="card-body">
                 Registration is successfully completed. You can wait for confirmation from the admin.
             </p>
+            <p id="docRef" class="card-body"></p>
             <p class="card-body">
                 <a href="/register" class=" btn btn-success text-decoration-none greencolor">Register new Form <i class="bi bi-arrow-clockwise"></i></a>
             </p>
         </div>
+        <p class="text-black-50 fs-7 d-flex flex-column gap-1 mt-2 ms-2 w-100">
+            <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp;
+                    Report an issue</a> &nbsp; | &nbsp;
+                <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
+        </p>
     </div>
 </body>
+<script>
+    console.log(window.location.href)
+    let url = window.location.href.split('/')
+    let id = url[url.length - 1].slice(1)
+    const docRef = document.getElementById('docRef')
+    docRef.innerHTML = `Your Document ID is <span class="fw-bolder">${id}</span>`
+    console.log(id)
+</script>
 </html>
