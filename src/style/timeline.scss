@@ -21,7 +21,7 @@
     }
     /* Container around content */
     .conbox {
-        padding: 10px 40px;
+        padding: 10px 0px;
         position: relative;
         background-color: inherit;
         width: 50%;
@@ -41,10 +41,12 @@
     /* Place the container to the left */
     .left {
         left: 0;
+        padding-right: 40px
     }
     /* Place the container to the right */
     .right {
         left: 50%;
+        padding-left: 40px
     }
     /* Add arrows to the left container (pointing right) */
     .left::before {

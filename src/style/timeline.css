@@ -28,7 +28,7 @@
   margin-left: -3px;
 }
 .the-past .conbox {
-  padding: 10px 40px;
+  padding: 10px 0px;
   position: relative;
   background-color: inherit;
   width: 50%;
@@ -46,9 +46,11 @@
 }
 .the-past .left {
   left: 0;
+  padding-right: 40px;
 }
 .the-past .right {
   left: 50%;
+  padding-left: 40px;
 }
 .the-past .left::before {
   content: " ";
