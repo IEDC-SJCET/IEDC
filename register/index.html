@@ -25,183 +25,25 @@
                 <div></div>
             </div>
         </div>
-    <div class="container d-flex flex-column justify-content-center align-items-center p-4">
-        <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
-            <img src="../src/EVENTS/Event details/panel.jpg" alt="" class="card-img-top">
-                <h2 class="text-black fs-2 fw-bolder card-header"> <span class="greencolor">COMMON FORM <i class="bi bi-cloud-fill"></i></span></h2>
-                <p class="card-body">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In pariatur adipisci eveniet minus blanditiis nesciunt consequuntur cum nulla mollitia aut, et expedita veritatis quos, sit doloremque cupiditate quasi repellat eaque.
-                </p>
-                <p class="card-body">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. In pariatur adipisci eveniet minus blanditiis nesciunt consequuntur cum nulla mollitia aut, et expedita veritatis quos, sit doloremque cupiditate quasi repellat eaque.
-                </p>
-            <!-- <div class="bg-darkGreen card-img-bottom" style="height:8px;"></div> -->
+    <div class="container d-flex flex-column justify-content-center align-items-center p-4 min-vh-100">
+        <div id="formHead">
+            
         </div>
         <div class="d-flex flex-column gap-3 align-items-center w-100">
-                <form class="showWidth container p-0" id="SUBMITFORM">
-                <div class="d-flex flex-column gap-4 my-3 w-100">
-                    <div class="w-100 flex-column d-flex gap-2">
-                        <label class="req">STUDENTS DETAILS</label>
-                        <input name="Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
-                        <input name="Email" type="email" minlength="4" maxlength="30" class="newFormField shadow-lg " placeholder="Email ID" required>
-                        <input name="WhatsappNumber" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Whatsapp Number" required>
-                        
-                    </div>
-                    <div class="w-100 flex-column d-flex gap-2">
-                        <div>
-                            <label class="req">ACADEMIC DETAILS</label>
-                            <p>In what educational institution are you currently
-                            enrolled in?</p>
-                        </div>
-                        <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Institution Name" required>
-                        
-                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
-                            <span class="w-100">Branch</span>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="AD" name="branch">
-                                <span class="d-none d-md-block">Artificial Intelligence</span>
-                                <span class="d-md-none">AD</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="CSE" name="branch">
-                                <span class="d-none d-md-block">Computer Science</span>
-                                <span class="d-md-none">CSE</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="CE" name="branch">
-                                <span class="d-none d-md-block">Civil Engineering</span>
-                                <span class="d-md-none">CE</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="ECE" name="branch">
-                                <span class="d-none d-md-block">Electronics & Communication</span>
-                                <span class="d-md-none">ECE</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="EEE" name="branch">
-                                <span class="d-none d-md-block">Electrical & Electronics</span>
-                                <span class="d-md-none">EEE</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="ME" name="branch">
-                                <span class="d-none d-md-block">Mechanical Engineering</span>
-                                <span class="d-md-none">ME</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="EI" name="branch">
-                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
-                                <span class="d-md-none">EI</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="ECS" name="branch">
-                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
-                                <span class="d-md-none">ECS</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="CYB" name="branch">
-                                <span class="d-none d-md-block">Cyber Security</span>
-                                <span class="d-md-none">CYB</span>
-                            </div>
-                            <div class="w-50 d-flex gap-2">
-                                <input id="otherRadio" name="branch" value="other" type="radio" class="collapsed" data-bs-toggle="collapse" data-bs-target="#otherText" aria-expanded="false" aria-controls="otherText">
-                                <span>Other</span>                                
-                            </div>
-                            <div class="w-100">
-                                <input id="otherText" name="otherBranch" type="text" minlength="3" maxlength="20" class="newFormField w-100 collapse" placeholder="Other?">
-                            </div>
-                        </div>
-
-                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
-                            <span class="w-100">Year</span>
-                            <div class="w-50">
-                                <input type="radio" value="1" name="currentYear" required>
-                                <span>First Year</span>
-                            </div>
-                            <div class="w-50">
-                                <input type="radio" value="2" name="currentYear">
-                                <span>Second Year</span>
-                            </div>
-                            <div class="w-50">
-                                <input type="radio" value="3" name="currentYear">
-                                <span>Third Year</span>
-                            </div>
-                            <div class="w-50">
-                                <input type="radio" value="4" name="currentYear">
-                                <span>Forth Year</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="extQ" class="w-100 flex-column d-flex gap-2">
-                        <div>
-                            <label class="req">IMPORTANT DETAILS</label>
-                            <p>required here</p>
-                        </div>
-                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
-                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
-                        <input name="" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
-                    </div>
-                    <div class="w-100 flex-column d-flex gap-2">
-                        <div>
-                            <label>HOLA 👋</label>
-                        </div>
-                        <div class="shadow-lg">
-                            <div class="choice">
-                                <span>Why do you want to join this program?</span>
-                                <div class="w-100">
-                                    <input name="message" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer">
-                                </div>
-                            </div>
-                            <div class="choice justify-content-between d-flex flex-row flex-wrap w-100">
-                                <span class="w-100">How do you know about this program?</span>
-                                <div class="w-50">
-                                    <input type="radio" value="WA" name="ads">
-                                    <span>Whatsapp</span>
-                                </div>
-                                <div class="w-50">
-                                    <input type="radio" value="DIS" name="ads">
-                                    <span>Discord</span>
-                                </div>
-                                <div class="w-50">
-                                    <input type="radio" value="IG" name="ads">
-                                    <span>Instagram</span>
-                                </div>
-                                <div class="w-50">
-                                    <input type="radio" value="FRND" name="ads">
-                                    <span>Friends told me</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="d-flex align-items-center gap-2">
-                            <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
-                        </div>
-                    </div>
-
-                    <div class="w-100 d-flex gap-2 justify-content-center my-2">
-                            <button class="mybtn btn w-50" type="reset">
-                                <span>RESET <i class="bi bi-trash-fill"></i></span>
-                            </button>
-                            <button id="btnSubmit" class="btn-success btn w-50" type="submit" disabled>
-                                <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
-                            </button>
-                    </div>
-                    
-                    
-                </div>
-                
-                </form>
+                <form class="showWidth container p-0" id="formBody" style="display: none;"></form>
         </div>
     </div>
-<script src="/src/script/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
 <script type="module" src="regnow.js"></script>
-</body>
+
 <script>
-    const submitBTN = document.getElementById('btnSubmit');
-    const checkBOX = (element)=>{
-        submitBTN.disabled = element.checked? false : true;
-    }
+    //dont remove this code, it does'nt work anywhere else
+    const checkBOX = (element) => {
+            const submitBTN = document.getElementById('btnSubmit');
+            submitBTN.disabled = element.checked ? false : true;
+        }
 </script>
+</body>
 </html>
