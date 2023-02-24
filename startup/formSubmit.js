@@ -16,10 +16,6 @@ const DB  = getFirestore();
 const HACKATHON = collection(DB,'startup');
 const storage = getStorage();
 
-const metadata = {
-    contentType: 'application/pdf',
-    author: 'Inside SJCET'
-};
 
 var file;
 var file_name;
@@ -77,7 +73,7 @@ SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
         openSpinner();
         file_name = (SUBMITFORM.teamName.value).replace(/ +/g,"");
-        uploadFile("EVENTS", file, file_name, metadata)
+        uploadFile("EVENTS", file, file_name, SUBMITFORM.teamName.value)
         .then(newURL => {
             takeMemeberData(newURL);
             console.log(newURL);
@@ -101,7 +97,14 @@ function isVisible(element) {
     return (document.getElementById(element).classList.contains('show'));
 }
 
-function uploadFile (dir, file, file_name, metadata ) {
+function uploadFile (dir, file, file_name, author) {
+    const metadata = {
+        contentType: file.type,
+        author: author,
+        title: file_name,
+        uploadedTimeStamp: Date.now(),
+    };
+    console.log(file.type)
     return new Promise((resolve, reject)=>{
         const storageRef = ref(storage, dir +'/'+ file_name);
         const uploadTask = uploadBytesResumable(storageRef, file, metadata);
@@ -195,7 +198,7 @@ function updateThumbnail(dropZoneElement, file) {
     }
 
     thumbnailElement.dataset.label = file.name;
-
+    console.log(file.type)
     
     if (file.type.startsWith("image/")) {
         const reader = new FileReader();
