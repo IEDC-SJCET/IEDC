@@ -111,4 +111,38 @@ input[type=radio]:checked ~ span {
 
 .showWidth {
   max-width: 500px;
+}
+
+.drop-zone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border-style: dashed;
+  min-height: 100px;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  color: var(--dark);
+  padding: 5px 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.panelDropZone {
+  width: 100%;
+  min-height: 150px !important;
 }/*# sourceMappingURL=form.css.map */
