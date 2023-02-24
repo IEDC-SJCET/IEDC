@@ -13,7 +13,7 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const HACKATHON = collection(DB,'HACKATHON');
+const HACKATHON = collection(DB,'startup');
 const storage = getStorage();
 
 const metadata = {
@@ -80,7 +80,7 @@ SUBMITFORM.addEventListener('submit',e => {
         uploadFile("EVENTS", file, file_name, metadata)
         .then(newURL => {
             takeMemeberData(newURL);
-            
+            console.log(newURL);
             console.log(m1,m2,m3,m4,m5, data);
             addDoc(HACKATHON, data).then(() => {
                         SUBMITFORM.reset();
@@ -91,6 +91,10 @@ SUBMITFORM.addEventListener('submit',e => {
                         submitNOTDone();
                     });
         })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+            submitNOTDone();
+        });
 })
 
 function isVisible(element) {
