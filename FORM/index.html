@@ -53,25 +53,93 @@
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <div>
-                            <label>INSTITUTIONAL DETAILS</label>
-                            <p>In what type of educational institution are you currently
-                            enrolled in?</p>
+                            <label>Team Lead Educational Details</label>
+                            <p>SJCET Palai only</p>
                         </div>
-                        <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Institution Name" required>
-                        <input name="fieldOfStudy" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Field of Study" required>
-                        <input name="graduationYear" type="tel"  pattern="[0-9]{4}" minlength="4" maxlength="4" class="newFormField shadow-lg " placeholder="Graduation Year" required>
+                        <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " value="SJCET PALAI"  placeholder="Institution (SJCET PALAI only)" required>
+                        <!-- <input name="fieldOfStudy" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Field of Study" required> -->
+                        <!-- <input name="graduationYear" type="tel"  pattern="[0-9]{4}" minlength="4" maxlength="4" class="newFormField shadow-lg " placeholder="Current Year" required> -->
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Branch</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="AD" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                <span class="d-md-none">AD</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CSE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Computer Science</span>
+                                <span class="d-md-none">CSE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Civil Engineering</span>
+                                <span class="d-md-none">CE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                <span class="d-md-none">ECE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EEE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                <span class="d-md-none">EEE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ME" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                <span class="d-md-none">ME</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EI" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                <span class="d-md-none">EI</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECS" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                <span class="d-md-none">ECS</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CYB" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Cyber Security</span>
+                                <span class="d-md-none">CYB</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Year</span>
+                            <div class="w-50">
+                                <input type="radio" value="1" name="currentYear" required>
+                                <span>First Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="2" name="currentYear">
+                                <span>Second Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="3" name="currentYear">
+                                <span>Third Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="4" name="currentYear">
+                                <span>Forth Year</span>
+                            </div>
+                        </div>
+
+
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <label>TEAM MEMBER 2</label>
                         <input name="member2Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
                         <input name="member2Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email" required>
-                        <input name="member2Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone" required>
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <label>TEAM MEMBER 3</label>
                         <input name="member3Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
                         <input name="member3Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email" required>
-                        <input name="member3Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone" required>
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member4" aria-expanded="false" aria-controls="member4">
@@ -81,7 +149,6 @@
                             <div class="d-flex flex-column gap-2">
                                 <input name="member4Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name">
                                 <input name="member4Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email">
-                                <input name="member4Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone">
                             </div>
                         </div>
                     <div>
@@ -93,10 +160,18 @@
                             <div class="d-flex flex-column gap-2">
                                 <input name="member5Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name">
                                 <input name="member5Email" type="email" minlength="4" maxlength="20" class="newFormField shadow-lg " placeholder="Email">
-                                <input name="member5Phone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Phone">
                             </div>
                         </div>
                     
+                        <div class="w-100 d-flex flex-column mt-4">
+                            <label>UPLOAD YOUR ABSTRACT HERE</label>
+                            <div class="drop-zone newFormField flex-column flex-grow-1">
+                                <i class="bi bi-file-earmark-pdf fs-1"></i><br>
+                                <span class="drop-zone__prompt">
+                                    Drop PDF or click to upload (Required)</span>
+                                    <input type="file" id="eventIMG" name="myFile" class="drop-zone__input" accept=".jpg, .jpeg, .png, .pdf" required>
+                                </div>
+                            </div>
                     <div class="w-100 d-flex align-items-center gap-2">
                         <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
                     </div>
@@ -109,7 +184,11 @@
                             </button>
                     </div>
                     
-                    
+                    <p class="text-black-50 fs-7 d-flex flex-column gap-1">
+                        Never submit passwords through Forms.
+                         <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp; Report an issue</a> &nbsp; | &nbsp;
+                         <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
+                    </p>
                 </div>
                 
                 </form>
