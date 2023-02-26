@@ -44,7 +44,7 @@ const takeMemeberData = (newURL)=>{
                 Email:SUBMITFORM.member4Email.value,
         }
     }
-    else m4 = "NA";
+    else m4 = {Name:"NA", Email:"NA"}
 
     if (isVisible('member5')) {
         m5 = {
@@ -52,7 +52,7 @@ const takeMemeberData = (newURL)=>{
                 Email:SUBMITFORM.member5Email.value,
         }
     }
-    else m5 = "NA";
+    else m5 = {Name:"NA", Email:"NA"}
 
     data = {
         // here is the actual code lives
