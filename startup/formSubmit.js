@@ -28,6 +28,7 @@ const takeMemeberData = (newURL)=>{
     m1 = {
                 Name:SUBMITFORM.leaderName.value,
                 Email:SUBMITFORM.leaderEmail.value,
+                Phone:SUBMITFORM.leaderPhone.value,
         }
     m2 = {
                 Name:SUBMITFORM.member2Name.value,
@@ -73,7 +74,7 @@ SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
         openSpinner();
         file_name = (SUBMITFORM.teamName.value).replace(/ +/g,"");
-        uploadFile("EVENTS", file, file_name, SUBMITFORM.teamName.value)
+        uploadFile("startup", file, file_name, SUBMITFORM.teamName.value)
         .then(newURL => {
             takeMemeberData(newURL);
             console.log(newURL);
