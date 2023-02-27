@@ -41,7 +41,7 @@ let invalid = {
                         </div>
                         <div class="card shadow-lg text-black boxDesign img-fluid">
                             <div class="fs-4 fw-bold text-black card-header d-flex align-items-center gap-2">${data.EventName}
-                                <div class="spinner-grow text-success spinner-grow-sm" role="status"></div>
+                                <div class="spinner-grow text-danger spinner-grow-sm" role="status"></div>
                             </div>
                             <div class="fs-7 text-black-50 fw-bolder card-body p-1 px-3">
                                 <p>${data.Description}</p><br>
