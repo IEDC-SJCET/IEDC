@@ -1,9 +1,7 @@
+const myTimeout = setTimeout(loader, 5000);
+
 window.addEventListener("load",()=>{
-    document.getElementById("loader").style.display = "none";
-    document.getElementById("loading").style.display = "none";
-    document.getElementsByTagName("body")[0].style.overflowY = "auto";
-    console.log("done loading");
-    AOS.init();
+    loader()
 });
 
 const extraTabs = document.getElementById('extraTabs');
@@ -22,3 +20,12 @@ openButton.addEventListener('click',()=>{
   }
 
 });
+
+function loader(){
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("loading").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflowY = "auto";
+    console.log("done loading");
+    AOS.init();
+}
+
