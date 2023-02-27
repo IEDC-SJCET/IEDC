@@ -143,16 +143,14 @@ let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
                             </div>
                         </div>
                         
-                        <div class="d-flex align-items-center gap-2">
-                            <label>I AGREE TO <a class="greencolor" href="http://iedc.sjcetpalai.ac.in/EVENTS">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
-                        </div>
+                        
                     </div>
             
                     <div class="w-100 d-flex gap-2 justify-content-center my-2">
                             <button class="mybtn btn w-50" type="reset">
                                 <span>RESET <i class="bi bi-trash-fill"></i></span>
                             </button>
-                            <button id="btnSubmit" class="btn-success btn w-50" type="submit" disabled>
+                            <button id="btnSubmit" class="btn-success btn w-50" type="submit">
                                 <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
                             </button>
                     </div>
@@ -164,6 +162,9 @@ let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
                 </div>
                 `
 
+                //         <div class="d-flex align-items-center gap-2">
+                //             <label>I AGREE TO <a class="greencolor" href="http://iedc.sjcetpalai.ac.in/EVENTS">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                //         </div>
 
 const querySnapshot = await getDocs(qry);
 querySnapshot.forEach((doc) => {

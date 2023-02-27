@@ -32,10 +32,7 @@ let invalid = {
     if (validity) {
             let EventDate = new Date(data.EventStartsAt);
             data.Description = data.Description.toString().replace(/(?:\r\n|\r|\n)/g, '<br>');
-            return `<h2 class="text-black fw-bold text-center fs-2 pb-3" data-aos="fade-up" data-aos-duration="1200">
-                        BOOTCAMP LIVE <span class="greencolor">EVENT<i class="bi bi-thunder"></i></span> 
-                    </h2>
-                    <div class="d-flex w-100 flex-column flex-md-row justify-content-center align-items-center gap-3">
+            return `<div class="d-flex w-100 flex-column flex-md-row justify-content-center align-items-center gap-3">
                         <div class="boxDesign">
                             <img src=${data.IMG_URL} alt="EventIMG" class="img-fluid rounded-3">
                         </div>
@@ -61,9 +58,11 @@ let invalid = {
 }
 
 
-const Aqry = query(EVENTS, orderBy('EventStartsAt', "desc"), limit(1));
+const Aqry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const homeEventContainer = document.getElementById("homeEvent");
-    homeEventContainer.innerHTML = "";
+    homeEventContainer.innerHTML = `<h2 class="text-black fw-bold text-center fs-2" data-aos="fade-up" data-aos-duration="1200">
+    BOOTCAMP LIVE <span class="greencolor">EVENT<i class="bi bi-thunder"></i></span> 
+</h2>`;
     const AquerySnapshot = await getDocs(Aqry);
     AquerySnapshot.forEach((doc) => {
         let data = doc.data();
