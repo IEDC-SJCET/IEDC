@@ -112,8 +112,10 @@ let firstHalf = `<div class="d-flex flex-column gap-4 mt-3 w-100">
                         </div>
                     </div>`
 let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
-                        <div>
+                        <div class="d-flex flex-column gap-2">
                             <label>HOLA 👋</label>
+                            <p> Join our IEDC SJCET community group to get updates about the program and future events.</p>
+                            <p><a class="btn btn-success text-decoration-none greencolor" target="_blank" href="https://chat.whatsapp.com/Cqvw6soqlF30wZzA37yUp2">Join Community Group <i class="bi bi-whatsapp"></i></a></p>
                         </div>
                         <div class="shadow-lg">
                             <div class="choice">
