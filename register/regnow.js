@@ -205,7 +205,7 @@ querySnapshot.forEach((doc) => {
                 let URL = "./success/#" + docRef.id;
                 setTimeout(() => {
                     window.location.replace(URL);
-                }, 1500);
+                }, 1000);
             })
             .catch((error) => {
                 submitNOTDone()
