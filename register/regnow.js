@@ -22,8 +22,8 @@ const qry = query(FORMS, orderBy("TimeStamp", "desc"), limit(1));
 let firstHalf = `<div class="d-flex flex-column gap-4 mt-3 w-100">
                     <div class="w-100 flex-column d-flex gap-2">
                         <label class="req">STUDENTS DETAILS</label>
-                        <input name="Name" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Name" required>
-                        <input name="Email" type="email" minlength="4" maxlength="30" class="newFormField shadow-lg " placeholder="Email ID" required>
+                        <input name="Name" type="text" minlength="2" maxlength="25" class="newFormField shadow-lg " placeholder="Name" required>
+                        <input name="Email" type="email" minlength="4" maxlength="45" class="newFormField shadow-lg " placeholder="Email ID" required>
                         <input name="WhatsappNumber" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Whatsapp Number" required>
                         
                     </div>
