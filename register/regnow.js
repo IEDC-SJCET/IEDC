@@ -107,7 +107,7 @@ let firstHalf = `<div class="d-flex flex-column gap-4 mt-3 w-100">
                             </div>
                             <div class="w-50">
                                 <input type="radio" value="4" name="currentYear">
-                                <span>Forth Year</span>
+                                <span>Fourth Year</span>
                             </div>
                         </div>
                     </div>`
