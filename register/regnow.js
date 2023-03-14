@@ -114,20 +114,20 @@ let firstHalf = `<div class="d-flex flex-column gap-4 mt-3 w-100">
 let secondHalf = `<div class="w-100 flex-column d-flex gap-2">
                         <div class="d-flex flex-column gap-2">
                             <label>HOLA 👋</label>
-                            <p> Join our IEDC SJCET community group to get updates about the program and future events.</p>
+                            <p> Join our IEDC Wednesday Café Whatsapp group to get updates about the program and future events.</p>
                             <p><a class="btn btn-success text-decoration-none greencolor" target="_blank" href="https://chat.whatsapp.com/Cqvw6soqlF30wZzA37yUp2">Join Community Group <i class="bi bi-whatsapp"></i></a></p>
                         </div>
                         <div class="shadow-lg">
                             <div class="choice">
                                 <span>Why do you want to join this program?</span>
                                 <div class="w-100">
-                                    <input name="message" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer">
+                                    <input name="message" type="text" maxlength="40" class="newFormField w-100" placeholder="Your Answer" required>
                                 </div>
                             </div>
                             <div class="choice justify-content-between d-flex flex-row flex-wrap w-100">
                                 <span class="w-100">How do you know about this program?</span>
                                 <div class="w-50">
-                                    <input type="radio" value="WA" name="ads">
+                                    <input type="radio" value="WA" name="ads" required>
                                     <span>Whatsapp</span>
                                 </div>
                                 <div class="w-50">
