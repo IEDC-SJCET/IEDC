@@ -43,7 +43,7 @@ const templete = (data,i) => {
                     <div class="fs-7 text-black-50 fw-bolder card-body p-1 px-3">
                         <p>${data.Description}</p><br>
                         <p>Venue: ${data.EventVenue}</p>
-                        <p>Date: ${EventDate.getDate()} - ${EventDate.getMonth()} - ${EventDate.getFullYear()}</p>
+                        <p>Date: ${EventDate.getDate()} - ${EventDate.getMonth() + 1} - ${EventDate.getFullYear()}</p>
                     </div>
                     <div class="card-footer ${validity.btnBG} text-end">
                     <a href=${data.RedirectLink} class="${validity.btnCOLOR} py-2 fs-6 fw-bold">
