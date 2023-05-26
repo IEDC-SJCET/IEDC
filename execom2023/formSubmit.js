@@ -35,6 +35,7 @@ function getData(){
         else data[key] = value;
     }
     console.log(data)
+    data.UploadTimeStamp = Date.now()
     return data
 }
 
