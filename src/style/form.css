@@ -70,6 +70,12 @@ textarea {
   color: #000;
 }
 
+.newFormField:required:disabled {
+  background: url("/src/media/check.svg") no-repeat 95% 50% var(--lightgreen);
+  background-size: 25px;
+  color: #000;
+}
+
 .newFormField:required:focus:valid {
   background-color: var(--lightgreen);
 }
@@ -145,4 +151,18 @@ input[type=radio]:checked ~ span {
 .panelDropZone {
   width: 100%;
   min-height: 150px !important;
+}
+
+.textAreaField {
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.1254901961) !important;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+.textAreaField:focus-visible {
+  outline: 3px solid rgba(0, 0, 0, 0.1254901961) !important;
+}
+.textAreaField:required:valid {
+  background-color: var(--lightgreen);
 }/*# sourceMappingURL=form.css.map */
