@@ -113,7 +113,7 @@ SUBMITFORM.addEventListener('submit',e => {
             }
             
             addDoc(HACKATHON, data).then((docRef) => {
-                let URL = "./success/#" + docRef.id;
+                let URL = "/execom2023/success/#" + docRef.id;
                 setTimeout(() => {
                     window.location.replace(URL);
                 }, 1000);
