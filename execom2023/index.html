@@ -18,11 +18,11 @@
 
     <style>
         .greencolor{
-            color: #25124a;
+            color: #730ac7;
         }
         :root {
             --lightgreen : #bcafff;
-            --green : #25124a;
+            --green : #730ac7;
         }
     </style>
 </head>
@@ -37,7 +37,7 @@
         </div>
     <div class="container d-flex flex-column justify-content-center align-items-center p-3">
         <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
-            <img src="./image.jpg" alt="" class="card-img-top">
+            <img src="/execom2023/image.jpg" alt="" class="card-img-top">
             <!-- <h2 class="text-black fs-2 fw-bolder card-header"> <span class="greencolor"> <i
                 class="bi bi-cloud-fill"></i></span></h2> -->
                 <p class="card-body">
@@ -46,6 +46,7 @@
                 <p class="card-body">
                     🌍 Drive innovation.<br>💡 Foster entrepreneurship.<br>🚀 Ignite change<br><br>Join us in making a difference and empowering the next generation of innovators at SJCET!🎓<br>Calling all SJCET students!
                 </p>
+                <p><a class="btn btn-success m-3 text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">Join IEDC EXECOM CALL Group <i class="bi bi-whatsapp"></i></a></p>
             <!-- <p class="card-body">
                 Deadline: last date to upload abstract march 10.
             </p> -->
@@ -87,7 +88,7 @@
                         <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                             <span class="w-100">Branch</span>
                             <div class="w-50 d-flex gap-2">
-                                <input type="radio" value="AD" name="fieldOfStudy">
+                                <input type="radio" value="AD" name="fieldOfStudy" required>
                                 <span class="d-none d-md-block">Artificial Intelligence</span>
                                 <span class="d-md-none">AD</span>
                             </div>
@@ -158,54 +159,55 @@
                             <label class="req">WHAT POST DO YOU OPT FOR?</label>
                             <!-- <p>You can Select Multiple options ✅</p> -->
                         </div>
-                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                        <div class="choice shadow-lg w-100 mx-auto row row-cols-1 row-cols-sm-2">
                             <span class="w-100">Multiple options ✓ </span>
                             <div class="w-100">
                                 <input type="checkbox" value="CEO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Executive Officer</span>
-                                <span class="d-sm-none">CEO</span>
+                                <span class="">Cheif Executive Officer</span>
+                                <!-- <span class="d-sm-none">CEO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="CTO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Technical Officer</span>
-                                <span class="d-sm-none">CTO</span>
+                                <span class="">Cheif Technical Officer</span>
+                                <!-- <span class="d-sm-none">CTO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="COO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Operating Officer</span>
-                                <span class="d-sm-none">COO</span>
+                                <span class="">Cheif Operating Officer</span>
+                                <!-- <span class="d-sm-none">COO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="CSO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Social Officer</span>
-                                <span class="d-sm-none">CSO</span>
+                                <span class="">Cheif Social Officer</span>
+                                <!-- <span class="d-sm-none">CSO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="CFO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Financial Officer</span>
-                                <span class="d-sm-none">CFO</span>
+                                <span class="">Cheif Financial Officer</span>
+                                <!-- <span class="d-sm-none">CFO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="CCO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Creative Officer</span>
-                                <span class="d-sm-none">CCO</span>
+                                <span class="">Cheif Creative Officer</span>
+                                <!-- <span class="d-sm-none">CCO</span> -->
                             </div>
-                            <div class="w-50">
+                            <div class="col">
                                 <input type="checkbox" value="CMO" name="teamSelected">
-                                <span class="d-none d-sm-block">Cheif Marketing Officer</span>
-                                <span class="d-sm-none">CMO</span>
+                                <span class="">Cheif Marketing Officer</span>
+                                <!-- <span class="d-sm-none">CMO</span> -->
                             </div>
                         </div>
                     </div>
                     <div class="w-100 flex-column d-flex gap-2 mt-4">
                         <div class="d-flex flex-column gap-2">
                             <label class="req">WHY DO YOU WISH TO BE A EXECOM MEMBER?</label>
+                            
                         </div>
                         <div class="shadow-lg">
                             <div class="choice">
                                 <span>(Min 20 letters)</span>
                                 <div class="w-100">
-                                    <textarea required minlength="20" class="w-100 textAreaField" name="wish" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="wish" cols="30" placeholder="Your Answer" rows="6"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -218,7 +220,7 @@
                             <div class="choice">
                                 <span>if yes, list out events that you have volunteer in</span>
                                 <div class="w-100">
-                                    <textarea required minlength="2" class="w-100 textAreaField" name="experience" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="experience" cols="30" placeholder="Your Answer" rows="6"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -231,7 +233,7 @@
                             <div class="choice">
                                 <!-- <span>.....what would be that one thing you always wished to change?</span> -->
                                 <div class="w-100">
-                                    <textarea required minlength="2" class="w-100 textAreaField" name="change" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="change" cols="30" placeholder="Your Answer" rows="6"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -244,7 +246,7 @@
                             <div class="choice">
                                 <!-- <span>.....what would be that one thing you always wished to change?</span> -->
                                 <div class="w-100">
-                                    <textarea required minlength="2" class="w-100 textAreaField" name="skills" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="skills" cols="30" placeholder="Your Answer" rows="6"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -257,7 +259,7 @@
                             <div class="choice">
                                 <span>Your Linkedin Profile</span>
                                 <div class="w-100">
-                                    <input name="linkedin" type="text" maxlength="40" class="newFormField w-100" placeholder="URL" required>
+                                    <input name="linkedin" type="text" maxlength="40" minlength="5" class="newFormField w-100" placeholder="URL" required>
                                 </div>
                             </div>
                         </div>
@@ -265,10 +267,11 @@
                             <div class="choice">
                                 <span>Your Portfolio or GitHub Profile</span>
                                 <div class="w-100">
-                                    <input name="portfolio" type="text" maxlength="40" class="newFormField w-100" placeholder="URL" required>
+                                    <input name="portfolio" type="text" maxlength="40" minlength="5" class="newFormField w-100" placeholder="URL" required>
                                 </div>
                             </div>
                         </div>
+                        <p><a class="btn btn-success text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">EXECOM CALL Group <i class="bi bi-whatsapp"></i></a></p>
                     </div>
                     <!-- <div class="w-100 flex-column d-flex gap-2 mt-4"> -->
                         
