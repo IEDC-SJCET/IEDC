@@ -107,11 +107,7 @@ SUBMITFORM.addEventListener('submit',e => {
                 alert("Linkedin URL is not valid")
                 return false
             }
-            if (data['portfolio'].split('.').length <= 1){
-                submitNOTDone();
-                alert("portfolio URL is not valid")
-                return false
-            }
+            
             
             addDoc(HACKATHON, data).then((docRef) => {
                 let URL = "/execom2023/success/#" + docRef.id;
