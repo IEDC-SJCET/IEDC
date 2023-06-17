@@ -60,15 +60,17 @@ let invalid = {
 
 const Aqry = query(EVENTS, orderBy('EventStartsAt', "desc"));
 const homeEventContainer = document.getElementById("homeEvent");
-    homeEventContainer.innerHTML = `<h2 class="text-black fw-bold text-center fs-2" data-aos="fade-up" data-aos-duration="1200">
-    BOOTCAMP LIVE <span class="greencolor">EVENT<i class="bi bi-thunder"></i></span> 
-</h2>`;
+    
     const AquerySnapshot = await getDocs(Aqry);
     AquerySnapshot.forEach((doc) => {
         let data = doc.data();
         let returnEvent =  homeEventTemplate(data)
-        if (returnEvent != -1)
-            homeEventContainer.innerHTML += returnEvent;
+        if (returnEvent != -1){
+            homeEventContainer.innerHTML = `<h2 class="text-black fw-bold text-center fs-2" data-aos="fade-up" data-aos-duration="1200">
+    BOOTCAMP LIVE <span class="greencolor">EVENT<i class="bi bi-thunder"></i></span> 
+</h2>`;
+homeEventContainer.innerHTML += returnEvent;
+        }
     });
     
 const templete = (i,data) => {
