@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        fetchpriority="high">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="stylesheet" href="/src/style/common.css">
+    <link rel="stylesheet" href="/src/style/loading.css">
+    <link rel="stylesheet" href="/src/style/form.css">
+
+    <style>
+        .greencolor{
+            color: #730ac7;
+        }
+        :root {
+            --lightgreen : #bcafff;
+            --green : #730ac7;
+        }
+    </style>
+</head>
+<body id="bgdots" class="m-0 p-0 w-100" style="overflow: hidden">
+        <div id="loading" class=" vh-100 vw-100">
+            <div id="loader" class="lds-ring shadow-lg">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center p-3">
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
+            <img src="/execom2023/image.jpg" alt="" class="card-img-top">
+            <!-- <h2 class="text-black fs-2 fw-bolder card-header"> <span class="greencolor"> <i
+                class="bi bi-cloud-fill"></i></span></h2> -->
+                <p class="card-body">
+                    🌟 <strong>Calling All Innovators ! Join IEDC Startup Bootcamp's Executive Committee!</strong> 🚀<br><br> We are seeking dedicated individuals with a strong entrepreneurial spirit to be a part of our dynamic team. If you are ready to make an impact and be a catalyst for change, apply now to become a member of the Executive Committee!
+                </p>
+                <p class="card-body">
+                    🌍 Drive innovation.<br>💡 Foster entrepreneurship.<br>🚀 Ignite change<br><br>Join us in making a difference and empowering the next generation of innovators at SJCET!🎓<br>Calling all SJCET students!
+                </p>
+                <p><a class="btn btn-success m-3 text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">Join IEDC EXECOM CALL Group <i class="bi bi-whatsapp"></i></a></p>
+            <!-- <p class="card-body">
+                Deadline: last date to upload abstract march 10.
+            </p> -->
+            <div class="card-img-bottom" style="height:8px; background: var(--lightgreen);"></div>
+            </div>
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth mt-3">
+            
+        </div>
+        
+        <div class="d-flex flex-column gap-3 align-items-center w-100">
+            <form class="showWidth container p-0" id="SUBMITFORM">
+                <div class="d-flex flex-column gap-4 my-3 w-100">
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <label class="req">STUDENTS DETAILS</label>
+                        <input name="studentName" type="text" minlength="2"  class="newFormField shadow-lg " placeholder="Student Name" required>
+                        <input name="studentEmail" type="email" minlength="4"  class="newFormField shadow-lg " placeholder="Student Email ID" required>
+                        <input name="studentPhone" type="tel" pattern="[0-9]{10}" maxlength="10" class="newFormField shadow-lg " placeholder="Student Phone Number" required>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div>
+                            <label class="req">Educational Details</label>
+                            <p>Institution</p>
+                        </div>
+                        <input name="institutionName" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " value="SJCET PALAI"  placeholder="SJCET PALAI" disabled required>
+                        <!-- <input name="fieldOfStudy" type="text" minlength="2" maxlength="20" class="newFormField shadow-lg " placeholder="Field of Study" required> -->
+                        <!-- <input name="graduationYear" type="tel"  pattern="[0-9]{4}" minlength="4" maxlength="4" class="newFormField shadow-lg " placeholder="Current Year" required> -->
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Mode of Attending College</span>
+                            <div class="w-50">
+                                <input type="radio" value="Day Scoholar" name="modeOfAttending" required>
+                                <span>Day Scoholar</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="Hosteler" name="modeOfAttending">
+                                <span>Hosteler</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Branch</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="AD" name="fieldOfStudy" required>
+                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                <span class="d-md-none">AD</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CSE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Computer Science</span>
+                                <span class="d-md-none">CSE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Civil Engineering</span>
+                                <span class="d-md-none">CE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                <span class="d-md-none">ECE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EEE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                <span class="d-md-none">EEE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ME" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                <span class="d-md-none">ME</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EI" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                <span class="d-md-none">EI</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECS" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                <span class="d-md-none">ECS</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CYB" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Cyber Security</span>
+                                <span class="d-md-none">CYB</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Year</span>
+                            <div class="w-50">
+                                <input type="radio" value="1" name="currentYear" required>
+                                <span>First Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="2" name="currentYear">
+                                <span>Second Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="3" name="currentYear">
+                                <span>Third Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="4" name="currentYear">
+                                <span>Forth Year</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div>
+                            <label class="req">WHAT POST DO YOU OPT FOR?</label>
+                            <!-- <p>You can Select Multiple options ✅</p> -->
+                        </div>
+                        <div class="choice shadow-lg w-100 mx-auto row row-cols-1 row-cols-sm-2">
+                            <span class="w-100">Multiple options ✓ </span>
+                            <div class="w-100">
+                                <input type="checkbox" value="CEO" name="teamSelected">
+                                <span class="">Cheif Executive Officer</span>
+                                <!-- <span class="d-sm-none">CEO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="CTO" name="teamSelected">
+                                <span class="">Cheif Technical Officer</span>
+                                <!-- <span class="d-sm-none">CTO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="COO" name="teamSelected">
+                                <span class="">Cheif Operating Officer</span>
+                                <!-- <span class="d-sm-none">COO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="CSO" name="teamSelected">
+                                <span class="">Cheif Social Officer</span>
+                                <!-- <span class="d-sm-none">CSO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="CFO" name="teamSelected">
+                                <span class="">Cheif Financial Officer</span>
+                                <!-- <span class="d-sm-none">CFO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="CCO" name="teamSelected">
+                                <span class="">Cheif Creative Officer</span>
+                                <!-- <span class="d-sm-none">CCO</span> -->
+                            </div>
+                            <div class="col">
+                                <input type="checkbox" value="CMO" name="teamSelected">
+                                <span class="">Cheif Marketing Officer</span>
+                                <!-- <span class="d-sm-none">CMO</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label class="req">WHY DO YOU WISH TO BE A EXECOM MEMBER?</label>
+                            
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>(Min 20 letters)</span>
+                                <div class="w-100">
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="wish" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label class="req">DO YOU HAVE ANY PRIOR EXPERIENCE AS A VOLUNTEER?</label>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>if yes, list out events that you have volunteer in</span>
+                                <div class="w-100">
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="experience" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label class="req">IF YOU WERE SELECTED TO BE PART OF THE CHIEF PANEL, WHAT WOULD BE THAT ONE THING YOU ALWAYS WISHED TO CHANGE?</label>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <!-- <span>.....what would be that one thing you always wished to change?</span> -->
+                                <div class="w-100">
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="change" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label class="req">WHAT ARE THE SKILLS YOU POSSESS THAT MAKE YOU SUITABLE FOR THIS POST?</label>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <!-- <span>.....what would be that one thing you always wished to change?</span> -->
+                                <div class="w-100">
+                                    <textarea required minlength="10" class="w-100 textAreaField" name="skills" cols="30" placeholder="Your Answer" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label class="req">SOCIAL MEDIA</label>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Your Linkedin Profile</span>
+                                <div class="w-100">
+                                    <input name="linkedin" type="text" maxlength="40" minlength="5" class="newFormField w-100" placeholder="URL" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Your Portfolio or GitHub Profile</span>
+                                <div class="w-100">
+                                    <input name="portfolio" type="text" maxlength="40" minlength="5" class="newFormField w-100" placeholder="URL" required>
+                                </div>
+                            </div>
+                        </div>
+                        <p><a class="btn btn-success text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">EXECOM CALL Group <i class="bi bi-whatsapp"></i></a></p>
+                    </div>
+                    <!-- <div class="w-100 flex-column d-flex gap-2 mt-4"> -->
+                        
+                    
+                        <!-- <div class="w-100 d-flex flex-column mt-4">
+                            <label class="req">UPLOAD YOUR ABSTRACT HERE</label>
+                            <div class="drop-zone newFormField flex-column flex-grow-1">
+                                <i class="bi bi-file-earmark-pdf fs-1"></i><br>
+                                <span class="drop-zone__prompt">
+                                    Drop PDF or click to upload (Required)</span>
+                                    <input type="file" id="eventIMG" name="myFile" class="drop-zone__input" accept=".jpg, .jpeg, .png, .pdf" required>
+                                </div>
+                            </div> -->
+                    <!-- <div class="w-100 d-flex align-items-center gap-2">
+                        <label class="req">I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                    </div> -->
+                    <div class="w-100 d-flex gap-2 justify-content-center mt-4">
+                            <button class="mybtn btn flex-grow-1" type="reset">
+                                <span>RESET <i class="bi bi-trash-fill"></i></span>
+                            </button>
+                            <button id="btnSubmit" class="btn-success btn flex-grow-1" type="submit" >
+                                <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                    </div>
+                    
+                    <p class="text-black-50 fs-7 d-flex flex-column gap-1">
+                        Never submit passwords through Forms.
+                         <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp; Report an issue</a> &nbsp; | &nbsp;
+                         <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
+                    </p>
+                </div>
+                
+                </form>
+        </div>
+    </div>
+<script src="/src/script/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+<script type="module" src="/execom2023/formSubmit.js"></script>
+</body>
+<script>
+    const submitBTN = document.getElementById('btnSubmit');
+    const checkBOX = (element)=>{
+        submitBTN.disabled = element.checked? false : true;
+    }
+</script>
+</html>
