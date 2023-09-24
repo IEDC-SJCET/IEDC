@@ -1,4 +1,4 @@
-import {openSpinner, submitDone, submitNOTDone} from '/src/script/main.js';
+import {openSpinner, submitDone, submitNOTDone} from './../../src/script/main.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
 import { addDoc, getFirestore, collection } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
 
@@ -13,7 +13,7 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const HACKATHON = collection(DB,'hackathon-demo');
+const HACKATHON = collection(DB,'smart-india-hackathon');
 // const storage = getStorage();
 
 
@@ -39,53 +39,88 @@ function getData(){
     return data
 }
 
-// let m1,m2,m3,m4,m5,data;
 
-// const takeMemeberData = (newURL)=>{
-//     m1 = {
-//                 Name:SUBMITFORM.leaderName.value,
-//                 Email:SUBMITFORM.leaderEmail.value,
-//                 Phone:SUBMITFORM.leaderPhone.value,
-//         }
-//     m2 = {
-//                 Name:SUBMITFORM.member2Name.value,
-//                 Email:SUBMITFORM.member2Email.value,
-//         }
-//     m3 = {
-//                 Name:SUBMITFORM.member3Name.value,
-//                 Email:SUBMITFORM.member3Email.value,
-//         }
-//     if (isVisible('member4')) {
-//         m4 = {
-//                 Name:SUBMITFORM.member4Name.value,
-//                 Email:SUBMITFORM.member4Email.value,
-//         }
-//     }
-//     else m4 = {Name:"NA", Email:"NA"}
+const takeMemeberData = ()=>{
+    let m1,m2,m3,m4,m5, m6;
+    m1 = {
+                name:SUBMITFORM.member1Name.value,
+                branch:SUBMITFORM.member1Branch.value,
+                year:SUBMITFORM.member1Year.value
+        }
 
-//     if (isVisible('member5')) {
-//         m5 = {
-//                 Name:SUBMITFORM.member5Name.value,
-//                 Email:SUBMITFORM.member5Email.value,
-//         }
-//     }
-//     else m5 = {Name:"NA", Email:"NA"}
+    if (isVisible('member2')) {
+        m2 = {
+                name:SUBMITFORM.member2Name.value,
+                branch:SUBMITFORM.member2Branch.value,
+                year:SUBMITFORM.member2Year.value
+        }
+    }
+    else m2 = { name: null, branch: null, year: null }
 
-//     data = {
-//         // here is the actual code lives
-//                 TeamName: SUBMITFORM.teamName.value,
-//                 Leader: m1,
-//                 Member2: m2,
-//                 Member3: m3,
-//                 Member4: m4,
-//                 Member5: m5,
-//                 Institution: SUBMITFORM.institutionName.value,
-//                 FieldOfStudy: SUBMITFORM.fieldOfStudy.value,
-//                 CurrentYear: SUBMITFORM.currentYear.value,
-//                 UploadTimeStamp: Date.now(),
-//                 projectDoc: newURL,
-//             }
-// }
+    if (isVisible('member3')) {
+        m3 = {
+                name:SUBMITFORM.member3Name.value,
+                branch:SUBMITFORM.member3Branch.value,
+                year:SUBMITFORM.member3Year.value
+        }
+    }
+    else m3 = { name: null, branch: null, year: null }
+        
+    if (isVisible('member4')) {
+        m4 = {
+                name:SUBMITFORM.member4Name.value,
+                branch:SUBMITFORM.member4Branch.value,
+                year:SUBMITFORM.member4Year.value
+        }
+    }
+    else m4 = { name: null, branch: null, year: null }
+
+    if (isVisible('member5')) {
+        m5 = {
+                name:SUBMITFORM.member5Name.value,
+                branch:SUBMITFORM.member5Branch.value,
+                year:SUBMITFORM.member5Year.value
+        }
+    }
+    else m5 = { name: null, branch: null, year: null }
+
+    if (isVisible('member6')) {
+        m6 = {
+            name:SUBMITFORM.member6Name.value,
+            branch:SUBMITFORM.member6Branch.value,
+            year:SUBMITFORM.member6Year.value
+        }
+    }
+    else m6 = { name: null, branch: null, year: null }
+
+    const  data = {
+        // here is the actual code lives
+                teamName: SUBMITFORM.teamName.value,
+                teamEmail: SUBMITFORM.teamEmail.value,
+                teamPhone: SUBMITFORM.teamPhone.value,
+
+                member1: m1,
+                member2: m2,
+                member3: m3,
+                member4: m4,
+                member5: m5,
+                member6: m6,
+
+                time: Date.now(),
+
+                dependency: "",
+                describe: "",
+                psCode: "",
+                psTitle: "",
+                techStack: "",
+                theme: "",
+                time: "",
+                useCase: "",
+                url: "",
+    }
+
+        return data
+}
 
 SUBMITFORM.addEventListener('submit',e => {
         e.preventDefault();
@@ -93,35 +128,17 @@ SUBMITFORM.addEventListener('submit',e => {
         // file_name = (SUBMITFORM.teamName.value).replace(/ +/g,"");
         // uploadFile("startup", file, file_name, SUBMITFORM.teamName.value)
         // .then(newURL => {
-        //     takeMemeberData(newURL);
-        //     console.log(newURL);
-        //     console.log(m1,m2,m3,m4,m5, data);
-            let data = getData()
-            if (!data['teamSelected']){
-                submitNOTDone();
-                alert("Prefered team is not selected")
-                return false
-            }
-            if (data['linkedin'].split('.').length <= 1){
-                submitNOTDone();
-                alert("Linkedin URL is not valid")
-                return false
-            }
-            if (data['portfolio'].split('.').length <= 1){
-                submitNOTDone();
-                alert("portfolio URL is not valid")
-                return false
-            }
+            const data = takeMemeberData();
             
             addDoc(HACKATHON, data).then((docRef) => {
-                let URL = "/execom2023/success/#" + docRef.id;
+                let URL = "/ideathon/register/success/#" + docRef.id;
                 setTimeout(() => {
                     window.location.replace(URL);
                 }, 1000);
                 submitDone();
             })
             .catch((error) => {
-                console.error("Error adding document: ", error);
+                alert("Error : ", JSON.stringify(error, undefined, 2));
                 submitNOTDone();
             });
         // })

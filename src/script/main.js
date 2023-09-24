@@ -8,7 +8,7 @@ export const openSpinner = () => {
 export const submitDone = () => {
     const submitBTN = document.getElementById('btnSubmit');
     submitBTN.innerHTML = `Uploaded <i class="bi bi-check2"></i>`;
-    submitBTN.disabled = false;
+    submitBTN.disabled = true;
 }
 export const submitNOTDone = () => {
     const submitBTN = document.getElementById('btnSubmit');
