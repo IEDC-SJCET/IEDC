@@ -18,11 +18,11 @@
 
     <style>
         .greencolor{
-            color: #730ac7;
+            color: #ffaa42;
         }
         :root {
-            --lightgreen : #bcafff;
-            --green : #730ac7;
+            --lightgreen : #ffe3b3;
+            --green : #ffaa42;
         }
     </style>
 </head>
@@ -37,16 +37,37 @@
         </div>
     <div class="container d-flex flex-column justify-content-center align-items-center p-3">
         <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
-            <img src="/execom2023/image.jpg" alt="" class="card-img-top">
+            <img src="./../banner.png" alt="" class="card-img-top">
             <!-- <h2 class="text-black fs-2 fw-bolder card-header"> <span class="greencolor"> <i
                 class="bi bi-cloud-fill"></i></span></h2> -->
                 <p class="card-body">
-                    🌟 <strong>Calling All Innovators ! Join IEDC Startup Bootcamp's Executive Committee!</strong> 🚀<br><br> We are seeking dedicated individuals with a strong entrepreneurial spirit to be a part of our dynamic team. If you are ready to make an impact and be a catalyst for change, apply now to become a member of the Executive Committee!
+                    🇮🇳 <strong>Join us on a thrilling journey of innovation, collaboration, and problem-solving. Together, we can turn your ideas into reality!</strong>
                 </p>
                 <p class="card-body">
-                    🌍 Drive innovation.<br>💡 Foster entrepreneurship.<br>🚀 Ignite change<br><br>Join us in making a difference and empowering the next generation of innovators at SJCET!🎓<br>Calling all SJCET students!
+                    To embark on the journey toward victory, the first step is to register your team. Please enter the details of each team member
                 </p>
-                <p><a class="btn btn-success m-3 text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">Join IEDC EXECOM CALL Group <i class="bi bi-whatsapp"></i></a></p>
+                <div class="card-body">
+                            <div class="d-flex gap-1">
+                                <i class="bi bi-info-circle-fill text-success"></i> 
+                                <p>Teams must be composed of SJCET students, fostering cross-branch collaboration.</p>
+
+                            </div>
+                            <div class="d-flex gap-1">
+                                <i class="bi bi-info-circle-fill text-success"></i> 
+                                <p>Each team comprises 6 members, including a team leader (max 6)</p>
+
+                            </div>
+                            <div class="d-flex gap-1">
+                                <i class="bi bi-info-circle-fill text-success"></i> 
+                                <p>Ensure that each team includes at least one female member to promote gender diversity.</p>
+
+                            </div>
+                            <div class="d-flex gap-1">
+                                <i class="bi bi-info-circle-fill text-success"></i> 
+                                <p>Also team members are <span style="color: #68ac5d;">optional</span>, you can apply as individual</p>
+                            </div>
+                </div>
+                <p><a class="btn btn-success m-3 text-decoration-none" target="_blank" href="">Get Help <i class="bi bi-whatsapp"></i></a></p>
             <!-- <p class="card-body">
                 Deadline: last date to upload abstract march 10.
             </p> -->
@@ -67,9 +88,7 @@
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <div>
-                            <label>INSTITUTIONAL DETAILS OF TEAM LEAD</label>
-                            <p>In what type of educational institution are you currently
-                            enrolled in?</p>
+                            <label>DETAILS OF TEAM LEAD (MEMBER 1)</label>
                         </div>
                         <input name="member1Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg " placeholder="Team Lead Name" required>
                         <input name="institutionName" type="text" minlength="2" class="newFormField shadow-lg " value="SJCET PALAI" placeholder="Institution Name (SJCET only)" disabled required>
@@ -146,8 +165,22 @@
                         
                     </div>
                     <div class="w-100 flex-column d-flex gap-2">
-                        <label>TEAM MEMBER 2</label>
-                        <input name="member2Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg " placeholder="Name" required>
+                        <div class="choice shadow-lg justify-content-between d-flex flex-column flex-wrap">
+                            <span class="w-100 d-flex gap-1"><i class="bi bi-info-circle-fill text-success"></i> All team members must be from the SJCET Palai.</span>
+                            <span class="w-100 d-flex gap-1"><i class="bi bi-info-circle-fill text-success"></i> Each team should consist of 6 members, including one designated team leader.</span>
+                            <span class="w-100 d-flex gap-1"><i class="bi bi-info-circle-fill text-success"></i> Ensure that each team includes at least one female member to promote gender diversity.</span>
+                            <span class="w-100 d-flex gap-1"><i class="bi bi-info-circle-fill text-success"></i> Team members are optional, you can apply as individual</span>
+                        </div>
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member2" aria-expanded="false" aria-controls="member2">
+                            <label>TEAM MEMBER 2 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+
+                        
+                        <div class="collapse" id="member2">
+                            <div class="d-flex flex-column gap-2">
+                                <input name="member2Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg " placeholder="Name">
                             <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                             <span class="w-100">Branch</span>
                             <div class="w-50 d-flex gap-2">
@@ -196,12 +229,10 @@
                                 <span class="d-md-none">CYB</span>
                             </div>
                         </div>
-                        
-                        
                             <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                                 <span class="w-100">Year</span>
                                 <div class="w-50">
-                                    <input type="radio" value="1" name="member2Year" required>
+                                    <input type="radio" value="1" name="member2Year">
                                     <span>First Year</span>
                                 </div>
                                 <div class="w-50">
@@ -217,10 +248,18 @@
                                     <span>Fourth Year</span>
                                 </div>
                             </div>
-                    </div>
+                            </div>
+                        </div>
+                    <div>
                     <div class="w-100 flex-column d-flex gap-2">
-                        <label>TEAM MEMBER 3</label>
-                        <input name="member3Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg " placeholder="Name" required>
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member3" aria-expanded="false" aria-controls="member3">
+                            <label>TEAM MEMBER 3 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+
+                        
+                        <div class="collapse" id="member3">
+                            <div class="d-flex flex-column gap-2">
+                                <input name="member3Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg " placeholder="Name">
                             <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                             <span class="w-100">Branch</span>
                             <div class="w-50 d-flex gap-2">
@@ -269,12 +308,10 @@
                                 <span class="d-md-none">CYB</span>
                             </div>
                         </div>
-                        
-                        
                             <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
                                 <span class="w-100">Year</span>
                                 <div class="w-50">
-                                    <input type="radio" value="1" name="member3Year" required>
+                                    <input type="radio" value="1" name="member3Year">
                                     <span>First Year</span>
                                 </div>
                                 <div class="w-50">
@@ -290,7 +327,9 @@
                                     <span>Fourth Year</span>
                                 </div>
                             </div>
-                    </div>
+                            </div>
+                        </div>
+                    <div>
                     <div class="w-100 flex-column d-flex gap-2">
                         <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button" data-bs-target="#member4" aria-expanded="false" aria-controls="member4">
                             <label>TEAM MEMBER 4 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
@@ -528,8 +567,8 @@
                             </div>
                         </div>
                     <div>
-                    <div class="w-100 d-flex align-items-center gap-2">
-                        <label>I AGREE TO <a class="greencolor" href="http://">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                    <div class="w-100 d-flex align-items-center gap-2 mt-5">
+                        <label>I AGREE TO <a class="greencolor" href="/ideathon/">TERMS & CONDITIONS</a> </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
                     </div>
                     <div class="w-100 d-flex gap-2 justify-content-center mt-4">
                             <button class="mybtn btn flex-grow-1" type="reset">

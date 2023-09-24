@@ -19,11 +19,11 @@
 
 <style>
     .greencolor{
-            color: #730ac7;
+            color: #ffaa42;
         }
         :root {
-            --lightgreen : #bcafff;
-            --green : #730ac7;
+            --lightgreen : #ffe3b3;
+            --green : #ffaa42;
         }
 </style>
 <body id="bgdots">
@@ -31,16 +31,20 @@
         <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
             <!-- <img src="/src/asset/success" alt="" class="card-img-top"> -->
             <h2 class="card-header d-flex justify-content-between text-black fs-3 fw-bolder">
-                Team Registration Is Done, Idea Submission Is Pending
+                Team Registration Is Done<br> Idea Submission Is Pending
                 <i class="bi bi-check-circle-fill greencolor"></i>
                 </h2>
             <p class="card-body">
-                You can wait for confirmation from the admin, or contact our IEDC core team to get the latest updates or help.
+                You can wait for confirmation from the admin, or contact our IEDC core team to get the latest updates or help.<br><br>
+                Copy this ID, and use it to submit your ideas.
             </p>
             <p id="docRef" class="card-body"></p>
             <p class="card-body d-flex gap-2 flex-wrap">
-                <a class="btn btn-success text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">EXECOM CALL Group <i class="bi bi-whatsapp"></i></a>
-                <a href="/" id="submitidea" class="btn mybtn text-decoration-none">Submit your ideas <i class="bi bi-file-pdf-fill"></i></a>
+                <button class="btn text-decoration-none mybtn" onclick='copyText()'>
+                    copy <i class="bi bi-clipboard"></i>
+                </button>
+                <a class="btn mybtn text-decoration-none" target="_blank" href="">Get Help <i class="bi bi-whatsapp"></i></a>
+                <a href="/ideathon/submissions" id="submitidea" class="btn btn-success text-decoration-none">Submit your ideas <i class="bi bi-lightbulb"></i></a>
             </p>
         </div>
         <div class="w-100 showWidth">
@@ -58,8 +62,14 @@
     let id = url[url.length - 1].slice(1)
     const docRef = document.getElementById('docRef')
     const submitidea = document.getElementById('submitidea')
-    docRef.innerHTML = `Your Document ID is <span class="fw-bolder">${id}</span>`
-    submitidea.href = `/ideathon/submissions?id=#${id}`
+    if (id && id.length > 0){
+        docRef.innerHTML = `Your Document ID is <span class="fw-bolder">${id}</span>`
+        submitidea.href = `/ideathon/submissions/#${id}`
+    }
     console.log(id)
+
+    function copyText() {
+        navigator.clipboard.writeText(id);
+    }
 </script>
 </html>
