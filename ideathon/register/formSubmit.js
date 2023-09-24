@@ -13,7 +13,7 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const HACKATHON = collection(DB,'hackathon-demo');
+const HACKATHON = collection(DB,'smart-india-hackathon');
 // const storage = getStorage();
 
 
@@ -47,16 +47,25 @@ const takeMemeberData = ()=>{
                 branch:SUBMITFORM.member1Branch.value,
                 year:SUBMITFORM.member1Year.value
         }
-    m2 = {
+
+    if (isVisible('member2')) {
+        m2 = {
                 name:SUBMITFORM.member2Name.value,
                 branch:SUBMITFORM.member2Branch.value,
                 year:SUBMITFORM.member2Year.value
         }
-    m3 = {
+    }
+    else m2 = { name: null, branch: null, year: null }
+
+    if (isVisible('member3')) {
+        m3 = {
                 name:SUBMITFORM.member3Name.value,
                 branch:SUBMITFORM.member3Branch.value,
                 year:SUBMITFORM.member3Year.value
         }
+    }
+    else m3 = { name: null, branch: null, year: null }
+        
     if (isVisible('member4')) {
         m4 = {
                 name:SUBMITFORM.member4Name.value,
@@ -98,7 +107,17 @@ const takeMemeberData = ()=>{
                 member6: m6,
 
                 time: Date.now(),
-            }
+
+                dependency: "",
+                describe: "",
+                psCode: "",
+                psTitle: "",
+                techStack: "",
+                theme: "",
+                time: "",
+                useCase: "",
+                url: "",
+    }
 
         return data
 }

@@ -1,6 +1,6 @@
 import {openSpinner, submitDone, submitNOTDone} from './../../src/script/main.js';
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js';
-import { addDoc, getFirestore, collection } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
+import { getFirestore, collection, updateDoc, doc } from 'https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore-lite.js';
 import { getStorage, uploadBytesResumable, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 
 const firebaseConfig = {
@@ -13,8 +13,9 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const HACKATHON = collection(DB,'hackathon-demo-submissions');
-const HACKATHONSTORAGE = 'hackathon-demo'
+const firestoreName = 'smart-india-hackathon'; 
+const HACKATHONSTORAGE = 'smart-india-hackathon-documents'
+const HACKATHON = collection(DB,firestoreName);
 const storage = getStorage();
 
 
@@ -51,24 +52,29 @@ SUBMITFORM.addEventListener('submit',e => {
         uploadFile(HACKATHONSTORAGE, file, file_name, SUBMITFORM.teamID.value)
         .then(newURL => {
             const data = getData();
-            data.url = newURL;
+            // data.url = newURL;
 
+            console.log(data)
+            const id = data.teamID.trim()
+            let Ref = doc(DB, firestoreName, id);
+
+            delete data.teamID
             delete data.file
             
-            addDoc(HACKATHON, data).then((docRef) => {
-                let URL = "/ideathon/success/#" + docRef.id;
+            updateDoc(Ref, data).then(() => {
+                let URL = "/ideathon/success/#" + id;
                 setTimeout(() => {
                     window.location.replace(URL);
                 }, 1000);
                 submitDone();
             })
             .catch((error) => {
-                console("Error : ", JSON.stringify(error, undefined, 2));
+                console.log("Error : ", JSON.stringify(error, undefined, 2));
                 submitNOTDone();
             });
         })
         .catch((error) => {
-            console("Error adding document: ", JSON.stringify(error, undefined, 2));
+            console.log("Error adding document: ", JSON.stringify(error, undefined, 2));
             submitNOTDone();
         });
 })

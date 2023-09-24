@@ -13,7 +13,7 @@ const firebaseConfig = {
             };
 initializeApp(firebaseConfig);
 const DB  = getFirestore();
-const HACKATHON = collection(DB,'execom2023');
+const HACKATHON = collection(DB,'hackathon-demo');
 // const storage = getStorage();
 
 

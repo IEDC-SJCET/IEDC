@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/src/style/loading.css">
     <link rel="stylesheet" href="/src/style/form.css">
 
-    <style>
+    <!-- <style>
         .greencolor{
             color: #ffaa42;
         }
@@ -24,7 +24,7 @@
             --lightgreen : #ffe3b3;
             --green : #ffaa42;
         }
-    </style>
+    </style> -->
 </head>
 <body id="bgdots" class="m-0 p-0 w-100" style="overflow: hidden">
         <div id="loading" class=" vh-100 vw-100">
@@ -35,32 +35,56 @@
                 <div></div>
             </div>
         </div>
-    <div class="container d-flex flex-column justify-content-center align-items-center p-4 min-vh-100">
-        <div class="d-flex flex-column gap-2 align-items-center w-100">
-            <h1 class="display-6 fw-bold text-center">Internal <span class="greencolor">Hackathon</span> by IEDC Bootcamp SJCET</h1>
-            <p>
-                Welcome to the <strong>Internal Hackathon</strong> by IEDC Bootcamp SJCET! Here&#39;s what makes it exciting: Teams consist of SJCET students, fostering diverse collaboration. Each team has six members, including a leader. We value inclusivity, so every team must include at least one female member. It starts with
+    <div class="container flex-column justify-content-center align-items-center p-4 min-vh-100" style="max-width: 1000px;">
+        <div class="d-flex flex-column gap-5 align-items-center w-100 mt-5">
+            <div class="card shadow-lg overflow-hidden">
+                <img src="./art.png" alt="" class="w-100">
+                <div class="card-header mt-5">
+                    <h2 class="fw-bold display-6">Welcome to <span class="greencolor">Smart India Hackathon</span></h2>
+                </div>
+                <p class="card-body fs-5">by IEDC Bootcamp SJCET! Here&#39;s what makes it exciting: Teams consist of SJCET students, fostering diverse collaboration. Each team has six members, including a leader. We value inclusivity, so every team must include at least one female member. It starts with
                 the Ideathon, where teams pitch creative solutions, and the best ideas advance. Choose problem
                 statements from the Smart India Hackathon website. In software, strong programming skills are key,
                 while for hardware, mix it up with Mechanical Engineers, Electronic Engineers, Product Designers,
                 and Programmers for holistic solutions. Win, and you&#39;ll earn a chance at the prestigious Smart India
                 Hackathon.<br><br>
                 Join us on a thrilling journey of innovation, collaboration, and problem-solving. Together, we can
-                turn your ideas into reality!
-            </p>
+                turn your ideas into reality!</p>
+            </div>
             <div class="d-flex flex-column gap-4 mt-5 mb-5">
-                <div class=" d-flex flex-column gap-2">
+                <h2 class="fw-bold display-6 text-center">Internal <span class="greencolor">Hackathon</span> Workflow</h2>
+                <div class=" d-flex flex-column gap-2 card bg-white shadow-lg card-body align-items-start fs-5">
                     <h4 class="m-0">Step 1</h4>
+                    <h2 class="fw-bold">Read Guidelines</h2>
+                    <p>
+                        To participate in the Internal Hackathon, the first step is to read the guidelines. Please read the
+                        guidelines carefully before registering your team. 
+                        <br><br>
+                    </p>
+                    <a href="./#guidelines" class="btn-success btn px-4">
+                        READ GUIDELINES
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
+                <div class=" d-flex flex-column gap-2 card bg-white shadow-lg card-body align-items-start fs-5">
+                    <h4 class="m-0">Step 2</h4>
                     <h2 class="fw-bold">Register your team</h2>
                     <p>
-                        To embark on the journey toward victory, the first step is to register your team. Please enter the
+                        To embark on the journey toward victory, the second step is to register your team. Please enter the
                         details of each team member by clicking on the link provided below. <br>(Teams must be composed of
                         SJCET students, fostering cross-branch collaboration. Each team comprises 6 members, including a
                         team leader. We encourage gender diversity by requiring at least one female member per team.)
+                        <br><br>
+                        Don't forget to save/copy your id after registration. It is required for submitting your idea later.
+                        <br><br>
                     </p>
+                    <a href="./register/" class="btn-success btn px-4">
+                        REGISTER TEAM
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
                 </div>
-                <div class=" d-flex flex-column gap-2">
-                    <h4 class="m-0">Step 2</h4>
+                <div class=" d-flex flex-column gap-2 card bg-white shadow-lg card-body align-items-start fs-5">
+                    <h4 class="m-0">Step 3</h4>
                     <h2 class="fw-bold">Select problem statement and theme</h2>
                     <p>
                         To choose a theme and problem statement, go to the Smart India Hackathon website. Look for the
@@ -70,21 +94,32 @@
                         submission.
                         <br><br>
                         Smart India Hackathon Website link : <a href="https://sih.gov.in/">https://sih.gov.in/</a>
+                        <br><br>
                     </p>
+                    <a href="https://sih.gov.in/" class="btn-success btn px-4">
+                        SIH.gov.in
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
                 </div>
-                <div class=" d-flex flex-column gap-2">
-                    <h4 class="m-0">Step 3</h4>
+                <div class=" d-flex flex-column gap-2 card bg-white shadow-lg card-body align-items-start fs-5">
+                    <h4 class="m-0">Step 4</h4>
                     <h2 class="fw-bold">Upload the abstract</h2>
                     <p>
                         Please submit the abstract in PDF format and provide the requested details about the topic and your
                         team members through the provided link.
                         <br><br>
-                        <a href="" class="mybtn btn px-4">SUBMIT ABSTRACT</a>
+                        use the id as team ID to submit your idea (auto detect may not work).
+                        <br><br>
                     </p>
+                    
+                    <a href="./submissions/" class="btn-success btn px-4">
+                        SUBMIT IDEA
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
                 </div>
             </div>
-            <h1 class="display-6 fw-bold text-center">What is <span class="greencolor">Smart India Hackathon</span>?</h1>
-            <p>
+            <h2 class="display-6 fw-bold text-center">What is <span class="greencolor">Smart India Hackathon</span>?</h2>
+            <p class="card shadow-lg card-body fs-5">
                 Smart India Hackathon (SIH) is a nationwide competition where students from all over India come
                 together to solve real-world problems faced by different government departments and industries.
                 It&#39;s a platform for students to use their technical skills and creativity to find innovative solutions to
@@ -96,43 +131,79 @@
                 SIh3018, SIh3019, SIh3020 and SIh3022 proved to be extremely successful in promoting innovation
                 out-of-the-box thinking in young minds, especially engineering students from across India.
             </p>
-            <h1 class="display-6 fw-bold text-center mt-4">Internal <span class="greencolor">Hackathon</span> Guidelines</h1>
-            <ul class="fs-6">
-                <li class="mb-2">
-                    All team members should be SJCET students; inter-college teams are not allowed. Include students
-                    from different branches within the college.
-                </li>
-                <li class="mb-2">
-                    Each team should consist of 6 members, including one designated team leader.
-                </li>
-                <li class="mb-2">
-                    Ensure that each team includes at least one female member to promote gender diversity.
-                </li>
-                <li class="mb-2">
-                    The first phase of the Internal Hackathon should be an Ideathon. Only the selected teams from the Ideathon will be eligible to participate in the Internal Hackathon.
-                </li>
-                <li class="mb-2">
-                    The participants can select the problem statements from the Smart India Hackathon website ( <a href="https://www.sih.gov.in/">https://www.sih.gov.in/</a> )
-                </li>
-                <li class="mb-2">
-                    For the software edition of the hackathon (digital product development), the majority of team members must possess strong programming skills
-                </li>
-                <li class="mb-2">
-                    For the hardware edition, encourage multi-disciplinary teams with a mix of Mechanical Engineers, Electronic Engineers, Product Designers, Programmers, etc., to foster a holistic approach to problem-solving and product development.
-                </li>
-                <li class="mb-2">
-                    The winners will be eligible for participating in Smart India Hackathon.
-                </li>
-            </ul>
-            <div class="d-flex flex-row flex-wrap justify-content-center gap-2">
-                <a href="" class="mybtn btn px-4">
-                    REGISTER TEAM
-                    <i class="bi bi-chevron-right"></i>
-                </a>
-                <a href="" class="mybtn btn px-4">
-                    SUBMIT IDEA 
-                    <i class="bi bi-chevron-right"></i>
-                </a>
+            <h2 class="display-6 fw-bold text-center mt-4" id="guidelines">Internal <span class="greencolor">Hackathon</span> Guidelines</h2>
+            <div class="fs-6 card bg-white shadow-lg card-body d-flex flex-column gap-4">
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        All team members should be SJCET students; inter-college teams are not allowed. Include students
+                        from different branches within the college.
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        Each team should consist of 6 members, including one designated team leader.
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        Ensure that each team includes at least one female member to promote gender diversity.
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        The first phase of the Internal Hackathon should be an Ideathon. Only the selected teams from the Ideathon will be eligible to participate in the Internal Hackathon.
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        The participants can select the problem statements from the Smart India Hackathon website ( <a href="https://www.sih.gov.in/">https://www.sih.gov.in/</a> )
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        For the software edition of the hackathon (digital product development), the majority of team members must possess strong programming skills
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        For the hardware edition, encourage multi-disciplinary teams with a mix of Mechanical Engineers, Electronic Engineers, Product Designers, Programmers, etc., to foster a holistic approach to problem-solving and product development.
+                    </p>
+                </div>
+                <div class="d-flex fs-5">
+                    <i class="bi bi-info-circle-fill me-2 text-success"></i> 
+                    <p>
+
+                        The winners will be eligible for participating in Smart India Hackathon.
+                    </p>
+                </div>
+            </div>
+            <div class="card bg-white shadow-lg w-100 overflow-hidden">
+                <img src="./banner.png" alt="" class="w-100">
+                <div class="d-flex w-100 p-5 flex-row flex-wrap justify-content-evenly gap-2">
+                    <a class="btn mybtn text-decoration-none" target="_blank" href="">Get Help <i class="bi bi-whatsapp"></i></a>
+                    <a href="./register/" class="btn-success btn px-4">
+                        REGISTER TEAM
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                    <a href="./submissions/" class="mybtn btn px-4">
+                        SUBMIT IDEA 
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
