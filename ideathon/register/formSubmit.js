@@ -95,9 +95,11 @@ const takeMemeberData = ()=>{
 
     const  data = {
         // here is the actual code lives
+        /*
                 teamName: SUBMITFORM.teamName.value,
                 teamEmail: SUBMITFORM.teamEmail.value,
                 teamPhone: SUBMITFORM.teamPhone.value,
+        */
 
                 member1: m1,
                 member2: m2,
