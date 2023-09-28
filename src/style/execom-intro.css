@@ -8,7 +8,7 @@
 .execom-container .img1 {
   grid-area: 1/1/2/2;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CEO.jpg");
+  background: url("../../EXECOM/super-pics/CEO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +16,7 @@
 .execom-container .img2 {
   grid-area: 1/2/2/3;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CCO.jpg");
+  background: url("../../EXECOM/super-pics/CCO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,7 +24,7 @@
 .execom-container .img3 {
   grid-area: 1/3/2/4;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CFO.jpg");
+  background: url("../../EXECOM/super-pics/CFO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,7 @@
 .execom-container .img4 {
   grid-area: 1/4/2/5;
   flex: 1;
-  background: url("../../EXECOM/super-pics/COO.jpg");
+  background: url("../../EXECOM/super-pics/COO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 .execom-container .img5 {
   grid-area: 2/1/3/2;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CMO.jpg");
+  background: url("../../EXECOM/super-pics/CMO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@
 .execom-container .img6 {
   grid-area: 2/2/3/3;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CTO.jpg");
+  background: url("../../EXECOM/super-pics/CTO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,7 +56,7 @@
 .execom-container .img7 {
   grid-area: 2/3/3/4;
   flex: 1;
-  background: url("../../EXECOM/super-pics/CSO.jpg");
+  background: url("../../EXECOM/super-pics/CSO.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,4 +68,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}/*# sourceMappingURL=execom-intro.css.map */
+}
+
+/*# sourceMappingURL=execom-intro.css.map */
