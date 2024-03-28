@@ -12,27 +12,30 @@
   height: fit-content;
 }
 .execom-container .img1 {
-  background-image: url("../../EXECOM/super-pics/CEO.png");
+  background-image: url("../../EXECOM/super-pics/CEO2024.jpg");
 }
 .execom-container .img2 {
-  background-image: url("../../EXECOM/super-pics/CCO.png");
+  background-image: url("../../EXECOM/super-pics/CCO2024.jpg");
 }
 .execom-container .img3 {
-  background-image: url("../../EXECOM/super-pics/CFO.png");
+  background-image: url("../../EXECOM/super-pics/CFO2024.jpg");
 }
 .execom-container .img4 {
-  background-image: url("../../EXECOM/super-pics/COO.png");
+  background-image: url("../../EXECOM/super-pics/COO2024.jpg");
 }
 .execom-container .img5 {
-  background-image: url("../../EXECOM/super-pics/CMO.png");
+  background-image: url("../../EXECOM/super-pics/CMO2024.jpg");
 }
 .execom-container .img6 {
-  background-image: url("../../EXECOM/super-pics/CTO.png");
+  background-image: url("../../EXECOM/super-pics/CTO2024.jpg");
 }
 .execom-container .img7 {
-  background-image: url("../../EXECOM/super-pics/CSO.png");
+  background-image: url("../../EXECOM/super-pics/CSO2024.jpg");
 }
 .execom-container .img8 {
+  background-image: url("../../EXECOM/super-pics/CVO2024.jpg");
+}
+.execom-container .img9 {
   background-image: url("../../EXECOM/super-pics/volunteer.jpg");
 }
 
