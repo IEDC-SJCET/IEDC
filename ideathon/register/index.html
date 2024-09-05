@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        fetchpriority="high">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="stylesheet" href="/src/style/common.css">
+    <link rel="stylesheet" href="/src/style/loading.css">
+    <link rel="stylesheet" href="/src/style/form.css">
+
+    <style>
+        .greencolor {
+            color: #ffaa42;
+        }
+
+        :root {
+            --lightgreen: #ffe3b3;
+            --green: #ffaa42;
+        }
+    </style>
+</head>
+
+<body id="bgdots" class="m-0 p-0 w-100" style="overflow: hidden">
+    <div id="loading" class=" vh-100 vw-100">
+        <div id="loader" class="lds-ring shadow-lg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center p-3">
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
+            <img src="./../banner.png" alt="" class="card-img-top">
+            <!-- <h2 class="text-black fs-2 fw-bolder card-header"> <span class="greencolor"> <i
+                class="bi bi-cloud-fill"></i></span></h2> -->
+            <p class="card-body">
+                🇮🇳 <strong>Join us on a thrilling journey of innovation, collaboration, and problem-solving. Together,
+                    we can turn your ideas into reality!</strong>
+            </p>
+
+            <p><a class="btn mybtn m-3 text-decoration-none" target="_blank" href="	https://wa.me/+918590682110">Get
+                    Help <i class="bi bi-whatsapp"></i></a>
+                <a href="https://chat.whatsapp.com/Ge0fvug1QyYGmqMebBf3d8" class="btn btn-success text-decoration-none"
+                    target="_blank">Join SIH'23 Group <i class="bi bi-whatsapp"></i></a>
+            </p>
+            <!-- <p class="card-body">
+                Deadline: last date to upload abstract march 10.
+            </p> -->
+            <div class="card-img-bottom" style="height:8px; background: var(--lightgreen);"></div>
+        </div>
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth mt-3">
+
+        </div>
+
+        <div class="d-flex flex-column gap-3 align-items-center w-100" style="max-width: 500px">
+            <form id="SUBMITFORM">
+                <div class="d-flex flex-column gap-4 my-3">
+
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <div>
+                            <label>DETAILS OF TEAM MEMBER 1</label>
+                        </div>
+                        <input name="member1Name" type="text" minlength="2" maxlength="45"
+                            class="newFormField shadow-lg " placeholder="Name" required>
+                        <input name="member1Email" type="email" minlength="2" maxlength="45"
+                            class="newFormField shadow-lg " placeholder="Email" required>
+                        <input name="member1Phone" type="text" minlength="10" maxlength="10"
+                            class="newFormField shadow-lg " placeholder="Phone Number" required>
+                        <input name="institutionName" type="text" minlength="2" class="newFormField shadow-lg "
+                            value="SJCET PALAI" placeholder="Institution Name (SJCET only)" disabled required>
+                        <input name="instituteCode" type="text" minlength="2" class="newFormField shadow-lg "
+                            value="C-11789" placeholder="Institute Code (AISHE) (C-11789 for SJCET Palai)" disabled
+                            required>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Branch</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="AD" name="member1Branch">
+                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                <span class="d-md-none">AD</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CSE" name="member1Branch">
+                                <span class="d-none d-md-block">Computer Science</span>
+                                <span class="d-md-none">CSE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CE" name="member1Branch">
+                                <span class="d-none d-md-block">Civil Engineering</span>
+                                <span class="d-md-none">CE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECE" name="member1Branch">
+                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                <span class="d-md-none">ECE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EEE" name="member1Branch">
+                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                <span class="d-md-none">EEE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ME" name="member1Branch">
+                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                <span class="d-md-none">ME</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="EI" name="member1Branch">
+                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                <span class="d-md-none">EI</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="ECS" name="member1Branch">
+                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                <span class="d-md-none">ECS</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CYB" name="member1Branch">
+                                <span class="d-none d-md-block">Cyber Security</span>
+                                <span class="d-md-none">CYB</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" value="CYB" name="member1Branch">
+                                <span class="d-none d-md-block">MCA/MBA</span>
+                                <span class="d-md-none">MCA/MBA</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Year</span>
+                            <div class="w-50">
+                                <input type="radio" value="1" name="member1Year" required>
+                                <span>First Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="2" name="member1Year">
+                                <span>Second Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="3" name="member1Year">
+                                <span>Third Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="4" name="member1Year">
+                                <span>Fourth Year</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                            data-bs-target="#member2" aria-expanded="false" aria-controls="member2">
+                            <label>TEAM MEMBER 2 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+
+
+                        <div class="collapse" id="member2">
+                            <div class="d-flex flex-column gap-2">
+                                <input name="member2Name" type="text" minlength="2" maxlength="45"
+                                    class="newFormField shadow-lg " placeholder="Name">
+                                <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                    <span class="w-100">Branch</span>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="AD" name="member2Branch">
+                                        <span class="d-none d-md-block">Artificial Intelligence</span>
+                                        <span class="d-md-none">AD</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="CSE" name="member2Branch">
+                                        <span class="d-none d-md-block">Computer Science</span>
+                                        <span class="d-md-none">CSE</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="CE" name="member2Branch">
+                                        <span class="d-none d-md-block">Civil Engineering</span>
+                                        <span class="d-md-none">CE</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="ECE" name="member2Branch">
+                                        <span class="d-none d-md-block">Electronics & Communication</span>
+                                        <span class="d-md-none">ECE</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="EEE" name="member2Branch">
+                                        <span class="d-none d-md-block">Electrical & Electronics</span>
+                                        <span class="d-md-none">EEE</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="ME" name="member2Branch">
+                                        <span class="d-none d-md-block">Mechanical Engineering</span>
+                                        <span class="d-md-none">ME</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="EI" name="member2Branch">
+                                        <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                        <span class="d-md-none">EI</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="ECS" name="member2Branch">
+                                        <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                        <span class="d-md-none">ECS</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="CYB" name="member2Branch">
+                                        <span class="d-none d-md-block">Cyber Security</span>
+                                        <span class="d-md-none">CYB</span>
+                                    </div>
+                                    <div class="w-50 d-flex gap-2">
+                                        <input type="radio" value="CYB" name="member2Branch">
+                                        <span class="d-none d-md-block">MCA/MBA</span>
+                                        <span class="d-md-none">MCA/MBA</span>
+                                    </div>
+                                </div>
+                                <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                    <span class="w-100">Year</span>
+                                    <div class="w-50">
+                                        <input type="radio" value="1" name="member2Year">
+                                        <span>First Year</span>
+                                    </div>
+                                    <div class="w-50">
+                                        <input type="radio" value="2" name="member2Year">
+                                        <span>Second Year</span>
+                                    </div>
+                                    <div class="w-50">
+                                        <input type="radio" value="3" name="member2Year">
+                                        <span>Third Year</span>
+                                    </div>
+                                    <div class="w-50">
+                                        <input type="radio" value="4" name="member2Year">
+                                        <span>Fourth Year</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="w-100 flex-column d-flex gap-2">
+                                <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                                    data-bs-target="#member3" aria-expanded="false" aria-controls="member3">
+                                    <label>TEAM MEMBER 3 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                                </button>
+
+
+                                <div class="collapse" id="member3">
+                                    <div class="d-flex flex-column gap-2">
+                                        <input name="member3Name" type="text" minlength="2" maxlength="45"
+                                            class="newFormField shadow-lg " placeholder="Name">
+                                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                            <span class="w-100">Branch</span>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="AD" name="member3Branch">
+                                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                                <span class="d-md-none">AD</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="CSE" name="member3Branch">
+                                                <span class="d-none d-md-block">Computer Science</span>
+                                                <span class="d-md-none">CSE</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="CE" name="member3Branch">
+                                                <span class="d-none d-md-block">Civil Engineering</span>
+                                                <span class="d-md-none">CE</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="ECE" name="member3Branch">
+                                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                                <span class="d-md-none">ECE</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="EEE" name="member3Branch">
+                                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                                <span class="d-md-none">EEE</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="ME" name="member3Branch">
+                                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                                <span class="d-md-none">ME</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="EI" name="member3Branch">
+                                                <span class="d-none d-md-block">Electrical & Instrumentation</span>
+                                                <span class="d-md-none">EI</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="ECS" name="member3Branch">
+                                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                                <span class="d-md-none">ECS</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="CYB" name="member3Branch">
+                                                <span class="d-none d-md-block">Cyber Security</span>
+                                                <span class="d-md-none">CYB</span>
+                                            </div>
+                                            <div class="w-50 d-flex gap-2">
+                                                <input type="radio" value="CYB" name="member3Branch">
+                                                <span class="d-none d-md-block">MCA/MBA</span>
+                                                <span class="d-md-none">MCA/MBA</span>
+                                            </div>
+                                        </div>
+                                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                            <span class="w-100">Year</span>
+                                            <div class="w-50">
+                                                <input type="radio" value="1" name="member3Year">
+                                                <span>First Year</span>
+                                            </div>
+                                            <div class="w-50">
+                                                <input type="radio" value="2" name="member3Year">
+                                                <span>Second Year</span>
+                                            </div>
+                                            <div class="w-50">
+                                                <input type="radio" value="3" name="member3Year">
+                                                <span>Third Year</span>
+                                            </div>
+                                            <div class="w-50">
+                                                <input type="radio" value="4" name="member3Year">
+                                                <span>Fourth Year</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="w-100 flex-column d-flex gap-2">
+                                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                                            data-bs-target="#member4" aria-expanded="false" aria-controls="member4">
+                                            <label>TEAM MEMBER 4 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                                        </button>
+
+
+                                        <div class="collapse" id="member4">
+                                            <div class="d-flex flex-column gap-2">
+                                                <input name="member4Name" type="text" minlength="2" maxlength="45"
+                                                    class="newFormField shadow-lg " placeholder="Name">
+                                                <div
+                                                    class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                    <span class="w-100">Branch</span>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="AD" name="member4Branch">
+                                                        <span class="d-none d-md-block">Artificial Intelligence</span>
+                                                        <span class="d-md-none">AD</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="CSE" name="member4Branch">
+                                                        <span class="d-none d-md-block">Computer Science</span>
+                                                        <span class="d-md-none">CSE</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="CE" name="member4Branch">
+                                                        <span class="d-none d-md-block">Civil Engineering</span>
+                                                        <span class="d-md-none">CE</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="ECE" name="member4Branch">
+                                                        <span class="d-none d-md-block">Electronics &
+                                                            Communication</span>
+                                                        <span class="d-md-none">ECE</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="EEE" name="member4Branch">
+                                                        <span class="d-none d-md-block">Electrical & Electronics</span>
+                                                        <span class="d-md-none">EEE</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="ME" name="member4Branch">
+                                                        <span class="d-none d-md-block">Mechanical Engineering</span>
+                                                        <span class="d-md-none">ME</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="EI" name="member4Branch">
+                                                        <span class="d-none d-md-block">Electrical &
+                                                            Instrumentation</span>
+                                                        <span class="d-md-none">EI</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="ECS" name="member4Branch">
+                                                        <span class="d-none d-md-block">Electronics & Computer
+                                                            Sci</span>
+                                                        <span class="d-md-none">ECS</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="CYB" name="member4Branch">
+                                                        <span class="d-none d-md-block">Cyber Security</span>
+                                                        <span class="d-md-none">CYB</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="CYB" name="member1Branch">
+                                                        <span class="d-none d-md-block">MCA/MBA</span>
+                                                        <span class="d-md-none">MCA/MBA</span>
+                                                    </div>
+                                                    <div class="w-50 d-flex gap-2">
+                                                        <input type="radio" value="CYB" name="member4Branch">
+                                                        <span class="d-none d-md-block">MCA/MBA</span>
+                                                        <span class="d-md-none">MCA/MBA</span>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                    <span class="w-100">Year</span>
+                                                    <div class="w-50">
+                                                        <input type="radio" value="1" name="member4Year">
+                                                        <span>First Year</span>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <input type="radio" value="2" name="member4Year">
+                                                        <span>Second Year</span>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <input type="radio" value="3" name="member4Year">
+                                                        <span>Third Year</span>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <input type="radio" value="4" name="member4Year">
+                                                        <span>Fourth Year</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="w-100 flex-column d-flex gap-2">
+                                                <button class="btn p-0 text-start" data-bs-toggle="collapse"
+                                                    type="button" data-bs-target="#member5" aria-expanded="false"
+                                                    aria-controls="member5">
+                                                    <label>TEAM MEMBER 5 (OPTIONAL) <i
+                                                            class="bi bi-chevron-down"></i></label>
+                                                </button>
+
+
+                                                <div class="collapse" id="member5">
+                                                    <div class="d-flex flex-column gap-2">
+                                                        <input name="member5Name" type="text" minlength="2"
+                                                            maxlength="45" class="newFormField shadow-lg "
+                                                            placeholder="Name">
+                                                        <div
+                                                            class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                            <span class="w-100">Branch</span>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="AD" name="member5Branch">
+                                                                <span class="d-none d-md-block">Artificial
+                                                                    Intelligence</span>
+                                                                <span class="d-md-none">AD</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="CSE" name="member5Branch">
+                                                                <span class="d-none d-md-block">Computer Science</span>
+                                                                <span class="d-md-none">CSE</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="CE" name="member5Branch">
+                                                                <span class="d-none d-md-block">Civil Engineering</span>
+                                                                <span class="d-md-none">CE</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="ECE" name="member5Branch">
+                                                                <span class="d-none d-md-block">Electronics &
+                                                                    Communication</span>
+                                                                <span class="d-md-none">ECE</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="EEE" name="member5Branch">
+                                                                <span class="d-none d-md-block">Electrical &
+                                                                    Electronics</span>
+                                                                <span class="d-md-none">EEE</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="ME" name="member5Branch">
+                                                                <span class="d-none d-md-block">Mechanical
+                                                                    Engineering</span>
+                                                                <span class="d-md-none">ME</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="EI" name="member5Branch">
+                                                                <span class="d-none d-md-block">Electrical &
+                                                                    Instrumentation</span>
+                                                                <span class="d-md-none">EI</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="ECS" name="member5Branch">
+                                                                <span class="d-none d-md-block">Electronics & Computer
+                                                                    Sci</span>
+                                                                <span class="d-md-none">ECS</span>
+                                                            </div>
+                                                            <div class="w-50 d-flex gap-2">
+                                                                <input type="radio" value="CYB" name="member5Branch">
+                                                                <span class="d-none d-md-block">Cyber Security</span>
+                                                                <span class="d-md-none">CYB</span>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                            <span class="w-100">Year</span>
+                                                            <div class="w-50">
+                                                                <input type="radio" value="1" name="member5Year">
+                                                                <span>First Year</span>
+                                                            </div>
+                                                            <div class="w-50">
+                                                                <input type="radio" value="2" name="member5Year">
+                                                                <span>Second Year</span>
+                                                            </div>
+                                                            <div class="w-50">
+                                                                <input type="radio" value="3" name="member5Year">
+                                                                <span>Third Year</span>
+                                                            </div>
+                                                            <div class="w-50">
+                                                                <input type="radio" value="4" name="member5Year">
+                                                                <span>Fourth Year</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="w-100 flex-column d-flex gap-2">
+                                                        <button class="btn p-0 text-start" data-bs-toggle="collapse"
+                                                            type="button" data-bs-target="#member6"
+                                                            aria-expanded="false" aria-controls="member6">
+                                                            <label>TEAM MEMBER 6 (OPTIONAL) <i
+                                                                    class="bi bi-chevron-down"></i></label>
+                                                        </button>
+
+
+                                                        <div class="collapse" id="member6">
+                                                            <div class="d-flex flex-column gap-2">
+                                                                <input name="member6Name" type="text" minlength="2"
+                                                                    maxlength="45" class="newFormField shadow-lg "
+                                                                    placeholder="Name">
+                                                                <div
+                                                                    class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                                    <span class="w-100">Branch</span>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="AD"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Artificial
+                                                                            Intelligence</span>
+                                                                        <span class="d-md-none">AD</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="CSE"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Computer
+                                                                            Science</span>
+                                                                        <span class="d-md-none">CSE</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="CE"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Civil
+                                                                            Engineering</span>
+                                                                        <span class="d-md-none">CE</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="ECE"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Electronics &
+                                                                            Communication</span>
+                                                                        <span class="d-md-none">ECE</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="EEE"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Electrical &
+                                                                            Electronics</span>
+                                                                        <span class="d-md-none">EEE</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="ME"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Mechanical
+                                                                            Engineering</span>
+                                                                        <span class="d-md-none">ME</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="EI"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Electrical &
+                                                                            Instrumentation</span>
+                                                                        <span class="d-md-none">EI</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="ECS"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Electronics &
+                                                                            Computer Sci</span>
+                                                                        <span class="d-md-none">ECS</span>
+                                                                    </div>
+                                                                    <div class="w-50 d-flex gap-2">
+                                                                        <input type="radio" value="CYB"
+                                                                            name="member6Branch">
+                                                                        <span class="d-none d-md-block">Cyber
+                                                                            Security</span>
+                                                                        <span class="d-md-none">CYB</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                                                                    <span class="w-100">Year</span>
+                                                                    <div class="w-50">
+                                                                        <input type="radio" value="1"
+                                                                            name="member6Year">
+                                                                        <span>First Year</span>
+                                                                    </div>
+                                                                    <div class="w-50">
+                                                                        <input type="radio" value="2"
+                                                                            name="member6Year">
+                                                                        <span>Second Year</span>
+                                                                    </div>
+                                                                    <div class="w-50">
+                                                                        <input type="radio" value="3"
+                                                                            name="member6Year">
+                                                                        <span>Third Year</span>
+                                                                    </div>
+                                                                    <div class="w-50">
+                                                                        <input type="radio" value="4"
+                                                                            name="member6Year">
+                                                                        <span>Fourth Year</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="w-100 d-flex align-items-center gap-2 mt-5">
+                                                                <label>I AGREE TO <a class="greencolor"
+                                                                        href="/ideathon/">TERMS & CONDITIONS</a>
+                                                                </label><input type="checkbox" name="terms" id="terms"
+                                                                    onchange="checkBOX(this)">
+                                                            </div>
+                                                            <div class="w-100 d-flex gap-2 justify-content-center mt-4">
+                                                                <button class="mybtn btn flex-grow-1" type="reset">
+                                                                    <span>RESET <i class="bi bi-trash-fill"></i></span>
+                                                                </button>
+                                                                <button id="btnSubmit"
+                                                                    class="btn-success btn flex-grow-1" type="submit"
+                                                                    disabled>
+                                                                    <span>SUBMIT <i
+                                                                            class="bi bi-chevron-right"></i></span>
+                                                                </button>
+                                                            </div>
+
+
+                                                        </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./formSubmit.js"></script>
+    <script src="/src/script/script.js"></script>
+</body>
+<script>
+    const submitBTN = document.getElementById('btnSubmit');
+    const checkBOX = (element) => {
+        submitBTN.disabled = element.checked ? false : true;
+    }
+</script>
+
+</html>

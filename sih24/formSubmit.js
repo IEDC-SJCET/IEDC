@@ -26,94 +26,116 @@ const HACKATHON = collection(DB, "sih-hackathon-24");
 // let data = {};
 
 const SUBMITFORM = document.getElementById("SUBMITFORM");
-function getData() {
+
+function getData(newURL) {
   let data = {};
   const formData = new FormData(SUBMITFORM);
 
-  for (const [key, value] of formData.entries()) {
-    data[key] = value;
-  }
-  console.log(data);
+  // Create base object for team leader
+  let teamLeader = {
+    studentName: formData.get("studentName"),
+    studentEmail: formData.get("studentEmail"),
+    studentPhone: formData.get("studentPhone"),
+    stay: formData.get("modeOfAttending"),
+    branch: formData.get("fieldOfStudy"),
+    currentYear: formData.get("currentYear"),
+    linkedin: formData.get("linkedin"),
+    portfolio: formData.get("portfolio"),
+  };
+
+  // Clean up empty fields in teamLeader
+  teamLeader = Object.fromEntries(
+    Object.entries(teamLeader).filter(
+      ([_, value]) => value && value.trim() !== ""
+    )
+  );
+
+  let members = [];
+
+  // Member 2
+  let member2 = {
+    member2Name: formData.get("member2Name"),
+    member2Email: formData.get("member2Email"),
+    member2Branch: formData.get("member2Branch"),
+    member2Year: formData.get("member2Year"),
+  };
+  if (member2.member2Name) members.push(member2); // Add member2 only if name is not empty
+
+  // Member 3
+  let member3 = {
+    member3Name: formData.get("member3Name"),
+    member3Email: formData.get("member3Email"),
+    member3Branch: formData.get("member3Branch"),
+    member3Year: formData.get("member3Year"),
+  };
+  if (member3.member3Name) members.push(member3); // Add member3 only if name is not empty
+
+  // Member 4
+  let member4 = isVisible("member4")
+    ? {
+        member4Name: formData.get("member4Name"),
+        member4Email: formData.get("member4Email"),
+        member4Branch: formData.get("member4Branch"),
+        member4Year: formData.get("member4Year"),
+      }
+    : { member4Name: "NA", member4Branch: "NA", member4Year: "NA" };
+  if (member4.member4Name !== "NA") members.push(member4); // Add member4 if not default
+
+  // Member 5
+  let member5 = isVisible("member5")
+    ? {
+        member5Name: formData.get("member5Name"),
+        member5Email: formData.get("member5Email"),
+        member5Branch: formData.get("member5Branch"),
+        member5Year: formData.get("member5Year"),
+      }
+    : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
+  if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
+
+  // Add cleaned-up data to final data object
+  data.teamLeader = teamLeader;
+  data.members = members; // List of all valid members
+  data.teamName = formData.get("teamName");
+  data.categoryOfProduct = formData.get("categoryOfProduct");
+  data.techStack = formData.get("techStack");
+  data.terms = formData.get("terms");
   data.UploadTimeStamp = Date.now();
+
+  // Count number of members
+  data.countOfMembers = members.length + 1; // Includes the team leader
+
   return data;
 }
 
-// let m1,m2,m3,m4,m5,data;
-
-// const takeMemeberData = (newURL)=>{
-//     m1 = {
-//                 Name:SUBMITFORM.leaderName.value,
-//                 Email:SUBMITFORM.leaderEmail.value,
-//                 Phone:SUBMITFORM.leaderPhone.value,
-//         }
-//     m2 = {
-//                 Name:SUBMITFORM.member2Name.value,
-//                 Email:SUBMITFORM.member2Email.value,
-//         }
-//     m3 = {
-//                 Name:SUBMITFORM.member3Name.value,
-//                 Email:SUBMITFORM.member3Email.value,
-//         }
-//     if (isVisible('member4')) {
-//         m4 = {
-//                 Name:SUBMITFORM.member4Name.value,
-//                 Email:SUBMITFORM.member4Email.value,
-//         }
-//     }
-//     else m4 = {Name:"NA", Email:"NA"}
-
-//     if (isVisible('member5')) {
-//         m5 = {
-//                 Name:SUBMITFORM.member5Name.value,
-//                 Email:SUBMITFORM.member5Email.value,
-//         }
-//     }
-//     else m5 = {Name:"NA", Email:"NA"}
-
-//     data = {
-//         // here is the actual code lives
-//                 TeamName: SUBMITFORM.teamName.value,
-//                 Leader: m1,
-//                 Member2: m2,
-//                 Member3: m3,
-//                 Member4: m4,
-//                 Member5: m5,
-//                 Institution: SUBMITFORM.institutionName.value,
-//                 FieldOfStudy: SUBMITFORM.fieldOfStudy.value,
-//                 CurrentYear: SUBMITFORM.currentYear.value,
-//                 UploadTimeStamp: Date.now(),
-//                 projectDoc: newURL,
-//             }
-// }
-
 SUBMITFORM.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log("form submitted");
+  console.log("Form submitted");
 
   openSpinner();
-  // file_name = (SUBMITFORM.teamName.value).replace(/ +/g,"");
+
+  // File upload logic here
   // uploadFile("startup", file, file_name, SUBMITFORM.teamName.value)
   // .then(newURL => {
-  //     takeMemeberData(newURL);
-  //     console.log(newURL);
-  //     console.log(m1,m2,m3,m4,m5, data);
-  let data = getData();
-  //   if (!data["teamSelected"]) {
-  //     submitNOTDone();
-  //     alert("Prefered team is not selected");
-  //     return false;
-  //   }
-  if (data["linkedin"].split(".").length <= 1) {
+
+  let newURL = "sample_url"; // replace with actual upload file logic
+  let data = getData(newURL);
+
+  // Validating LinkedIn and portfolio URLs
+  if (data.teamLeader.linkedin.split(".").length <= 1) {
     submitNOTDone();
-    alert("Linkedin URL is not valid");
-    return false;
-  }
-  if (data["portfolio"].split(".").length <= 1) {
-    submitNOTDone();
-    alert("portfolio URL is not valid");
+    alert("LinkedIn URL is not valid");
     return false;
   }
 
+  if (data.teamLeader.portfolio.split(".").length <= 1) {
+    submitNOTDone();
+    alert("Portfolio URL is not valid");
+    return false;
+  }
+
+  console.log(data);
+
+  // Example Firebase logic to save data (uncomment when using Firebase)
   addDoc(HACKATHON, data)
     .then((docRef) => {
       let URL = "./success/#" + docRef.id;
@@ -126,10 +148,7 @@ SUBMITFORM.addEventListener("submit", (e) => {
       console.error("Error adding document: ", error);
       submitNOTDone();
     });
-  // })
-  // .catch((error) => {
-  //     console.error("Error adding document: ", error);
-  //     submitNOTDone();
+
   // });
 });
 
