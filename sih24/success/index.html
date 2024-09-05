@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +19,16 @@
 </head>
 
 <style>
-    .greencolor{
-            color: #730ac7;
-        }
-        :root {
-            --lightgreen : #bcafff;
-            --green : #730ac7;
-        }
+    .greencolor {
+        color: #730ac7;
+    }
+
+    :root {
+        --lightgreen: #bcafff;
+        --green: #730ac7;
+    }
 </style>
+
 <body id="bgdots">
     <div class="vh-100 container d-flex flex-column justify-content-center align-items-center p-4">
         <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
@@ -33,19 +36,23 @@
             <h2 class="card-header d-flex justify-content-between text-black fs-3 fw-bolder">
                 Registration Done
                 <i class="bi bi-check-circle-fill greencolor"></i>
-                </h2>
+            </h2>
             <p class="card-body">
-                You can wait for confirmation from the admin, or join our IEDC EXECOM Call Group to get the latest notifications.
+                You can wait for confirmation from the admin, or join our IEDC EXECOM Call Group to get the latest
+                notifications.
             </p>
             <p id="docRef" class="card-body"></p>
             <p class="card-body d-flex gap-2 flex-wrap">
-                <a class="btn btn-success text-decoration-none" target="_blank" href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">EXECOM CALL Group <i class="bi bi-whatsapp"></i></a>
-                <a href="/execom2023" class="btn mybtn text-decoration-none">Register new Form <i class="bi bi-arrow-clockwise"></i></a>
+                <a class="btn btn-success text-decoration-none" target="_blank"
+                    href="https://chat.whatsapp.com/Fo64XKqOWvlLNLsB7BmNg4">SIH Group <i class="bi bi-whatsapp"></i></a>
+                <a href="/execom2023" class="btn mybtn text-decoration-none">Register new Form <i
+                        class="bi bi-arrow-clockwise"></i></a>
             </p>
         </div>
         <div class="w-100 showWidth">
             <p class="text-black-50 fs-7 d-flex flex-column gap-1 mt-2 ms-2 text-start">
-                <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i> &nbsp;
+                <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i>
+                        &nbsp;
                         Report an issue</a> &nbsp; | &nbsp;
                     <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
             </p>
@@ -60,4 +67,5 @@
     docRef.innerHTML = `Your Document ID is <span class="fw-bolder">${id}</span>`
     console.log(id)
 </script>
+
 </html>
