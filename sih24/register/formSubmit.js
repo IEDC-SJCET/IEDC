@@ -121,13 +121,20 @@ SUBMITFORM.addEventListener("submit", (e) => {
   let data = getData(newURL);
 
   // Validating LinkedIn and portfolio URLs
-  if (data.teamLeader.linkedin.split(".").length <= 1) {
+
+  if (
+    data.teamLeader.linkedin &&
+    data.teamLeader.linkedin.split(".").length <= 1
+  ) {
     submitNOTDone();
     alert("LinkedIn URL is not valid");
     return false;
   }
 
-  if (data.teamLeader.portfolio.split(".").length <= 1) {
+  if (
+    data.teamLeader.portfolio &&
+    data.teamLeader.portfolio.split(".").length <= 1
+  ) {
     submitNOTDone();
     alert("Portfolio URL is not valid");
     return false;
