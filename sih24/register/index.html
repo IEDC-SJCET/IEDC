@@ -86,7 +86,19 @@
                             placeholder="Collage Email ID" required>
                         <input name="studentPhone" type="tel" pattern="[0-9]{10}" maxlength="10"
                             class="newFormField shadow-lg " placeholder="Phone Number" required>
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Food preferences</span>
+                            <div class="w-50">
+                                <input type="radio" value="Non Veg" name="foodPreferences" required>
+                                <span>Non Veg</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" value="Veg" name="foodPreferences">
+                                <span>Veg</span>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="w-100 flex-column d-flex gap-2 mt-4">
                         <div>
                             <label class="req">Educational Details</label>
@@ -414,6 +426,21 @@
                 <span>Fourth Year</span>
             </div>
         </div>
+     
+</script>
+
+    <script type="text/template" id="food-template">
+    <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+        <span class="w-100">Food preferences</span>
+        <div class="w-50">
+            <input type="radio" value="Non Veg" name="{memberFoodPreference}">
+            <span>Non Veg</span>
+        </div>
+        <div class="w-50">
+            <input type="radio" value="Veg" name="{memberFoodPreference}">
+            <span>Veg</span>
+        </div>
+    </div>
 </script>
 
 
@@ -422,12 +449,15 @@
             function generateMemberForm(memberNumber) {
                 const branchTemplate = document.getElementById('branch-template').innerHTML;
                 const yearTemplate = document.getElementById('year-template').innerHTML;
+                const foodTemplate = document.getElementById('food-template').innerHTML;
 
                 const memberBranchName = `member${memberNumber}Branch`;
                 const memberYearName = `member${memberNumber}Year`;
+                const memberFoodPreference = `member${memberNumber}FoodPreference`;
 
                 const branchHtml = branchTemplate.replace(/{memberBranchName}/g, memberBranchName);
                 const yearHtml = yearTemplate.replace(/{memberYearName}/g, memberYearName);
+                const foodHtml = foodTemplate.replace(/{memberFoodPreference}/g, memberFoodPreference);
 
                 return `
                 <div class="d-flex flex-column gap-2">
@@ -435,6 +465,7 @@
                     <input name="member${memberNumber}Email" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg" placeholder="Collage Email">
                     ${branchHtml}
                     ${yearHtml}
+                    ${foodHtml}
                 </div>
              
             `;
