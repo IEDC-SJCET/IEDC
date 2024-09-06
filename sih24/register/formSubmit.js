@@ -27,7 +27,7 @@ const HACKATHON = collection(DB, "sih-hackathon-24");
 
 const SUBMITFORM = document.getElementById("SUBMITFORM");
 
-function getData(newURL) {
+function getData() {
   let data = {};
   const formData = new FormData(SUBMITFORM);
 
@@ -41,6 +41,7 @@ function getData(newURL) {
     currentYear: formData.get("currentYear"),
     linkedin: formData.get("linkedin"),
     portfolio: formData.get("portfolio"),
+    foodPreference: formData.get("foodPreference"),
   };
 
   // Clean up empty fields in teamLeader
@@ -58,6 +59,7 @@ function getData(newURL) {
     member2Email: formData.get("member2Email"),
     member2Branch: formData.get("member2Branch"),
     member2Year: formData.get("member2Year"),
+    member2FoodPreference: formData.get("member2FoodPreference"),
   };
   if (member2.member2Name) members.push(member2); // Add member2 only if name is not empty
 
@@ -67,6 +69,7 @@ function getData(newURL) {
     member3Email: formData.get("member3Email"),
     member3Branch: formData.get("member3Branch"),
     member3Year: formData.get("member3Year"),
+    member3FoodPreference: formData.get("member3FoodPreference"),
   };
   if (member3.member3Name) members.push(member3); // Add member3 only if name is not empty
 
@@ -77,6 +80,7 @@ function getData(newURL) {
         member4Email: formData.get("member4Email"),
         member4Branch: formData.get("member4Branch"),
         member4Year: formData.get("member4Year"),
+        member4FoodPreference: formData.get("member4FoodPreference"),
       }
     : { member4Name: "NA", member4Branch: "NA", member4Year: "NA" };
   if (member4.member4Name !== "NA") members.push(member4); // Add member4 if not default
@@ -88,6 +92,7 @@ function getData(newURL) {
         member5Email: formData.get("member5Email"),
         member5Branch: formData.get("member5Branch"),
         member5Year: formData.get("member5Year"),
+        member5FoodPreference: formData.get("member5FoodPreference"),
       }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
@@ -113,12 +118,7 @@ SUBMITFORM.addEventListener("submit", (e) => {
 
   openSpinner();
 
-  // File upload logic here
-  // uploadFile("startup", file, file_name, SUBMITFORM.teamName.value)
-  // .then(newURL => {
-
-  let newURL = "sample_url"; // replace with actual upload file logic
-  let data = getData(newURL);
+  let data = getData();
 
   // Validating LinkedIn and portfolio URLs
 
@@ -162,118 +162,3 @@ SUBMITFORM.addEventListener("submit", (e) => {
 function isVisible(element) {
   return document.getElementById(element).classList.contains("show");
 }
-
-// function uploadFile (dir, file, file_name, author) {
-//     const metadata = {
-//         contentType: file.type,
-//         author: author,
-//         title: file_name,
-//         uploadedTimeStamp: Date.now(),
-//     };
-//     console.log(file.type)
-//     return new Promise((resolve, reject)=>{
-//         const storageRef = ref(storage, dir +'/'+ file_name);
-//         const uploadTask = uploadBytesResumable(storageRef, file, metadata);
-
-//         uploadTask.on('state_changed',
-//         (snapshot) => {
-//             //do nothing
-//         },
-//         (error) => {
-//             switch (error.code) {
-//             case 'storage/unauthorized':
-//             case 'storage/canceled':
-//             case 'storage/unknown':
-//                 reject("Uploading Error");
-//             }
-//         },
-//         () => {
-//             getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-//                 resolve(downloadURL);
-//             });
-//         }
-//         );
-
-//    });
-
-// }
-
-// document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-//     const dropZoneElement = inputElement.closest(".drop-zone");
-
-//     dropZoneElement.addEventListener("click", (e) => {
-//         inputElement.click();
-//     });
-
-//     inputElement.addEventListener("change", (e) => {
-//         if (inputElement.files.length) {
-//             console.log('added file')
-//             file = e.target.files[0];
-//             file_name = file.name;
-//             console.log(file_name)
-//             updateThumbnail(dropZoneElement, file);
-//         }
-//     });
-
-//     dropZoneElement.addEventListener("dragover", (e) => {
-//         e.preventDefault();
-//         dropZoneElement.classList.add("drop-zone--over");
-//     });
-
-//     ["dragleave", "dragend"].forEach((type) => {
-//         dropZoneElement.addEventListener(type, (e) => {
-//             dropZoneElement.classList.remove("drop-zone--over");
-//         });
-//     });
-
-//     dropZoneElement.addEventListener("drop", (e) => {
-//         e.preventDefault();
-
-//         if (e.dataTransfer.files.length) {
-//             inputElement.files = e.dataTransfer.files;
-//             console.log('added file')
-//             file = e.dataTransfer.files[0];
-//             file_name = file.name;
-//             console.log(file_name)
-//             updateThumbnail(dropZoneElement, file);
-//         }
-
-//         dropZoneElement.classList.remove("drop-zone--over");
-//     });
-// });
-
-//  /**
-//              * Updates the thumbnail on a drop zone element.
-//              *
-//              * @param {HTMLElement} dropZoneElement
-//              * @param {File} file
-//              */
-// function updateThumbnail(dropZoneElement, file) {
-//     let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-//     if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-//         dropZoneElement.querySelector(".drop-zone__prompt").remove();
-//     }
-
-//     if (!thumbnailElement) {
-//         thumbnailElement = document.createElement("div");
-//         thumbnailElement.classList.add("drop-zone__thumb");
-//         dropZoneElement.appendChild(thumbnailElement);
-//     }
-
-//     thumbnailElement.dataset.label = file.name;
-//     console.log(file.type)
-
-//     if (file.type.startsWith("image/")) {
-//         const reader = new FileReader();
-
-//         reader.readAsDataURL(file);
-//         reader.onload = () => {
-//             thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-//             console.log("done background change")
-//         };
-//     } else {
-//         thumbnailElement.style.backgroundImage = null;
-//         console.log("not done background change")
-//     }
-// }
