@@ -243,8 +243,8 @@
                             <div class="choice">
                                 <span>Your Linkedin Profile</span>
                                 <div class="w-100">
-                                    <input name="linkedin" type="text" maxlength="40" minlength="5"
-                                        class="newFormField w-100" placeholder="URL">
+                                    <input name="linkedin" type="text" minlength="5" class="newFormField w-100"
+                                        placeholder="URL">
                                 </div>
                             </div>
                         </div>
@@ -252,8 +252,8 @@
                             <div class="choice">
                                 <span>Your Portfolio or GitHub Profile</span>
                                 <div class="w-100">
-                                    <input name="portfolio" type="text" maxlength="40" minlength="5"
-                                        class="newFormField w-100" placeholder="URL">
+                                    <input name="portfolio" type="text" minlength="5" class="newFormField w-100"
+                                        placeholder="URL">
                                 </div>
                             </div>
                         </div>
@@ -462,7 +462,7 @@
                 return `
                 <div class="d-flex flex-column gap-2">
                     <input name="member${memberNumber}Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg" placeholder="Name">
-                    <input name="member${memberNumber}Email" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg" placeholder="Collage Email">
+                    <input name="member${memberNumber}Email" type="text" minlength="2" class="newFormField shadow-lg" placeholder="Collage Email">
                     ${branchHtml}
                     ${yearHtml}
                     ${foodHtml}
