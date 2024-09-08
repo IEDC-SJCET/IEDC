@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEDC</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+        fetchpriority="high">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous"
+        fetchpriority="high">
+    <link rel="stylesheet" href="/src/style/common.css">
+    <link rel="stylesheet" href="/src/style/loading.css">
+    <link rel="stylesheet" href="/src/style/form.css">
+
+    <style>
+        .greencolor {
+            color: #7b7b9d;
+        }
+
+        :root {
+            --lightgreen: linear-gradient(315deg, #e6c9c6 0%, #7b7b9d 74%);
+            --green: #010101;
+        }
+    </style>
+</head>
+
+<body id="bgdots" class="m-0 p-0 w-100" style="overflow: hidden">
+    <div id="loading" class=" vh-100 vw-100">
+        <div id="loader" class="lds-ring shadow-lg">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="container d-flex flex-column justify-content-center align-items-center p-3">
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth">
+            <img src="./image.png" alt="" class="card-img-top">
+            <p class="card-body">
+                🌟 <strong>🚀 Hack Your Way to the Top! 🚀</strong>
+                🚀<br><br>
+
+                Edit your response here.
+            </p>
+            <div class="card-img-bottom" style="height:8px; background: var(--lightgreen);"></div>
+        </div>
+        <div class="d-flex flex-column gap-2 card shadow-lg showWidth mt-3">
+
+        </div>
+        <div>
+            <input name="docId" type="text" class="newFormField shadow-lg " placeholder="Paste  your secret id here"
+                id="docId">
+            <button class="btn btn-dark m-3 text-decoration-none" id="submitBtn">Fetch Data</button>
+        </div>
+        <div class="d-flex flex-column gap-3 align-items-center w-100">
+            <form class="showWidth container p-0" id="SUBMITFORM">
+                <div class="d-flex flex-column gap-4 my-3 w-100">
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <label class="req">Team Leader DETAILS</label>
+                        <input name="studentName" id="studentName" type="text" minlength="2"
+                            class="newFormField shadow-lg " placeholder="Name (Team Leader)" required>
+                        <input name="studentEmail" id="studentEmail" type="email" minlength="4"
+                            class="newFormField shadow-lg " placeholder="Collage Email ID" required>
+                        <input name="studentPhone" id="studentPhone" type="tel" pattern="[0-9]{10}" maxlength="10"
+                            class="newFormField shadow-lg " placeholder="Phone Number" required>
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Food preferences</span>
+                            <div class="w-50">
+                                <input type="radio" id="foodPreferenceNonVeg" value="Non Veg" name="foodPreference"
+                                    required>
+                                <span>Non Veg</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="foodPreferenceVeg" value="Veg" name="foodPreference">
+                                <span>Veg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div>
+                            <label class="req">Educational Details</label>
+                            <p>Institution</p>
+                        </div>
+                        <input name="institutionName" type="text" minlength="2" maxlength="20"
+                            class="newFormField shadow-lg " value="SJCET PALAI" placeholder="SJCET PALAI" disabled
+                            required>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Mode of Attending College</span>
+                            <div class="w-50">
+                                <input type="radio" id="modeOfAttendingDayScholar" value="Day Scholar"
+                                    name="modeOfAttending" required>
+                                <span>Day Scholar</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="modeOfAttendingHosteler" value="Hosteler"
+                                    name="modeOfAttending">
+                                <span>Hosteler</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Branch</span>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyAD" value="AD" name="fieldOfStudy" required>
+                                <span class="d-none d-md-block">Artificial Intelligence</span>
+                                <span class="d-md-none">AD</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyCSE" value="CSE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Computer Science</span>
+                                <span class="d-md-none">CSE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyCE" value="CE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Civil Engineering</span>
+                                <span class="d-md-none">CE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyECE" value="ECE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Communication</span>
+                                <span class="d-md-none">ECE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyEEE" value="EEE" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electrical & Electronics</span>
+                                <span class="d-md-none">EEE</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyME" value="ME" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Mechanical Engineering</span>
+                                <span class="d-md-none">ME</span>
+                            </div>
+
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyECS" value="ECS" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Electronics & Computer Sci</span>
+                                <span class="d-md-none">ECS</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyCY" value="CY" name="fieldOfStudy">
+                                <span class="d-none d-md-block">Cyber Security</span>
+                                <span class="d-md-none">CY</span>
+                            </div>
+                            <div class="w-50 d-flex gap-2">
+                                <input type="radio" id="fieldOfStudyMCA" value="MCA/MBA" name="fieldOfStudy">
+                                <span class="d-none d-md-block">MCA/MBA</span>
+                                <span class="d-md-none">MCA/MBA</span>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Year</span>
+
+                            <div class="w-50">
+                                <input type="radio" id="currentYear2" value="2" name="currentYear">
+                                <span>Second Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="currentYear3" value="3" name="currentYear">
+                                <span>Third Year</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="currentYear4" value="4" name="currentYear">
+                                <span>Fourth Year</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div>
+                            <label class="req">Product Details</label>
+                        </div>
+
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Team name</span>
+                                <div class="w-100">
+                                    <input name="teamName" id="teamName" type="text" class="newFormField w-100"
+                                        placeholder="Team Name" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Which category best describes the product</span>
+                            <div class="w-50">
+                                <input type="radio" id="categoryOfProductSoftware" value="Software"
+                                    name="categoryOfProduct" required>
+                                <span>Software</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="categoryOfProductHardware" value="Hardware"
+                                    name="categoryOfProduct">
+                                <span>Hardware</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="categoryOfProductDesign" value="Design"
+                                    name="categoryOfProduct">
+                                <span>Design</span>
+                            </div>
+                        </div>
+
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Which tech stack do you use (if you select Software)</span>
+                                <div class="w-100">
+                                    <input name="techStack" id="techStack" type="text" class="newFormField w-100"
+                                        placeholder="Tech Stack">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="w-100 flex-column d-flex gap-2 mt-4">
+                        <div class="d-flex flex-column gap-2">
+                            <label>SOCIAL MEDIA</label>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Your Linkedin Profile</span>
+                                <div class="w-100">
+                                    <input name="linkedin" id="linkedin" type="text" minlength="5"
+                                        class="newFormField w-100" placeholder="URL">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shadow-lg">
+                            <div class="choice">
+                                <span>Your Portfolio or GitHub Profile</span>
+                                <div class="w-100">
+                                    <input name="portfolio" id="portfolio" type="text" minlength="5"
+                                        class="newFormField w-100" placeholder="URL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                            data-bs-target="#member2" aria-expanded="false" aria-controls="member2">
+                            <label>TEAM MEMBER 2 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+
+
+                        <div class="collapse" id="member2"></div>
+                    </div>
+
+                    <div class="w-100 flex-column d-flex gap-2">
+                        <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                            data-bs-target="#member3" aria-expanded="false" aria-controls="member3">
+                            <label>TEAM MEMBER 3 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                        </button>
+
+
+                        <div class="collapse" id="member3"></div>
+                    </div>
+                    <div>
+                        <div class="w-100 flex-column d-flex gap-2">
+                            <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                                data-bs-target="#member4" aria-expanded="false" aria-controls="member4">
+                                <label>TEAM MEMBER 4 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                            </button>
+
+
+                            <div class="collapse" id="member4"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="w-100 flex-column d-flex gap-2">
+                            <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                                data-bs-target="#member5" aria-expanded="false" aria-controls="member5">
+                                <label>TEAM MEMBER 5 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                            </button>
+
+
+                            <div class="collapse" id="member5"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="w-100 flex-column d-flex gap-2">
+                            <button class="btn p-0 text-start" data-bs-toggle="collapse" type="button"
+                                data-bs-target="#member6" aria-expanded="false" aria-controls="member6">
+                                <label>TEAM MEMBER 6 (OPTIONAL) <i class="bi bi-chevron-down"></i></label>
+                            </button>
+
+
+                            <div class="collapse" id="member6"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="w-100 d-flex align-items-center gap-2 mt-5">
+                            <label>I AGREE TO <a class="greencolor" href="/sih24">TERMS
+                                    & CONDITIONS</a>
+                            </label><input type="checkbox" name="terms" id="terms" onchange="checkBOX(this)">
+                        </div>
+                        <div class="w-100 d-flex gap-2 justify-content-center mt-4">
+                            <button class="mybtn btn flex-grow-1" type="reset">
+                                <span>RESET <i class="bi bi-trash-fill"></i></span>
+                            </button>
+                            <button id="btnSubmit" class="btn-success btn flex-grow-1" type="submit" disabled>
+                                <span>SUBMIT <i class="bi bi-chevron-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p class="text-black-50 fs-7 d-flex flex-column gap-1">
+                Never submit passwords through Forms.
+                <span><a href="mailto:ctobootcamp@sjcetpalai.ac.in" class="text-black-50"><i class="bi bi-envelope"></i>
+                        &nbsp; Report an issue</a> &nbsp; | &nbsp;
+                    <a href="https://iedc.sjcetpalai.ac.in" class="text-black-50">@ IEDC SJCET</a></span>
+            </p>
+        </div>
+    </div>
+
+    </div>
+    </div>
+    <script src="/src/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./formFetch.js"></script>
+
+    <!-- Reusable component for Branch -->
+    <script type="text/template" id="branch-template">
+        <div
+        class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+        <span class="w-100">Branch</span>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="AD" name="{memberBranchName}" id="{memberBranchName}" >
+            <span class="d-none d-md-block">Artificial Intelligence</span>
+            <span class="d-md-none">AD</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="CSE" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Computer Science</span>
+            <span class="d-md-none">CSE</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="CE" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Civil Engineering</span>
+            <span class="d-md-none">CE</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="ECE" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Electronics &
+                Communication</span>
+            <span class="d-md-none">ECE</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="EEE" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Electrical & Electronics</span>
+            <span class="d-md-none">EEE</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="ME" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Mechanical Engineering</span>
+            <span class="d-md-none">ME</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="ECS" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Electronics & Computer
+                Sci</span>
+            <span class="d-md-none">ECS</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="CY" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">Cyber Security</span>
+            <span class="d-md-none">CY</span>
+        </div>
+        <div class="w-50 d-flex gap-2">
+            <input type="radio" value="MCA/MBA" name="{memberBranchName}" id="{memberBranchName}">
+            <span class="d-none d-md-block">MCA/MBA</span>
+            <span class="d-md-none">MCA/MBA</span>
+        </div>
+    </div>
+</script>
+
+    <!-- Reusable component for Year -->
+    <script type="text/template" id="year-template">
+        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+            <span class="w-100">Year</span>
+            <!-- <div class="w-50">
+                <input type="radio" value="1" name="{memberYearName}">
+                <span>First Year</span>
+            </div> -->
+            <div class="w-50">
+                <input type="radio" value="2" name="{memberYearName}">
+                <span>Second Year</span>
+            </div>
+            <div class="w-50">
+                <input type="radio" value="3" name="{memberYearName}">
+                <span>Third Year</span>
+            </div>
+            <div class="w-50">
+                <input type="radio" value="4" name="{memberYearName}">
+                <span>Fourth Year</span>
+            </div>
+        </div>
+     
+</script>
+
+    <script type="text/template" id="food-template">
+    <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+        <span class="w-100">Food preferences</span>
+        <div class="w-50">
+            <input type="radio" value="Non Veg" name="{memberFoodPreference}">
+            <span>Non Veg</span>
+        </div>
+        <div class="w-50">
+            <input type="radio" value="Veg" name="{memberFoodPreference}">
+            <span>Veg</span>
+        </div>
+    </div>
+</script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function generateMemberForm(memberNumber) {
+                const branchTemplate = document.getElementById('branch-template').innerHTML;
+                const yearTemplate = document.getElementById('year-template').innerHTML;
+                const foodTemplate = document.getElementById('food-template').innerHTML;
+
+                const memberBranchName = `member${memberNumber}Branch`;
+                const memberYearName = `member${memberNumber}Year`;
+                const memberFoodPreference = `member${memberNumber}FoodPreference`;
+
+                const branchHtml = branchTemplate.replace(/{memberBranchName}/g, memberBranchName);
+                const yearHtml = yearTemplate.replace(/{memberYearName}/g, memberYearName);
+                const foodHtml = foodTemplate.replace(/{memberFoodPreference}/g, memberFoodPreference);
+
+                return `
+                <div class="d-flex flex-column gap-2">
+                    <input name="member${memberNumber}Name" id="member${memberNumber}Name" type="text" minlength="2" maxlength="45" class="newFormField shadow-lg" placeholder="Name">
+                    <input name="member${memberNumber}Email" id="member${memberNumber}Email" type="text" minlength="2" class="newFormField shadow-lg" placeholder="Collage Email">
+                    ${branchHtml}
+                    ${yearHtml}
+                    ${foodHtml}
+                </div>
+             
+            `;
+            }
+
+            // Generate forms for team members
+            for (let i = 2; i <= 6; i++) {
+                const memberDiv = document.getElementById(`member${i}`);
+                if (memberDiv) {
+                    memberDiv.innerHTML = generateMemberForm(i);
+                }
+            }
+        });
+    </script>
+</body>
+<script>
+    const submitBTN = document.getElementById('btnSubmit');
+    const checkBOX = (element) => {
+        submitBTN.disabled = element.checked ? false : true;
+    }
+</script>
+
+</html>
