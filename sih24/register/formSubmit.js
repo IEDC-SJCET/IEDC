@@ -96,6 +96,17 @@ function getData() {
       }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
+  // Member 6
+  let member6 = isVisible("member6")
+    ? {
+        member6Name: formData.get("member6Name"),
+        member6Email: formData.get("member6Email"),
+        member6Branch: formData.get("member6Branch"),
+        member6Year: formData.get("member6Year"),
+        member6FoodPreference: formData.get("member6FoodPreference"),
+      }
+    : { member6Name: "NA", member6Branch: "NA", member6Year: "NA" };
+  if (member6.member6Name !== "NA") members.push(member6); // Add member6 if not default
 
   // Add cleaned-up data to final data object
   data.teamLeader = teamLeader;
