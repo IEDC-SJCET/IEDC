@@ -106,6 +106,7 @@ function getData() {
       }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
+
   // Member 6
   let member6 = isVisible("member6")
     ? {
@@ -134,13 +135,12 @@ function getData() {
 
   return data;
 }
-// Function to populate form with fetched data
-// ... (previous code remains the same)
 
 // Function to populate form with fetched data
 function populateForm(data) {
   const { teamLeader, members, categoryOfProduct, teamName, techStack, terms } =
     data;
+
   // Team Leader details
   setInputValue("studentName", teamLeader.studentName);
   setInputValue("studentEmail", teamLeader.studentEmail);
@@ -228,7 +228,11 @@ function setRadioButton(name, value) {
   }
 }
 
-// ... (rest of the code remains the same)
+const urlParams = new URLSearchParams(window.location.search);
+const idValue = urlParams.get("id");
+
+console.log(idValue);
+
 // Handle form submission
 SUBMITFORM.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -237,11 +241,12 @@ SUBMITFORM.addEventListener("submit", async (e) => {
 
   try {
     const formData = getData();
-    const docId = document.getElementById("docId").value;
+    // const docIdElement = document.getElementById("docId");
+    // const docId = docIdElement ? docIdElement.value : null;
 
-    if (docId) {
+    if (idValue) {
       // Update existing document
-      const docRef = doc(DB, "sih-hackathon-24", docId);
+      const docRef = doc(DB, "sih-hackathon-24", idValue);
       await updateDoc(docRef, formData).then(() => {
         submitDone();
       });
@@ -258,10 +263,14 @@ SUBMITFORM.addEventListener("submit", async (e) => {
   }
 });
 
-async function handleAutofill(){
-  const docId = document.getElementById("docId").value;
+// Fetch data on page load
+window.onload = async () => {
+  console.log("Page loaded", idValue);
 
-  if (!docId) {
+  const idValueFromInput = document.getElementById("idValue");
+  const id = idValueFromInput ? idValueFromInput.value : idValue;
+
+  if (!id) {
     alert("Please enter a document ID!");
     return;
   }
@@ -269,7 +278,7 @@ async function handleAutofill(){
   // openSpinner();
 
   try {
-    const docRef = doc(DB, "sih-hackathon-24", docId);
+    const docRef = doc(DB, "sih-hackathon-24", id);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
@@ -285,46 +294,8 @@ async function handleAutofill(){
   } finally {
     // openSpinner(false);
   }
-}
-
-// Fetch data on button click
-document.getElementById("submitBtn").addEventListener("click", async () => {
-  const docId = document.getElementById("docId").value;
-
-  if (!docId) {
-    alert("Please enter a document ID!");
-    return;
-  }
-
-  // openSpinner();
-
-  try {
-    const docRef = doc(DB, "sih-hackathon-24", docId);
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      populateForm(docSnap.data());
-      // console.log("Document data:", docSnap.data());
-    } else {
-      console.log("No such document!");
-      alert("No such document found!");
-    }
-  } catch (error) {
-    console.error("Error fetching document:", error);
-    alert("Failed to fetch document.");
-  } finally {
-    // openSpinner(false);
-  }
-});
+};
 
 function isVisible(element) {
-  return document.getElementById(element).classList.contains("show");
-}
-
-const search = new URLSearchParams(window.location.href.split("?")[1]);
-if(search.get("id")){
-  const secretIdInput = document.querySelector("#docId");
-  secretIdInput.value = search.get("id");
-  const dataFetchButton = document.getElementById("submitBtn");
-  dataFetchButton.click();
+  return document.getElementById(element)?.classList.contains("show") ?? false;
 }
