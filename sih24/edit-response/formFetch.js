@@ -258,6 +258,35 @@ SUBMITFORM.addEventListener("submit", async (e) => {
   }
 });
 
+async function handleAutofill(){
+  const docId = document.getElementById("docId").value;
+
+  if (!docId) {
+    alert("Please enter a document ID!");
+    return;
+  }
+
+  // openSpinner();
+
+  try {
+    const docRef = doc(DB, "sih-hackathon-24", docId);
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      populateForm(docSnap.data());
+      // console.log("Document data:", docSnap.data());
+    } else {
+      console.log("No such document!");
+      alert("No such document found!");
+    }
+  } catch (error) {
+    console.error("Error fetching document:", error);
+    alert("Failed to fetch document.");
+  } finally {
+    // openSpinner(false);
+  }
+}
+
 // Fetch data on button click
 document.getElementById("submitBtn").addEventListener("click", async () => {
   const docId = document.getElementById("docId").value;
@@ -290,4 +319,12 @@ document.getElementById("submitBtn").addEventListener("click", async () => {
 
 function isVisible(element) {
   return document.getElementById(element).classList.contains("show");
+}
+
+const search = new URLSearchParams(window.location.href.split("?")[1]);
+if(search.get("id")){
+  const secretIdInput = document.querySelector("#docId");
+  secretIdInput.value = search.get("id");
+  const dataFetchButton = document.getElementById("submitBtn");
+  dataFetchButton.click();
 }
