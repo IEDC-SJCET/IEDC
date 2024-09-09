@@ -2,6 +2,7 @@ import { openSpinner, submitDone, submitNOTDone } from "/src/script/main.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import {
   addDoc,
+  setDoc,
   getFirestore,
   collection,
   getDoc,
@@ -247,8 +248,16 @@ SUBMITFORM.addEventListener("submit", async (e) => {
     if (idValue) {
       // Update existing document
       const docRef = doc(DB, "sih-hackathon-24", idValue);
-      await updateDoc(docRef, formData).then(() => {
-        submitDone();
+      const collectionRefSelected = doc(
+        DB,
+        "sih-hackathon-selected-24",
+        idValue
+      );
+
+      await setDoc(collectionRefSelected, formData).then(() => {
+        updateDoc(docRef, formData).then(() => {
+          submitDone();
+        });
       });
     } else {
       // Create new document
