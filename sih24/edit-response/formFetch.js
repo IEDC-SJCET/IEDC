@@ -241,8 +241,8 @@ SUBMITFORM.addEventListener("submit", async (e) => {
 
   try {
     const formData = getData();
-    const docIdElement = document.getElementById("docId");
-    const docId = docIdElement ? docIdElement.value : null;
+    // const docIdElement = document.getElementById("docId");
+    // const docId = docIdElement ? docIdElement.value : null;
 
     if (idValue) {
       // Update existing document
