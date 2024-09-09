@@ -80,6 +80,17 @@
                                 <span>Veg</span>
                             </div>
                         </div>
+                        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+                            <span class="w-100">Gender</span>
+                            <div class="w-50">
+                                <input type="radio" id="gender" value="Male" name="gender" required>
+                                <span>Male</span>
+                            </div>
+                            <div class="w-50">
+                                <input type="radio" id="gender" value="Female" name="gender">
+                                <span>Female</span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="w-100 flex-column d-flex gap-2 mt-4">
@@ -408,7 +419,37 @@
                 <span>Fourth Year</span>
             </div>
         </div>
-     
+</script>
+
+    <!-- Reusable component for stay -->
+    <script type="text/template" id="stay-template">
+    <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+        <span class="w-100">Mode of Attending College</span>
+        <div class="w-50">
+            <input type="radio" id="modeOfAttendingDayScholar" value="Day Scholar"
+            name="{memberStay}" required>
+            <span>Day Scholar</span>
+        </div>
+        <div class="w-50">
+            <input type="radio" id="modeOfAttendingHosteler" value="Hosteler"
+            name="{memberStay}">
+            <span>Hosteler</span>
+        </div>
+    </div>
+</script>
+    <!-- Reusable component for stay -->
+    <script type="text/template" id="gender-template">
+        <div class="choice shadow-lg justify-content-between d-flex flex-row flex-wrap">
+            <span class="w-100">Gender</span>
+            <div class="w-50">
+                <input type="radio" id="gender" value="Male" name="{memberGender}" required>
+                <span>Male</span>
+            </div>
+            <div class="w-50">
+                <input type="radio" id="gender" value="Female" name="{memberGender}">
+                <span>Female</span>
+            </div>
+        </div>
 </script>
 
     <script type="text/template" id="food-template">
@@ -432,14 +473,21 @@
                 const branchTemplate = document.getElementById('branch-template').innerHTML;
                 const yearTemplate = document.getElementById('year-template').innerHTML;
                 const foodTemplate = document.getElementById('food-template').innerHTML;
+                const stayTemplate = document.getElementById('stay-template').innerHTML;
+                const genderTemplate = document.getElementById('gender-template').innerHTML;
+
 
                 const memberBranchName = `member${memberNumber}Branch`;
                 const memberYearName = `member${memberNumber}Year`;
                 const memberFoodPreference = `member${memberNumber}FoodPreference`;
+                const memberStay = `member${memberNumber}Stay`;
+                const memberGender = `member${memberNumber}Gender`;
 
                 const branchHtml = branchTemplate.replace(/{memberBranchName}/g, memberBranchName);
                 const yearHtml = yearTemplate.replace(/{memberYearName}/g, memberYearName);
                 const foodHtml = foodTemplate.replace(/{memberFoodPreference}/g, memberFoodPreference);
+                const stayHtml = stayTemplate.replace(/{memberStay}/g, memberStay);
+                const genderHtml = genderTemplate.replace(/{memberGender}/g, memberGender);
 
                 return `
                 <div class="d-flex flex-column gap-2">
@@ -448,6 +496,8 @@
                     ${branchHtml}
                     ${yearHtml}
                     ${foodHtml}
+                    ${stayHtml}
+                    ${genderHtml}
                 </div>
              
             `;

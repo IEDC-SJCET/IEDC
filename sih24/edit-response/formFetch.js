@@ -38,6 +38,7 @@ function getData() {
     studentEmail: formData.get("studentEmail"),
     studentPhone: formData.get("studentPhone"),
     stay: formData.get("modeOfAttending"),
+    gender: formData.get("gender"),
     branch: formData.get("fieldOfStudy"),
     currentYear: formData.get("currentYear"),
     linkedin: formData.get("linkedin"),
@@ -61,6 +62,8 @@ function getData() {
     member2Branch: formData.get("member2Branch"),
     member2Year: formData.get("member2Year"),
     member2FoodPreference: formData.get("member2FoodPreference"),
+    member2Stay: formData.get("member2Stay"),
+    member2Gender: formData.get("member2Gender"),
   };
   if (member2.member2Name) members.push(member2); // Add member2 only if name is not empty
 
@@ -71,6 +74,8 @@ function getData() {
     member3Branch: formData.get("member3Branch"),
     member3Year: formData.get("member3Year"),
     member3FoodPreference: formData.get("member3FoodPreference"),
+    member3Stay: formData.get("member3Stay"),
+    member3Gender: formData.get("member3Gender"),
   };
   if (member3.member3Name) members.push(member3); // Add member3 only if name is not empty
 
@@ -82,6 +87,8 @@ function getData() {
         member4Branch: formData.get("member4Branch"),
         member4Year: formData.get("member4Year"),
         member4FoodPreference: formData.get("member4FoodPreference"),
+        member4Stay: formData.get("member4Stay"),
+        member4Gender: formData.get("member4Gender"),
       }
     : { member4Name: "NA", member4Branch: "NA", member4Year: "NA" };
   if (member4.member4Name !== "NA") members.push(member4); // Add member4 if not default
@@ -94,6 +101,8 @@ function getData() {
         member5Branch: formData.get("member5Branch"),
         member5Year: formData.get("member5Year"),
         member5FoodPreference: formData.get("member5FoodPreference"),
+        member5Stay: formData.get("member5Stay"),
+        member5Gender: formData.get("member5Gender"),
       }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
@@ -105,6 +114,8 @@ function getData() {
         member6Branch: formData.get("member6Branch"),
         member6Year: formData.get("member6Year"),
         member6FoodPreference: formData.get("member6FoodPreference"),
+        member6Stay: formData.get("member6Stay"),
+        member6Gender: formData.get("member6Gender"),
       }
     : { member6Name: "NA", member6Branch: "NA", member6Year: "NA" };
   if (member6.member6Name !== "NA") members.push(member6); // Add member6 if not default
@@ -139,6 +150,7 @@ function populateForm(data) {
 
   // Set radio buttons for team leader
   setRadioButton("foodPreference", teamLeader.foodPreference);
+  setRadioButton("gender", teamLeader.gender);
   setRadioButton("modeOfAttending", teamLeader.stay);
   setRadioButton("fieldOfStudy", teamLeader.branch);
   setRadioButton("currentYear", teamLeader.currentYear);
@@ -173,6 +185,14 @@ function populateForm(data) {
       setRadioButton(
         `member${memberIndex}FoodPreference`,
         member[`member${memberIndex}FoodPreference`]
+      );
+      setRadioButton(
+        `member${memberIndex}Stay`,
+        member[`member${memberIndex}Stay`]
+      );
+      setRadioButton(
+        `member${memberIndex}Gender`,
+        member[`member${memberIndex}Gender`]
       );
     }
   });
