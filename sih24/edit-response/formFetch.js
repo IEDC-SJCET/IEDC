@@ -229,11 +229,7 @@ function setRadioButton(name, value) {
   }
 }
 
-const urlParams = new URLSearchParams(window.location.search);
-const idValue = urlParams.get("id");
-
-console.log(idValue);
-
+// ... (rest of the code remains the same)
 // Handle form submission
 SUBMITFORM.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -242,17 +238,12 @@ SUBMITFORM.addEventListener("submit", async (e) => {
 
   try {
     const formData = getData();
-    // const docIdElement = document.getElementById("docId");
-    // const docId = docIdElement ? docIdElement.value : null;
+    const docId = document.getElementById("docId").value;
 
-    if (idValue) {
+    if (docId) {
       // Update existing document
-      const docRef = doc(DB, "sih-hackathon-24", idValue);
-      const collectionRefSelected = doc(
-        DB,
-        "sih-hackathon-selected-24",
-        idValue
-      );
+      const docRef = doc(DB, "sih-hackathon-24", docId);
+      const collectionRefSelected = doc(DB, "sih-hackathon-selected-24", docId);
 
       await setDoc(collectionRefSelected, formData).then(() => {
         updateDoc(docRef, formData).then(() => {
@@ -272,14 +263,11 @@ SUBMITFORM.addEventListener("submit", async (e) => {
   }
 });
 
-// Fetch data on page load
-window.onload = async () => {
-  console.log("Page loaded", idValue);
+// Fetch data on button click
+document.getElementById("submitBtn").addEventListener("click", async () => {
+  const docId = document.getElementById("docId").value;
 
-  const idValueFromInput = document.getElementById("idValue");
-  const id = idValueFromInput ? idValueFromInput.value : idValue;
-
-  if (!id) {
+  if (!docId) {
     alert("Please enter a document ID!");
     return;
   }
@@ -287,7 +275,7 @@ window.onload = async () => {
   // openSpinner();
 
   try {
-    const docRef = doc(DB, "sih-hackathon-24", id);
+    const docRef = doc(DB, "sih-hackathon-24", docId);
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
@@ -303,8 +291,16 @@ window.onload = async () => {
   } finally {
     // openSpinner(false);
   }
-};
+});
 
 function isVisible(element) {
-  return document.getElementById(element)?.classList.contains("show") ?? false;
+  return document.getElementById(element).classList.contains("show");
+}
+
+const search = new URLSearchParams(window.location.href.split("?")[1]);
+if (search.get("id")) {
+  const secretIdInput = document.querySelector("#docId");
+  secretIdInput.value = search.get("id");
+  const dataFetchButton = document.getElementById("submitBtn");
+  dataFetchButton.click();
 }
