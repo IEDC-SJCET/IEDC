@@ -299,6 +299,7 @@ function isVisible(element) {
 
 const search = new URLSearchParams(window.location.href.split("?")[1]);
 if (search.get("id")) {
+  document.getElementById("fetchDataDiv").style.display = "none";
   const secretIdInput = document.querySelector("#docId");
   secretIdInput.value = search.get("id");
   const dataFetchButton = document.getElementById("submitBtn");
