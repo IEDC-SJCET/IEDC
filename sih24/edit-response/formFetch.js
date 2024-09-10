@@ -2,6 +2,7 @@ import { openSpinner, submitDone, submitNOTDone } from "/src/script/main.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
 import {
   addDoc,
+  setDoc,
   getFirestore,
   collection,
   getDoc,
@@ -106,6 +107,7 @@ function getData() {
       }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
+
   // Member 6
   let member6 = isVisible("member6")
     ? {
@@ -134,13 +136,12 @@ function getData() {
 
   return data;
 }
-// Function to populate form with fetched data
-// ... (previous code remains the same)
 
 // Function to populate form with fetched data
 function populateForm(data) {
   const { teamLeader, members, categoryOfProduct, teamName, techStack, terms } =
     data;
+
   // Team Leader details
   setInputValue("studentName", teamLeader.studentName);
   setInputValue("studentEmail", teamLeader.studentEmail);
@@ -242,8 +243,12 @@ SUBMITFORM.addEventListener("submit", async (e) => {
     if (docId) {
       // Update existing document
       const docRef = doc(DB, "sih-hackathon-24", docId);
-      await updateDoc(docRef, formData).then(() => {
-        submitDone();
+      const collectionRefSelected = doc(DB, "sih-hackathon-selected-24", docId);
+
+      await setDoc(collectionRefSelected, formData).then(() => {
+        updateDoc(docRef, formData).then(() => {
+          submitDone();
+        });
       });
     } else {
       // Create new document
@@ -257,35 +262,6 @@ SUBMITFORM.addEventListener("submit", async (e) => {
     // openSpinner(false);
   }
 });
-
-async function handleAutofill(){
-  const docId = document.getElementById("docId").value;
-
-  if (!docId) {
-    alert("Please enter a document ID!");
-    return;
-  }
-
-  // openSpinner();
-
-  try {
-    const docRef = doc(DB, "sih-hackathon-24", docId);
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      populateForm(docSnap.data());
-      // console.log("Document data:", docSnap.data());
-    } else {
-      console.log("No such document!");
-      alert("No such document found!");
-    }
-  } catch (error) {
-    console.error("Error fetching document:", error);
-    alert("Failed to fetch document.");
-  } finally {
-    // openSpinner(false);
-  }
-}
 
 // Fetch data on button click
 document.getElementById("submitBtn").addEventListener("click", async () => {
@@ -322,7 +298,7 @@ function isVisible(element) {
 }
 
 const search = new URLSearchParams(window.location.href.split("?")[1]);
-if(search.get("id")){
+if (search.get("id")) {
   const secretIdInput = document.querySelector("#docId");
   secretIdInput.value = search.get("id");
   const dataFetchButton = document.getElementById("submitBtn");
