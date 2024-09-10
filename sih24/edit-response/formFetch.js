@@ -83,42 +83,42 @@ function getData() {
   // Member 4
   let member4 = isVisible("member4")
     ? {
-        member4Name: formData.get("member4Name"),
-        member4Email: formData.get("member4Email"),
-        member4Branch: formData.get("member4Branch"),
-        member4Year: formData.get("member4Year"),
-        member4FoodPreference: formData.get("member4FoodPreference"),
-        member4Stay: formData.get("member4Stay"),
-        member4Gender: formData.get("member4Gender"),
-      }
+      member4Name: formData.get("member4Name"),
+      member4Email: formData.get("member4Email"),
+      member4Branch: formData.get("member4Branch"),
+      member4Year: formData.get("member4Year"),
+      member4FoodPreference: formData.get("member4FoodPreference"),
+      member4Stay: formData.get("member4Stay"),
+      member4Gender: formData.get("member4Gender"),
+    }
     : { member4Name: "NA", member4Branch: "NA", member4Year: "NA" };
   if (member4.member4Name !== "NA") members.push(member4); // Add member4 if not default
 
   // Member 5
   let member5 = isVisible("member5")
     ? {
-        member5Name: formData.get("member5Name"),
-        member5Email: formData.get("member5Email"),
-        member5Branch: formData.get("member5Branch"),
-        member5Year: formData.get("member5Year"),
-        member5FoodPreference: formData.get("member5FoodPreference"),
-        member5Stay: formData.get("member5Stay"),
-        member5Gender: formData.get("member5Gender"),
-      }
+      member5Name: formData.get("member5Name"),
+      member5Email: formData.get("member5Email"),
+      member5Branch: formData.get("member5Branch"),
+      member5Year: formData.get("member5Year"),
+      member5FoodPreference: formData.get("member5FoodPreference"),
+      member5Stay: formData.get("member5Stay"),
+      member5Gender: formData.get("member5Gender"),
+    }
     : { member5Name: "NA", member5Branch: "NA", member5Year: "NA" };
   if (member5.member5Name !== "NA") members.push(member5); // Add member5 if not default
 
   // Member 6
   let member6 = isVisible("member6")
     ? {
-        member6Name: formData.get("member6Name"),
-        member6Email: formData.get("member6Email"),
-        member6Branch: formData.get("member6Branch"),
-        member6Year: formData.get("member6Year"),
-        member6FoodPreference: formData.get("member6FoodPreference"),
-        member6Stay: formData.get("member6Stay"),
-        member6Gender: formData.get("member6Gender"),
-      }
+      member6Name: formData.get("member6Name"),
+      member6Email: formData.get("member6Email"),
+      member6Branch: formData.get("member6Branch"),
+      member6Year: formData.get("member6Year"),
+      member6FoodPreference: formData.get("member6FoodPreference"),
+      member6Stay: formData.get("member6Stay"),
+      member6Gender: formData.get("member6Gender"),
+    }
     : { member6Name: "NA", member6Branch: "NA", member6Year: "NA" };
   if (member6.member6Name !== "NA") members.push(member6); // Add member6 if not default
 
@@ -128,6 +128,10 @@ function getData() {
   data.teamName = formData.get("teamName");
   data.categoryOfProduct = formData.get("categoryOfProduct");
   data.techStack = formData.get("techStack");
+  data.psCode = formData.get("psCode");
+  data.psTheme = formData.get("psTheme");
+  data.psTitle = formData.get("psTitle");
+  data.psDescribe = formData.get("psDescribe");
   data.terms = formData.get("terms");
   data.UploadTimeStamp = Date.now();
 
@@ -139,7 +143,10 @@ function getData() {
 
 // Function to populate form with fetched data
 function populateForm(data) {
-  const { teamLeader, members, categoryOfProduct, teamName, techStack, terms } =
+  const { teamLeader, members, categoryOfProduct, teamName, techStack, terms, psCode,
+    psTheme,
+    psTitle,
+    psDescribe } =
     data;
 
   // Team Leader details
@@ -202,6 +209,10 @@ function populateForm(data) {
   setInputValue("teamName", teamName);
   setRadioButton("categoryOfProduct", categoryOfProduct);
   setInputValue("techStack", techStack);
+  setInputValue("psCode", psCode);
+  setInputValue("psTheme", psTheme);
+  setInputValue("psTitle", psTitle);
+  setInputValue("psDescribe", psDescribe);
   // if (terms == "on") {
   //   document.getElementById("terms").checked = true;
   // } else {
