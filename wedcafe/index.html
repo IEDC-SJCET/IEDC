@@ -9,10 +9,15 @@
     <div style="position: relative; height: 100vh; overflow: auto;">
       <iframe
         title="Formbrick"
+        id="formbricks"
         src="https://app.formbricks.com/s/cm5v3c6l40000lc039rwz2omz"
         frameborder="0"
         style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; border: 0; background-color: black;"
       ></iframe>
+      <script language="javascript">
+        const iframe = document.getElementById('formbricks');
+        iframe.src = iframe.src + window.location.search;
+      </script>
     </div>
   </body>
 </html>
